@@ -168,7 +168,6 @@ pub trait Renderer {
         let category_attr = data
             .and_then(|d| d.0.get(&NodeDataKey::Category))
             .map(String::as_str);
-        let class = format!("gloss-sc-{}", node.tag.as_str());
 
         // https://github.com/lambda-fairy/maud/issues/240
         // The attr=[value] syntax skips the attribute if the value is None
@@ -176,8 +175,8 @@ pub trait Renderer {
             ($tag:ident) => {
                 html! {
                     $tag
-                        class=(class)
-                        title=[node.title.clone()]
+                        class={ "gloss-sc-" (node.tag.as_str()) }
+                        title=[node.title.as_deref()]
                         data-sc-content=[content_attr]
                         data-sc-category=[category_attr]
                         lang=[node.lang.as_ref().map(LangAttr::as_str)]
