@@ -11,7 +11,6 @@ use pangloss::{
 use crate::{
     cli::Options,
     dict::writer::{STYLES_CSS, YOMITAN_CSS, build_entries},
-    lang::Lang,
     models::yomitan::YomitanDict,
     path::PathManager,
 };
@@ -19,17 +18,11 @@ use crate::{
 mod renderer;
 use renderer::MdictRenderer;
 
-pub fn write_mdict(
-    source: Lang,
-    target: Lang,
-    _: &Options,
-    pm: &PathManager,
-    ydict: YomitanDict,
-) -> Result<PathBuf> {
+pub fn write_mdict(_: &Options, pm: &PathManager, ydict: YomitanDict) -> Result<PathBuf> {
     let dir_in_stage = pm.dir_in_stage("mdict");
     _ = fs::create_dir_all(&dir_in_stage);
 
-    let dict_name = format!("wty-{source}-{target}");
+    let dict_name = pm.dict_name_expanded();
     let mdx_path = dir_in_stage.join(format!("{dict_name}.mdx"));
     let mut glossary = build_glossary(&dict_name, ydict);
     merge_css_files(&mut glossary);

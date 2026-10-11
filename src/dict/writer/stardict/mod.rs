@@ -7,24 +7,17 @@ use anyhow::Result;
 use pangloss::{Glossary, GlossaryInfo, Writer, formats::stardict::StardictFormat};
 
 use crate::{
-    cli::Options, dict::writer::build_entries, lang::Lang, models::yomitan::YomitanDict,
-    path::PathManager,
+    cli::Options, dict::writer::build_entries, models::yomitan::YomitanDict, path::PathManager,
 };
 
 mod renderer;
 use renderer::StardictRenderer;
 
-pub fn write_stardict(
-    source: Lang,
-    target: Lang,
-    _: &Options,
-    pm: &PathManager,
-    ydict: YomitanDict,
-) -> Result<PathBuf> {
+pub fn write_stardict(_: &Options, pm: &PathManager, ydict: YomitanDict) -> Result<PathBuf> {
     let dir_in_stage = pm.dir_in_stage("stardict");
     _ = fs::create_dir_all(&dir_in_stage);
 
-    let dict_name = format!("wty-{source}-{target}");
+    let dict_name = pm.dict_name_expanded();
     let ifo_path = dir_in_stage.join(format!("{dict_name}.ifo"));
     let glossary = build_glossary(&dict_name, ydict);
 
