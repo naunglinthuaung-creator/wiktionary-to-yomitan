@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "zh",
             "content": [
               {
                 "tag": "li",
@@ -68,6 +69,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "zh",
             "content": [
               {
                 "tag": "div",

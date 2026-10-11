@@ -71,6 +71,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -153,6 +154,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "es",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -169,6 +171,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "He/she ",
                                     {
@@ -243,6 +246,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "es",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -259,6 +263,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "He/she ",
                                     {
@@ -290,6 +295,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "es",
                                   "content": [
                                     "La pobrecita ",
                                     {
@@ -307,6 +313,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The poor girl ",
                                     {

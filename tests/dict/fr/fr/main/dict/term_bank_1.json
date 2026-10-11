@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "fr",
             "content": [
               {
                 "tag": "li",
@@ -131,6 +132,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Que d’",
                                     {
@@ -162,6 +164,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Batman est l’",
                                     {
@@ -193,6 +196,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "L’espéranto est l’",
                                     {
@@ -250,6 +254,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Le service social du travail – ",
                                     {
@@ -267,6 +272,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "fr",
                                   "content": "titre d’un livre de François Aballéa et Charlotte Simon, 2004"
                                 }
                               ]
@@ -355,6 +361,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "fr",
             "content": [
               {
                 "tag": "li",
@@ -392,6 +399,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -408,6 +416,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "fr",
                                   "content": "Alexandre Dumas, Othon l’archer, 1839"
                                 }
                               ]
@@ -429,6 +438,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Il ",
                                     {
@@ -446,6 +456,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "fr",
                                   "content": "Victor Méric, Les Compagnons de l’Escopette, Éditions de l’Épi, Paris, 1930, page 213"
                                 }
                               ]
@@ -467,6 +478,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "J’avais neuf ans et j’attrapais avec mon frère des sauterelles que nous faisions griller dans le jardin pour les ",
                                     {
@@ -484,6 +496,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "fr",
                                   "content": "Francis Carco, Maman Petitdoigt, La Revue de Paris, 1920"
                                 }
                               ]
@@ -548,6 +561,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Aussi nous ne ",
                                     {
@@ -565,6 +579,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "fr",
                                   "content": "Octave Mirbeau, La Bonne, dans Lettres de ma chaumière, 1885"
                                 }
                               ]
@@ -629,6 +644,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "En quelques années il ",
                                     {
@@ -711,6 +727,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Ce poêle ",
                                     {
@@ -801,6 +818,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "À l'en croire, il ",
                                     {
@@ -818,6 +836,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "fr",
                                   "content": "Camille de Cordemoy, Au Chili, 1896"
                                 }
                               ]
@@ -865,6 +884,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Un muret éboulé, la rivière, trois planches ",
                                     {
@@ -882,6 +902,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "fr",
                                   "content": "Florence Aubenas, Dans les Cévennes, sur les traces de la femme des bois, Le Monde. Mis en ligne le 30 avril 2021"
                                 }
                               ]
@@ -979,6 +1000,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Heureusement que la pauvre madame n’est plus là pour se faire du mauvais sang, elle ",
                                     {
@@ -996,6 +1018,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "fr",
                                   "content": "François Mauriac, Le Mystère Frontenac, 1933, réédition Le Livre de Poche, page 204"
                                 }
                               ]
@@ -1042,6 +1065,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "fr",
             "content": [
               {
                 "tag": "div",

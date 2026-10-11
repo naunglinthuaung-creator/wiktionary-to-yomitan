@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "li",
@@ -86,6 +87,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "it",
                                   "content": [
                                     "Disse la povera madre ormai stremata: \"Eh, ma... non è possibile: le ",
                                     {
@@ -160,6 +162,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "it",
                                   "content": "\"Aoh, che fissa!!\""
                                 }
                               ]
@@ -178,6 +181,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "div",
@@ -326,6 +330,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "li",
@@ -374,6 +379,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "it",
                                   "content": [
                                     "più ",
                                     {
@@ -402,6 +408,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "div",
@@ -550,6 +557,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "li",
@@ -587,6 +595,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "it",
                                   "content": "L’alimentazione fornisce energia al corpo e teoricamente non si dovrebbe mangiare più di ciò che si consuma"
                                 }
                               ]
@@ -651,6 +660,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "it",
                                   "content": "devi mangiare il cavallo"
                                 }
                               ]
@@ -669,6 +679,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "div",

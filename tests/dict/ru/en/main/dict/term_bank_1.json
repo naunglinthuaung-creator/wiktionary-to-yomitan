@@ -71,6 +71,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -108,6 +109,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     "идёт ",
                                     {
@@ -124,6 +126,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "it is snowing"
                                 }
                               ]
@@ -145,6 +148,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     "мо́крый ",
                                     {
@@ -161,6 +165,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "sleet, wet snow"
                                 }
                               ]
@@ -182,6 +187,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     "пе́рвый ",
                                     {
@@ -198,6 +204,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "the first snow"
                                 }
                               ]
@@ -364,6 +371,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -568,6 +576,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -622,6 +631,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -638,6 +648,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -746,6 +757,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
