@@ -320,6 +320,10 @@ pub struct Options {
     /// Do not write dictionaries with fewer than this many entries
     #[arg(long, default_value_t = DEFAULT_MIN_ENTRIES)]
     pub min_entries: usize,
+
+    /// Read the entries from the databases made by `wty db build`, not from the kaikki jsonl
+    #[arg(long)]
+    pub from_db: bool,
 }
 
 /// Default of [`Options::min_entries`].

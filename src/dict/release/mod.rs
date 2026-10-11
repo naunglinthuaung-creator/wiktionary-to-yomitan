@@ -31,7 +31,7 @@ use crate::{
     db::WiktextractDb,
     dict::{
         DGlossary, DGlossaryExtended, DIpa, DIpaMerged, DMain, Dictionary, Langs, WriterFormat,
-        core::skip_below_min_entries,
+        core::{make_dict_from_jsonl, rejected, skip_below_min_entries},
     },
     lang::{Edition, EditionSpec, Lang},
     path::{DictionaryType, PathManager},
@@ -307,6 +307,16 @@ impl DQuery for DGlossary {
         ";
 }
 
+/// Make a dictionary from the kaikki jsonl, or from the databases with `--from-db`.
+pub fn make_dict<D: Dictionary + DQuery>(dict: D, from_db: bool, raw_args: D::A) -> Result<()> {
+    if from_db {
+        make_dict_from_db(dict, raw_args, &Edition::all())?;
+        Ok(())
+    } else {
+        make_dict_from_jsonl(dict, raw_args)
+    }
+}
+
 /// Make a dictionary from database made from a Kaikki jsonlines.
 pub fn make_dict_from_db<D: Dictionary + DQuery>(
     dict: D,
@@ -340,9 +350,20 @@ pub fn make_dict_from_db<D: Dictionary + DQuery>(
             _ => stmt.query([source_pm.iso(), target_pm.iso()])?,
         };
 
+        let mut accepted_count = 0;
+
         while let Some(row) = rows.next()? {
             let blob: &[u8] = row.get_ref(0)?.as_blob()?;
             let mut entry = WiktextractDb::blob_to_word_entry(blob)?;
+
+            if rejected(&entry, opts) {
+                continue;
+            }
+
+            if opts.first == Some(accepted_count) {
+                break;
+            }
+            accepted_count += 1;
 
             if dict.skip_if(&entry) {
                 continue;

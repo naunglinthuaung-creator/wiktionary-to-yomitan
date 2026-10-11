@@ -45,6 +45,11 @@ impl WiktextractDb {
         P: AsRef<Path>,
     {
         let db_path = Self::db_path_for(root_dir, edition);
+        anyhow::ensure!(
+            db_path.exists(),
+            "no database for the {edition} edition at {}: run `wty db build {edition}` first",
+            db_path.display()
+        );
         let conn = Connection::open(&db_path)?;
         Ok(Self { conn })
     }
