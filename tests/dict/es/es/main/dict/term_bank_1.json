@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "es",
             "content": [
               {
                 "tag": "li",
@@ -142,6 +143,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "es",
                                   "content": [
                                     "El lugar permanecía incomunicado por la ",
                                     {
@@ -159,6 +161,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "es",
                                   "content": "Calderón Samaniego. Elegía con pétalos de rosa. 2008. ISBN: 9788461284030."
                                 }
                               ]
@@ -275,6 +278,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "es",
             "content": [
               {
                 "tag": "div",
@@ -388,6 +392,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "es",
             "content": [
               {
                 "tag": "li",
@@ -442,6 +447,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "es",
                                   "content": "Si no comes en varias semanas, morirás de inanición."
                                 }
                               ]
@@ -489,6 +495,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "es",
                                   "content": [
                                     "«He quedado con unos amigos para ir a ",
                                     {
@@ -506,6 +513,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "es",
                                   "content": "«Ejemplo brindado por Wikcionario»."
                                 }
                               ]
@@ -524,6 +532,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "es",
             "content": [
               {
                 "tag": "div",

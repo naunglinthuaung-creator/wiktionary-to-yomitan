@@ -14,6 +14,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "zh",
             "content": [
               {
                 "tag": "li",
@@ -33,6 +34,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "div",

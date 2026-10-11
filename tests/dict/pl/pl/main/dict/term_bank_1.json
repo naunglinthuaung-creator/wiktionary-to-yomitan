@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "pl",
             "content": [
               {
                 "tag": "li",
@@ -103,6 +104,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "pl",
                                   "content": [
                                     "Wczoraj spadł pierwszy ",
                                     {
@@ -160,6 +162,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "pl",
                                   "content": [
                                     "Obiecałaś matce, że jej pomożesz w odgarnięciu ",
                                     {
@@ -243,6 +246,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "pl",
                                   "content": [
                                     "Obudziło go mruganie ",
                                     {
@@ -299,6 +303,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "pl",
             "content": [
               {
                 "tag": "div",
@@ -391,6 +396,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "pl",
             "content": [
               {
                 "tag": "li",
@@ -428,6 +434,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "pl",
                                   "content": [
                                     "Dzieci ",
                                     {
@@ -502,6 +509,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "pl",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -575,6 +583,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "pl",
                                   "content": [
                                     "Jego spojrzenie ",
                                     {
@@ -632,6 +641,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "pl",
                                   "content": [
                                     "Nowa autostrada ",
                                     {
@@ -660,6 +670,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "pl",
             "content": [
               {
                 "tag": "div",

@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -103,6 +104,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -119,6 +121,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "take my hand"
                                 }
                               ]
@@ -183,6 +186,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "elle ",
                                     {
@@ -200,6 +204,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "she is drinking a coffee"
                                 }
                               ]
@@ -264,6 +269,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Je vais ",
                                     {
@@ -281,6 +287,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "I'll ",
                                     {
@@ -355,6 +362,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -371,6 +379,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "to ",
                                     {
@@ -445,6 +454,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -461,6 +471,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "to make a decision"
                                 }
                               ]
@@ -482,6 +493,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -498,6 +510,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "to take draconian measures"
                                 }
                               ]
@@ -562,6 +575,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "le feu ne ",
                                     {
@@ -579,6 +593,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "the fire won't start"
                                 }
                               ]
@@ -600,6 +615,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "la sauce ne ",
                                     {
@@ -617,6 +633,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "the sauce isn't thickening"
                                 }
                               ]
@@ -638,6 +655,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "ma mayonnaise ne ",
                                     {
@@ -655,6 +673,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "my mayonnaise isn't setting"
                                 }
                               ]
@@ -719,6 +738,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "je me suis ",
                                     {
@@ -736,6 +756,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "I caught my hand in the door"
                                 }
                               ]
@@ -757,6 +778,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "je me suis ",
                                     {
@@ -774,6 +796,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "the door hit me in the face"
                                 }
                               ]
@@ -838,6 +861,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Qu'est-ce qui t'a ",
                                     {
@@ -855,6 +879,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "What were you thinking? What got into you? What came over you?"
                                 }
                               ]
@@ -876,6 +901,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Qu'est-ce qui lui a ",
                                     {
@@ -893,6 +919,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "What was he thinking? What got into him?"
                                 }
                               ]
@@ -914,6 +941,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": "bien lui en prit"
                                 },
                                 {
@@ -921,6 +949,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "good for him; it was a good choice"
                                 }
                               ]
@@ -985,6 +1014,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": "prendre en aversion"
                                 },
                                 {
@@ -992,6 +1022,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "take an aversion (to)"
                                 }
                               ]
@@ -1013,6 +1044,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": "prendre en grippe"
                                 },
                                 {
@@ -1020,6 +1052,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "take a dislike (to)"
                                 }
                               ]
@@ -1041,6 +1074,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": "prendre en dégoût"
                                 },
                                 {
@@ -1048,6 +1082,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "become disgusted (by)"
                                 }
                               ]
@@ -1095,6 +1130,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": "prendre de la vitesse"
                                 },
                                 {
@@ -1102,6 +1138,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "to gain speed"
                                 }
                               ]
@@ -1123,6 +1160,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": "prendre du galon"
                                 },
                                 {
@@ -1130,6 +1168,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "to gain a promotion"
                                 }
                               ]
@@ -1151,6 +1190,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": "prendre de l'avance"
                                 },
                                 {
@@ -1158,6 +1198,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "to gain ground"
                                 }
                               ]
@@ -1231,6 +1272,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": "Ça va me prendre au moins deux heures pour le mettre à jour."
                                 },
                                 {
@@ -1238,6 +1280,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "It's going to take me at least two hours to update it."
                                 }
                               ]
@@ -1311,6 +1354,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Pour finir dans deux heures, ",
                                     {
@@ -1328,6 +1372,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "To finish in two hours, it'll ",
                                     {
@@ -1402,6 +1447,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": "il prend [quelque chose] à [quelqu'un]"
                                 },
                                 {
@@ -1409,6 +1455,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "[something] ",
                                     {
@@ -1440,6 +1487,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": "Il lui prend une fantaisie de mettre le feu à la maison."
                                 },
                                 {
@@ -1447,6 +1495,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "A fancy comes over him to set fire to the house."
                                 }
                               ]
@@ -1468,6 +1517,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Et s'il me ",
                                     {
@@ -1485,6 +1535,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "And if I ",
                                     {
@@ -1502,6 +1553,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "2015, Zaz, Si jamais j'oublie"
                                 }
                               ]
@@ -1590,6 +1642,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1653,6 +1706,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Il ",
                                     {
@@ -1670,6 +1724,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "There ",
                                     {
@@ -1818,6 +1873,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1936,6 +1992,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1973,6 +2030,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "Oui, je suis ",
                                     {
@@ -1990,6 +2048,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Yes, I ",
                                     {
@@ -2021,6 +2080,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fr",
                                   "content": [
                                     "tomber ",
                                     {
@@ -2037,6 +2097,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "to reach an agreement, to agree"
                                 }
                               ]

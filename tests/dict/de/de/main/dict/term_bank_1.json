@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -86,6 +87,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Der ",
                                     {
@@ -114,6 +116,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
@@ -248,6 +251,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -285,6 +289,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Sindbad band sich, um seinem Schicksal auf einer abgelegenen Insel zu entkommen, an ein Bein des Vogels ",
                                     {
@@ -312,6 +317,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
@@ -411,6 +417,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -448,6 +455,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Ich werde das Auto in die ",
                                     {
@@ -479,6 +487,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Ein Mann steht vor seinem Opel allein in einer ",
                                     {
@@ -510,6 +519,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Leo stand schon draußen vor der ",
                                     {
@@ -527,6 +537,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Heinrich Böll: Ansichten eines Clowns. Roman. Insel, Leipzig 1990, ISBN 3-7351-0161-5, Seite 68."
                                 }
                               ]
@@ -574,6 +585,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Ein Mann steht vor seinem Opel allein in einer ",
                                     {
@@ -605,6 +617,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Leo stand schon draußen vor der ",
                                     {
@@ -622,6 +635,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Heinrich Böll: Ansichten eines Clowns. Roman. Insel, Leipzig 1990, ISBN 3-7351-0161-5, Seite 68."
                                 }
                               ]
@@ -643,6 +657,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Als ich zur ",
                                     {
@@ -745,6 +760,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Selbstverständlich werden in der ",
                                     {
@@ -762,6 +778,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Online-Ausgabe der Jungfrau Zeitung, Lernen Sie das neue Team kennen, 03.07.2009"
                                 }
                               ]
@@ -780,6 +797,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
@@ -879,6 +897,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -916,6 +935,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Er ",
                                     {
@@ -954,6 +974,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Hast du die Heizung ",
                                     {
@@ -984,6 +1005,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Ich ",
                                     {
@@ -1048,6 +1070,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Es war ",
                                     {
@@ -1079,6 +1102,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Sie war Trudis Vorschlag gefolgt und ",
                                     {
@@ -1104,6 +1128,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Katharina Adler: Ida. Roman. 1. Auflage. Rowohlt Verlag, Reinbek bei Hamburg 2018, ISBN 978-3-498-00093-6, Seite 384 ."
                                 }
                               ]
@@ -1151,6 +1176,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Wenn man mit einem Buben ",
                                     {
@@ -1182,6 +1208,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Sie ",
                                     {
@@ -1246,6 +1273,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Was unsere Freundschaft ",
                                     {
@@ -1303,6 +1331,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Kinder ",
                                     {
@@ -1367,6 +1396,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Es ",
                                     {
@@ -1432,6 +1462,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Am anderen Ufer konnte der Forscher eine Gruppe Krokodile ",
                                     {
@@ -1488,6 +1519,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Die Bauern ",
                                     {
@@ -1526,6 +1558,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Beim nächsten H",
                                     {
@@ -1599,6 +1632,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Das muss er mit seinem Gewissen ",
                                     {
@@ -1627,6 +1661,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
@@ -1775,6 +1810,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -1812,6 +1848,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Anna und ",
                                     {
@@ -1843,6 +1880,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1873,6 +1911,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1970,6 +2009,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -2007,6 +2047,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Was haben wir ",
                                     {
@@ -2038,6 +2079,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2094,6 +2136,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Was wird ",
                                     {
@@ -2151,6 +2194,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Das ist ",
                                     {
@@ -2219,6 +2263,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2275,6 +2320,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2302,6 +2348,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
@@ -2415,6 +2462,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -2478,6 +2526,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2508,6 +2557,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2538,6 +2588,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Vormittags sollten die Schüler ",
                                     {
@@ -2629,6 +2680,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Ab morgen gehst du ",
                                     {
@@ -2676,6 +2728,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Im W",
                                     {
@@ -2749,6 +2802,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Im W",
                                     {
@@ -2796,6 +2850,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2826,6 +2881,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Ich will ",
                                     {
@@ -2891,6 +2947,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2921,6 +2978,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2951,6 +3009,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Halloweenscherze versetzen ke",
                                     {
@@ -2995,6 +3054,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
@@ -3108,6 +3168,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -3162,6 +3223,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Er ",
                                     {
@@ -3243,6 +3305,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Bei Oma und Opa war es l",
                                     {
@@ -3316,6 +3379,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Sie kann mir in dieser Sache nichts ",
                                     {
@@ -3343,6 +3407,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
@@ -3449,6 +3514,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -3486,6 +3552,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Seit ich die neue Brille habe, ",
                                     {
@@ -3517,6 +3584,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Das Kindermädchen ",
                                     {
@@ -3548,6 +3616,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -3621,6 +3690,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Das ",
                                     {
@@ -3652,6 +3722,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Dann wollen wir mal ",
                                     {
@@ -3683,6 +3754,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Wenn ich das richtig ",
                                     {
@@ -3711,6 +3783,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
@@ -3824,6 +3897,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -3861,6 +3935,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Folgen Sie mir ",
                                     {
@@ -3892,6 +3967,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "\"Viele Vögel brüten ",
                                     {
@@ -3923,6 +3999,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Seine explosive Fracht transportierte er in einem ",
                                     {
@@ -3940,6 +4017,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Christine Richter: Attentäter ohne Netzwerk. In: G/Geschichte. Nummer 5/2017, ISSN 1617-9412, Seite 45."
                                 }
                               ]
@@ -3958,6 +4036,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
@@ -4064,6 +4143,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -4101,6 +4181,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Lucas arbeitet in ",
                                     {
@@ -4132,6 +4213,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Von Paris aus ist ",
                                     {
@@ -4149,6 +4231,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Wikipedia-Artikel „Nantes“"
                                 }
                               ]
@@ -4237,6 +4320,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -4274,6 +4358,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Nur Myriam Dyckhoff, eigentlich Torhüterin, und Trainerin Gabi ",
                                     {
@@ -4291,6 +4376,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Abbenhaus spricht Klartext. Westfälische Nachrichten, 5. Februar 2013, abgerufen am 27. September 2013."
                                 }
                               ]
@@ -4379,6 +4465,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -4416,6 +4503,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Die ",
                                     {
@@ -4433,6 +4521,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "bento: The Rock bekommt eine Tochter – und verneigt sich vor allen Frauen. 24. April 2018, abgerufen am 12. Mai 2018."
                                 }
                               ]
@@ -4454,6 +4543,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Wegen der heftigen Erschütterung fiel ein Stück der Zimmerdecke genau in den Korb, in dem die ",
                                     {

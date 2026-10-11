@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "nl",
             "content": [
               {
                 "tag": "li",
@@ -86,6 +87,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "nl",
                                   "content": [
                                     "En daarna was hij ",
                                     {
@@ -114,6 +116,7 @@
             "data": {
               "content": "related-words"
             },
+            "lang": "nl",
             "content": [
               {
                 "tag": "div",

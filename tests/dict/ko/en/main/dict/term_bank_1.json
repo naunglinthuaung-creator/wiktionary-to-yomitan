@@ -71,6 +71,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -182,6 +183,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -219,6 +221,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     "1",
                                     {
@@ -236,6 +239,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "from 1 to 10"
                                 }
                               ]
@@ -283,6 +287,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     "집",
                                     {
@@ -300,6 +305,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "I'm taking a nap ",
                                     {
@@ -357,6 +363,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     "국가",
                                     {
@@ -374,6 +381,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "the money which the government gave out"
                                 }
                               ]
@@ -484,6 +492,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -521,6 +530,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -537,6 +547,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -567,6 +578,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -583,6 +595,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "to ",
                                     {
@@ -666,6 +679,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -682,6 +696,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -712,6 +727,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -728,6 +744,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "to skim the surface"
                                 }
                               ]
@@ -749,6 +766,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -765,6 +783,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "mild-mannered but actually foolish"
                                 }
                               ]
@@ -812,6 +831,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -828,6 +848,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "to play ",
                                     {
@@ -885,6 +906,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -901,6 +923,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -931,6 +954,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -947,6 +971,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "freshly eaten pickled vegetables (without fermentation)"
                                 }
                               ]
@@ -1057,6 +1082,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1103,6 +1129,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ko",
                                       "content": [
                                         "다시는 담배를 피우지 않",
                                         {
@@ -1120,6 +1147,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": "I won't smoke again!"
                                     }
                                   ]
@@ -1141,6 +1169,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ko",
                                       "content": [
                                         "철수가 오늘 김밥을 먹",
                                         {
@@ -1158,6 +1187,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": "Cheolsu said he would eat kimbap today."
                                     }
                                   ]
@@ -1200,6 +1230,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ko",
                                       "content": [
                                         "내일 비가 오",
                                         {
@@ -1217,6 +1248,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": "Tomorrow it will probably rain."
                                     }
                                   ]
@@ -1238,6 +1270,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ko",
                                       "content": [
                                         "어제 모스크바에서도 눈이 내렸",
                                         {
@@ -1255,6 +1288,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": "It probably snowed in Moscow too yesterday, right?"
                                     }
                                   ]
@@ -1297,6 +1331,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ko",
                                       "content": [
                                         "제가 말을 좀 해도 되",
                                         {
@@ -1314,6 +1349,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": "Would it be okay if I said something?"
                                     }
                                   ]
@@ -1426,6 +1462,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1463,6 +1500,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ko",
                                   "content": [
                                     "여러분, 종이 신문을 ",
                                     {
@@ -1480,6 +1518,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "Ladies and gentlemen (or everybody, you guys), do you read paper newspapers?"
                                 }
                               ]

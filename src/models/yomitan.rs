@@ -10,7 +10,7 @@
 use serde::ser::{SerializeStruct, SerializeTuple, Serializer};
 use serde::{Deserialize, Serialize};
 
-use crate::{Map, models::kaikki::Tag, tags::ScriptTag};
+use crate::{Map, lang::Lang, models::kaikki::Tag, tags::ScriptTag};
 
 /// A custom type for a yomitan dictionary.
 ///
@@ -373,6 +373,47 @@ impl NTag {
     }
 }
 
+/// A `lang` attribute: the script of an example, or a language.
+///
+/// The yomitan side of [`ScriptTag`], which is kaikki side: parsed from the tags of an example.
+///
+/// Written explicitly so the css `:lang` rules match the real language, and also work in formats
+/// that cannot rely on Yomitan adding the `lang` attributes (mdict, html).
+#[derive(Debug, Clone, Copy)]
+pub enum LangAttr {
+    Script(ScriptTag),
+    Lang(Lang),
+}
+
+impl LangAttr {
+    /// Chinese lects get plain `zh`, the one the css selects on.
+    pub fn as_str(&self) -> &str {
+        match self {
+            Self::Script(script) => script.as_lang_attr(),
+            Self::Lang(Lang::Cmn | Lang::Yue) => "zh",
+            Self::Lang(lang) => lang.iso(),
+        }
+    }
+}
+
+impl From<ScriptTag> for LangAttr {
+    fn from(script: ScriptTag) -> Self {
+        Self::Script(script)
+    }
+}
+
+impl From<Lang> for LangAttr {
+    fn from(lang: Lang) -> Self {
+        Self::Lang(lang)
+    }
+}
+
+impl Serialize for LangAttr {
+    fn serialize<S: Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
+        serializer.serialize_str(self.as_str())
+    }
+}
+
 /// One of the possible values of the [`Node`] enum.
 ///
 /// Note that fields are ordered for visualization and may be different from yomitan builder order.
@@ -387,7 +428,7 @@ pub struct GenericNode {
     pub data: Option<NodeData>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub lang: Option<ScriptTag>,
+    pub lang: Option<LangAttr>,
 
     pub content: Node,
 }
@@ -424,8 +465,8 @@ impl GenericNode {
     }
 
     #[must_use]
-    pub const fn with_lang(mut self, lang: Option<ScriptTag>) -> Self {
-        self.lang = lang;
+    pub fn with_lang(mut self, lang: impl Into<LangAttr>) -> Self {
+        self.lang = Some(lang.into());
         self
     }
 
@@ -543,5 +584,19 @@ impl Serialize for TagInfo {
         tup.serialize_element(&self.long_tag)?;
         tup.serialize_element(&self.popularity_score)?;
         tup.end()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn lang_attr_values() {
+        assert_eq!(LangAttr::from(Lang::Ja).as_str(), "ja");
+        assert_eq!(LangAttr::from(Lang::Simple).as_str(), "en");
+        assert_eq!(LangAttr::from(Lang::Cmn).as_str(), "zh");
+        assert_eq!(LangAttr::from(Lang::Yue).as_str(), "zh");
+        assert_eq!(LangAttr::from(ScriptTag::ZhHant).as_str(), "zh-Hant");
     }
 }
