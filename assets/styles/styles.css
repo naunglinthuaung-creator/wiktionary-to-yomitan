@@ -91,7 +91,7 @@ div[data-sc-content="example-sentence-c"] {
    Wiktionary does the same per script: Hani/Hans/Hant, Hira/Jpan/Kana and Hang/Kore are 120%
    (with line-height 1 on the span), while Latin, Cyrillic and Greek are left alone
    https://en.wiktionary.org/wiki/MediaWiki:Gadget-LanguagesAndScripts.css
-   Yomitan marks text containers with lang="ja" or lang="zh" for these scripts. */
+   wty writes an explicit lang on these containers, so the rules select on the real language. */
 div[data-sc-content="example-sentence-a"]:is(:lang(ja), :lang(zh)) {
     font-size: 1.2em;
     line-height: 1.19;

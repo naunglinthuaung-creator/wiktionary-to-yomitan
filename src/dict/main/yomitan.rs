@@ -16,8 +16,8 @@ use crate::{
     models::{
         kaikki::{Example, Linkage, Offset, Tag},
         yomitan::{
-            BacklinkContent, BacklinkContentKind, DetailedDefinition, GenericNode, NTag, Node,
-            TagInfo, TermBankEntry, TermBankEntryForm, YomitanDict, wrap,
+            BacklinkContent, BacklinkContentKind, DetailedDefinition, GenericNode, LangAttr, NTag,
+            Node, TagInfo, TermBankEntry, TermBankEntryForm, YomitanDict, wrap,
         },
     },
     tags::{Pos, find_tag_in_bank, localize_tag, localize_tag_info},
@@ -73,12 +73,13 @@ fn to_yomitan_lemma(
     }
 
     detailed_definition_content.push(structured_glosses(
+        source,
         target,
         &info.gloss_tree,
         &common_short_tags_found,
     ));
 
-    if let Some(related_words_node) = structured_related_words(info) {
+    if let Some(related_words_node) = structured_related_words(source, info) {
         detailed_definition_content.push(related_words_node);
     }
 
@@ -172,11 +173,12 @@ fn structured_backlink(wlink: String, klink: String) -> Node {
 }
 
 fn structured_glosses(
+    source: Lang,
     target: Lang,
     gloss_tree: &GlossTree,
     common_short_tags_found: &[Tag],
 ) -> Node {
-    wrap(
+    GenericNode::new(
         NTag::Ol,
         "glosses",
         Node::Array(
@@ -185,6 +187,7 @@ fn structured_glosses(
                 .map(|(gloss, gloss_info)| {
                     let mut nodes = Vec::new();
                     push_gloss_nodes(
+                        source,
                         target,
                         gloss,
                         gloss_info,
@@ -197,10 +200,13 @@ fn structured_glosses(
                 .collect(),
         ),
     )
+    .with_lang(target)
+    .into_node()
 }
 
 // Recursive helper ~ should return Node for consistency
 fn structured_glosses_go(
+    source: Lang,
     target: Lang,
     gloss_tree: &GlossTree,
     common_short_tags_found: &[Tag],
@@ -210,6 +216,7 @@ fn structured_glosses_go(
 
     for (gloss, gloss_info) in gloss_tree {
         push_gloss_nodes(
+            source,
             target,
             gloss,
             gloss_info,
@@ -225,6 +232,7 @@ fn structured_glosses_go(
 /// Append the nodes of a single gloss: the gloss itself, then a nested list of its
 /// children, if any.
 fn push_gloss_nodes(
+    source: Lang,
     target: Lang,
     gloss: &str,
     gloss_info: &GlossInfo,
@@ -252,7 +260,7 @@ fn push_gloss_nodes(
     level_content.push(Node::Text(gloss.into()));
 
     if !gloss_info.examples.is_empty() {
-        level_content.push(structured_examples(target, &gloss_info.examples));
+        level_content.push(structured_examples(source, target, &gloss_info.examples));
     }
 
     nested.push(wrap(html_tag, "", level_content));
@@ -269,6 +277,7 @@ fn push_gloss_nodes(
         NTag::Ul,
         "",
         Node::Array(structured_glosses_go(
+            source,
             target,
             children,
             &new_common_short_tags_found,
@@ -322,7 +331,7 @@ fn structured_tags(target: Lang, tags: &[Tag], common_short_tags_found: &[Tag]) 
     }
 }
 
-fn structured_examples(target: Lang, examples: &[Example]) -> Node {
+fn structured_examples(source: Lang, target: Lang, examples: &[Example]) -> Node {
     debug_assert!(!examples.is_empty());
 
     let localized_label = wrap(
@@ -336,29 +345,37 @@ fn structured_examples(target: Lang, examples: &[Example]) -> Node {
         "details-entry-examples",
         Node::Array(
             std::iter::once(localized_label)
-                .chain(examples.iter().map(structured_example))
+                .chain(
+                    examples
+                        .iter()
+                        .map(|example| structured_example(source, target, example)),
+                )
                 .collect(),
         ),
     )
 }
 
 // TODO: change a-b-c into a more descriptive name: text/translation/ref
-fn structured_example(example: &Example) -> Node {
+fn structured_example(source: Lang, target: Lang, example: &Example) -> Node {
     let mut structured_example_content = GenericNode::new(
         NTag::Div,
         "example-sentence-a",
         structured_example_text(&example.text, &example.bold_text_offsets),
     )
-    .with_lang(example.lang)
+    .with_lang(example.lang.map_or_else(|| source.into(), LangAttr::from))
     .into_node()
     .into_array_node();
 
     if !example.translation.is_empty() {
-        structured_example_content.push(wrap(
-            NTag::Div,
-            "example-sentence-b",
-            structured_example_text(&example.translation, &example.bold_translation_offsets),
-        ));
+        structured_example_content.push(
+            GenericNode::new(
+                NTag::Div,
+                "example-sentence-b",
+                structured_example_text(&example.translation, &example.bold_translation_offsets),
+            )
+            .with_lang(target)
+            .into_node(),
+        );
     }
 
     if !example.reference.is_empty() {
@@ -367,11 +384,11 @@ fn structured_example(example: &Example) -> Node {
             .strip_suffix(':')
             .unwrap_or(&example.reference)
             .to_string();
-        structured_example_content.push(wrap(
-            NTag::Div,
-            "example-sentence-c",
-            Node::Text(reference),
-        ));
+        structured_example_content.push(
+            GenericNode::new(NTag::Div, "example-sentence-c", Node::Text(reference))
+                .with_lang(target)
+                .into_node(),
+        );
     }
 
     wrap(
@@ -423,7 +440,7 @@ fn structured_example_text(text: &str, offsets: &[Offset]) -> Node {
     content
 }
 
-fn structured_related_words(info: &LemmaInfo) -> Option<Node> {
+fn structured_related_words(source: Lang, info: &LemmaInfo) -> Option<Node> {
     let nodes: Vec<Node> = structured_linkages(
         &info.synonyms,
         ["synonyms", "synonyms-list", "synonym-item"],
@@ -446,7 +463,11 @@ fn structured_related_words(info: &LemmaInfo) -> Option<Node> {
         return None;
     }
 
-    Some(wrap(NTag::Div, "related-words", Node::Array(nodes)))
+    Some(
+        GenericNode::new(NTag::Div, "related-words", Node::Array(nodes))
+            .with_lang(source)
+            .into_node(),
+    )
 }
 
 fn structured_linkages(
