@@ -19,8 +19,8 @@ use crate::{
     path::PathManager,
 };
 
-pub struct WiktextractDb {
-    pub conn: Connection,
+pub(crate) struct WiktextractDb {
+    pub(crate) conn: Connection,
 }
 
 impl WiktextractDb {
@@ -66,7 +66,7 @@ impl WiktextractDb {
         }
     }
 
-    pub fn open<P>(root_dir: P, edition: Edition) -> Result<Self>
+    pub(crate) fn open<P>(root_dir: P, edition: Edition) -> Result<Self>
     where
         P: AsRef<Path>,
     {
@@ -103,7 +103,12 @@ impl WiktextractDb {
     /// Resolve the jsonl of `edition` (downloading it if missing) and import it.
     ///
     /// Returns how long the import took, which is what the release metadata records.
-    pub fn build<P>(root_dir: P, edition: Edition, force: bool, quiet: bool) -> Result<Duration>
+    pub(crate) fn build<P>(
+        root_dir: P,
+        edition: Edition,
+        force: bool,
+        quiet: bool,
+    ) -> Result<Duration>
     where
         P: AsRef<Path>,
     {
@@ -144,7 +149,7 @@ impl WiktextractDb {
         Ok(elapsed)
     }
 
-    pub fn create<P>(root_dir: P, edition: Edition, path_jsonl: PathBuf) -> Result<Self>
+    fn create<P>(root_dir: P, edition: Edition, path_jsonl: PathBuf) -> Result<Self>
     where
         P: AsRef<Path>,
     {
@@ -201,7 +206,7 @@ impl WiktextractDb {
     }
 
     #[tracing::instrument(skip_all, level = "debug")]
-    pub fn import_jsonl<P: AsRef<Path>>(&mut self, jsonl_path: P) -> Result<()> {
+    fn import_jsonl<P: AsRef<Path>>(&mut self, jsonl_path: P) -> Result<()> {
         let start = Instant::now();
         let file = File::open(&jsonl_path)?;
         let reader = BufReader::new(file);
@@ -245,7 +250,7 @@ impl WiktextractDb {
         Ok(())
     }
 
-    pub fn blob_to_word_entry(blob: &[u8]) -> Result<WordEntry> {
+    pub(crate) fn blob_to_word_entry(blob: &[u8]) -> Result<WordEntry> {
         let archived: &Archived<WordEntry> =
             rkyv::access::<Archived<WordEntry>, rkyv::rancor::Error>(blob)?;
         let word_entry: WordEntry = rkyv::deserialize::<WordEntry, rkyv::rancor::Error>(archived)?;
