@@ -12,7 +12,7 @@ use std::{
     time::Instant,
 };
 
-use anyhow::Result;
+use anyhow::{Context, Result};
 use rayon::ThreadPoolBuilder;
 use rayon::prelude::*;
 use zip::{CompressionMethod, ZipWriter, write::SimpleFileOptions};
@@ -332,11 +332,14 @@ pub fn make_dict_from_db<D: Dictionary + DQuery>(
 
     let mut irs = D::I::default();
 
-    for edition in edition_pm
+    let to_read: Vec<Edition> = edition_pm
         .variants()
         .into_iter()
         .filter(|e| editions.contains(e))
-    {
+        .collect();
+    WiktextractDb::ensure_built(&opts.root_dir, &to_read)?;
+
+    for edition in to_read {
         let db = WiktextractDb::open(&opts.root_dir, edition)?;
         let langs = Langs {
             edition,
@@ -354,7 +357,11 @@ pub fn make_dict_from_db<D: Dictionary + DQuery>(
 
         while let Some(row) = rows.next()? {
             let blob: &[u8] = row.get_ref(0)?.as_blob()?;
-            let mut entry = WiktextractDb::blob_to_word_entry(blob)?;
+            let mut entry = WiktextractDb::blob_to_word_entry(blob).with_context(|| {
+                format!(
+                    "cannot read the {edition} database, it was probably built by another version of wty: rebuild it with `wty db build {edition} --force`"
+                )
+            })?;
 
             if rejected(&entry, opts) {
                 continue;

@@ -9,7 +9,7 @@ use std::{
 use anyhow::{Context, Result};
 use rayon::prelude::*;
 use rkyv::Archived;
-use rusqlite::{Connection, params};
+use rusqlite::{Connection, OpenFlags, params};
 
 use crate::{
     cli::{DbArgs, DbOp, DictName, MainArgs, MainLangs, Options},
@@ -40,17 +40,38 @@ impl WiktextractDb {
         Self::db_folder(root_dir).join(format!("wiktextract_{edition}.db"))
     }
 
+    /// Fail if some of `editions` has no database.
+    pub(crate) fn ensure_built<P>(root_dir: P, editions: &[Edition]) -> Result<()>
+    where
+        P: AsRef<Path>,
+    {
+        let missing: Vec<_> = editions
+            .iter()
+            .filter(|&&edition| !Self::db_path_for(&root_dir, edition).exists())
+            .collect();
+        let folder = Self::db_folder(&root_dir);
+        let folder = folder.display();
+
+        match missing.as_slice() {
+            [] => Ok(()),
+            [edition] => {
+                anyhow::bail!(
+                    "no database for {edition} in {folder}: run `wty db build {edition}` first"
+                )
+            }
+            _ => anyhow::bail!(
+                "no database for {} editions in {folder}: run `wty db build` first",
+                missing.len()
+            ),
+        }
+    }
+
     pub fn open<P>(root_dir: P, edition: Edition) -> Result<Self>
     where
         P: AsRef<Path>,
     {
         let db_path = Self::db_path_for(root_dir, edition);
-        anyhow::ensure!(
-            db_path.exists(),
-            "no database for the {edition} edition at {}: run `wty db build {edition}` first",
-            db_path.display()
-        );
-        let conn = Connection::open(&db_path)?;
+        let conn = Connection::open_with_flags(db_path, OpenFlags::SQLITE_OPEN_READ_ONLY)?;
         Ok(Self { conn })
     }
 
