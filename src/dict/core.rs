@@ -122,7 +122,7 @@ pub trait Dictionary {
     fn to_yomitan(&self, langs: LangSpecs, irs: &Self::I) -> YomitanDict;
 }
 
-fn rejected(entry: &WordEntry, opts: &Options) -> bool {
+pub(super) fn rejected(entry: &WordEntry, opts: &Options) -> bool {
     opts.reject.iter().any(|(k, v)| k.field_value(entry) == v)
         || !opts.filter.iter().all(|(k, v)| k.field_value(entry) == v)
 }

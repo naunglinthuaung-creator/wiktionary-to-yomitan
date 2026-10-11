@@ -18,6 +18,6 @@ pub use glossary::{DGlossary, DGlossaryExtended};
 pub use ipa::{DIpa, DIpaMerged};
 pub use main::DMain;
 
-pub use release::{make_dict_from_db, release};
+pub use release::{make_dict, make_dict_from_db, release};
 pub use scan::scan;
 pub use writer::WriterFormat;

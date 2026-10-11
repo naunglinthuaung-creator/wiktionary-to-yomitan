@@ -9,7 +9,7 @@ use std::{
 use anyhow::{Context, Result};
 use rayon::prelude::*;
 use rkyv::Archived;
-use rusqlite::{Connection, params};
+use rusqlite::{Connection, OpenFlags, params};
 
 use crate::{
     cli::{DbArgs, DbOp, DictName, MainArgs, MainLangs, Options},
@@ -19,8 +19,8 @@ use crate::{
     path::PathManager,
 };
 
-pub struct WiktextractDb {
-    pub conn: Connection,
+pub(crate) struct WiktextractDb {
+    pub(crate) conn: Connection,
 }
 
 impl WiktextractDb {
@@ -40,12 +40,38 @@ impl WiktextractDb {
         Self::db_folder(root_dir).join(format!("wiktextract_{edition}.db"))
     }
 
-    pub fn open<P>(root_dir: P, edition: Edition) -> Result<Self>
+    /// Fail if some of `editions` has no database.
+    pub(crate) fn ensure_built<P>(root_dir: P, editions: &[Edition]) -> Result<()>
+    where
+        P: AsRef<Path>,
+    {
+        let missing: Vec<_> = editions
+            .iter()
+            .filter(|&&edition| !Self::db_path_for(&root_dir, edition).exists())
+            .collect();
+        let folder = Self::db_folder(&root_dir);
+        let folder = folder.display();
+
+        match missing.as_slice() {
+            [] => Ok(()),
+            [edition] => {
+                anyhow::bail!(
+                    "no database for {edition} in {folder}: run `wty db build {edition}` first"
+                )
+            }
+            _ => anyhow::bail!(
+                "no database for {} editions in {folder}: run `wty db build` first",
+                missing.len()
+            ),
+        }
+    }
+
+    pub(crate) fn open<P>(root_dir: P, edition: Edition) -> Result<Self>
     where
         P: AsRef<Path>,
     {
         let db_path = Self::db_path_for(root_dir, edition);
-        let conn = Connection::open(&db_path)?;
+        let conn = Connection::open_with_flags(db_path, OpenFlags::SQLITE_OPEN_READ_ONLY)?;
         Ok(Self { conn })
     }
 
@@ -77,7 +103,12 @@ impl WiktextractDb {
     /// Resolve the jsonl of `edition` (downloading it if missing) and import it.
     ///
     /// Returns how long the import took, which is what the release metadata records.
-    pub fn build<P>(root_dir: P, edition: Edition, force: bool, quiet: bool) -> Result<Duration>
+    pub(crate) fn build<P>(
+        root_dir: P,
+        edition: Edition,
+        force: bool,
+        quiet: bool,
+    ) -> Result<Duration>
     where
         P: AsRef<Path>,
     {
@@ -118,7 +149,7 @@ impl WiktextractDb {
         Ok(elapsed)
     }
 
-    pub fn create<P>(root_dir: P, edition: Edition, path_jsonl: PathBuf) -> Result<Self>
+    fn create<P>(root_dir: P, edition: Edition, path_jsonl: PathBuf) -> Result<Self>
     where
         P: AsRef<Path>,
     {
@@ -175,7 +206,7 @@ impl WiktextractDb {
     }
 
     #[tracing::instrument(skip_all, level = "debug")]
-    pub fn import_jsonl<P: AsRef<Path>>(&mut self, jsonl_path: P) -> Result<()> {
+    fn import_jsonl<P: AsRef<Path>>(&mut self, jsonl_path: P) -> Result<()> {
         let start = Instant::now();
         let file = File::open(&jsonl_path)?;
         let reader = BufReader::new(file);
@@ -219,7 +250,7 @@ impl WiktextractDb {
         Ok(())
     }
 
-    pub fn blob_to_word_entry(blob: &[u8]) -> Result<WordEntry> {
+    pub(crate) fn blob_to_word_entry(blob: &[u8]) -> Result<WordEntry> {
         let archived: &Archived<WordEntry> =
             rkyv::access::<Archived<WordEntry>, rkyv::rancor::Error>(blob)?;
         let word_entry: WordEntry = rkyv::deserialize::<WordEntry, rkyv::rancor::Error>(archived)?;

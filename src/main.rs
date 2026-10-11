@@ -5,9 +5,7 @@ use tracing_subscriber::fmt::format::FmtSpan;
 use wty::{
     cli::{Cli, Command, LangSpecs},
     db,
-    dict::{
-        DGlossary, DGlossaryExtended, DIpa, DIpaMerged, DMain, make_dict_from_jsonl, release, scan,
-    },
+    dict::{DGlossary, DGlossaryExtended, DIpa, DIpaMerged, DMain, make_dict, release, scan},
     download::find_or_download_jsonl,
     lang::{Edition, Lang},
     path::PathManager,
@@ -37,11 +35,11 @@ fn run(cmd: Command) -> Result<()> {
     tracing::trace!("{:#?}", cmd);
 
     match cmd {
-        Command::Main(args) => make_dict_from_jsonl(DMain, args),
-        Command::Glossary(args) => make_dict_from_jsonl(DGlossary, args),
-        Command::GlossaryExtended(args) => make_dict_from_jsonl(DGlossaryExtended, args),
-        Command::Ipa(args) => make_dict_from_jsonl(DIpa, args),
-        Command::IpaMerged(args) => make_dict_from_jsonl(DIpaMerged, args),
+        Command::Main(args) => make_dict(DMain, args.options.from_db, args),
+        Command::Glossary(args) => make_dict(DGlossary, args.options.from_db, args),
+        Command::GlossaryExtended(args) => make_dict(DGlossaryExtended, args.options.from_db, args),
+        Command::Ipa(args) => make_dict(DIpa, args.options.from_db, args),
+        Command::IpaMerged(args) => make_dict(DIpaMerged, args.options.from_db, args),
         Command::Download(args) => {
             // NOTE: uses MainArgs, so it expects two language codes.
             let langs: LangSpecs = args.langs.clone().try_into()?;

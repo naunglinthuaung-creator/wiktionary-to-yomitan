@@ -12,7 +12,7 @@ use std::{
     time::Instant,
 };
 
-use anyhow::Result;
+use anyhow::{Context, Result};
 use rayon::ThreadPoolBuilder;
 use rayon::prelude::*;
 use zip::{CompressionMethod, ZipWriter, write::SimpleFileOptions};
@@ -31,7 +31,7 @@ use crate::{
     db::WiktextractDb,
     dict::{
         DGlossary, DGlossaryExtended, DIpa, DIpaMerged, DMain, Dictionary, Langs, WriterFormat,
-        core::skip_below_min_entries,
+        core::{make_dict_from_jsonl, rejected, skip_below_min_entries},
     },
     lang::{Edition, EditionSpec, Lang},
     path::{DictionaryType, PathManager},
@@ -307,6 +307,16 @@ impl DQuery for DGlossary {
         ";
 }
 
+/// Make a dictionary from the kaikki jsonl, or from the databases with `--from-db`.
+pub fn make_dict<D: Dictionary + DQuery>(dict: D, from_db: bool, raw_args: D::A) -> Result<()> {
+    if from_db {
+        make_dict_from_db(dict, raw_args, &Edition::all())?;
+        Ok(())
+    } else {
+        make_dict_from_jsonl(dict, raw_args)
+    }
+}
+
 /// Make a dictionary from database made from a Kaikki jsonlines.
 pub fn make_dict_from_db<D: Dictionary + DQuery>(
     dict: D,
@@ -322,11 +332,14 @@ pub fn make_dict_from_db<D: Dictionary + DQuery>(
 
     let mut irs = D::I::default();
 
-    for edition in edition_pm
+    let to_read: Vec<Edition> = edition_pm
         .variants()
         .into_iter()
         .filter(|e| editions.contains(e))
-    {
+        .collect();
+    WiktextractDb::ensure_built(&opts.root_dir, &to_read)?;
+
+    for edition in to_read {
         let db = WiktextractDb::open(&opts.root_dir, edition)?;
         let langs = Langs {
             edition,
@@ -340,9 +353,24 @@ pub fn make_dict_from_db<D: Dictionary + DQuery>(
             _ => stmt.query([source_pm.iso(), target_pm.iso()])?,
         };
 
+        let mut accepted_count = 0;
+
         while let Some(row) = rows.next()? {
             let blob: &[u8] = row.get_ref(0)?.as_blob()?;
-            let mut entry = WiktextractDb::blob_to_word_entry(blob)?;
+            let mut entry = WiktextractDb::blob_to_word_entry(blob).with_context(|| {
+                format!(
+                    "cannot read the {edition} database, it was probably built by another version of wty: rebuild it with `wty db build {edition} --force`"
+                )
+            })?;
+
+            if rejected(&entry, opts) {
+                continue;
+            }
+
+            if opts.first == Some(accepted_count) {
+                break;
+            }
+            accepted_count += 1;
 
             if dict.skip_if(&entry) {
                 continue;
