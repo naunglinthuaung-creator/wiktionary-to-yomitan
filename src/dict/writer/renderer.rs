@@ -95,14 +95,14 @@ pub trait Renderer {
         html! {
             div class="entry form" {
                 h2 { (tm.term) }
-                h3 { (Self::render_phonetic_transcription(&tm.transcription)) }
+                h3 { (tm.transcription.reading) }
+                (Self::render_phonetic_transcription(&tm.transcription))
             }
         }
     }
 
     fn render_phonetic_transcription(pt: &PhoneticTranscription) -> Markup {
         html! {
-            b { (pt.reading) }
             ul {
                 @for tr in &pt.transcriptions {
                     li {
