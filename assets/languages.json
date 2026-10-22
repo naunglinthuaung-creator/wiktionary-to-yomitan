@@ -135,6 +135,7 @@
     {"iso": "tl",  "language": "Tagalog",                "displayName": "Tagalog",                  "flag": "🇵🇭"                       },
     {"iso": "tg",  "language": "Tajik",                  "displayName": "Tajik",                    "flag": "🇹🇯"                       },
     {"iso": "ta",  "language": "Tamil",                  "displayName": "Tamil",                    "flag": "🇮🇳"                       },
+    {"iso": "tt",  "language": "Tatar",                  "displayName": "Tatar",                    "flag": "🇷🇺"                       },
     {"iso": "te",  "language": "Telugu",                 "displayName": "Telugu",                   "flag": "🇮🇳"                       },
     {"iso": "th",  "language": "Thai",                   "displayName": "Thai",                     "flag": "🇹🇭",   "hasEdition": true },
     {"iso": "bo",  "language": "Tibetan",                "displayName": "Tibetan",                  "flag": "🇨🇳"                       },
