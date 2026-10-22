@@ -142,6 +142,7 @@
   <option value="tl">Tagalog</option>
   <option value="tg">Tajik</option>
   <option value="ta">Tamil</option>
+  <option value="tt">Tatar</option>
   <option value="te">Telugu</option>
   <option value="th">Thai</option>
   <option value="bo">Tibetan</option>
@@ -305,6 +306,7 @@
   <option value="tl">Tagalog</option>
   <option value="tg">Tajik</option>
   <option value="ta">Tamil</option>
+  <option value="tt">Tatar</option>
   <option value="te">Telugu</option>
   <option value="th">Thai</option>
   <option value="bo">Tibetan</option>
