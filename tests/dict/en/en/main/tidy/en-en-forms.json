@@ -69,8 +69,8 @@
       ]
     }
   },
-  "synonyme": {
-    "synonym": {
+  "synonym": {
+    "synonyme": {
       "noun": [
         "altofsense",
         [
@@ -78,7 +78,9 @@
           "archaic"
         ]
       ]
-    },
+    }
+  },
+  "synonyme": {
     "synonymes": {
       "noun": [
         "extracted",
@@ -114,6 +116,17 @@
       ]
     }
   },
+  "peninsula": {
+    "peninsular": {
+      "noun": [
+        "altofsense",
+        [
+          "alt-of",
+          "misspelling"
+        ]
+      ]
+    }
+  },
   "peninsular": {
     "peninsulars": {
       "noun": [
@@ -132,8 +145,8 @@
       ]
     }
   },
-  "1920's": {
-    "1920s": {
+  "1920s": {
+    "1920's": {
       "noun": [
         "altofsense",
         [
@@ -189,8 +202,8 @@
       ]
     }
   },
-  "cephal-": {
-    "cephalo-": {
+  "cephalo-": {
+    "cephal-": {
       "prefix": [
         "altofsense",
         [

@@ -148,20 +148,20 @@
     ""
   ],
   [
-    "synonym",
+    "synonyme",
     "",
     "non-lemma",
     "n",
     0,
     [
       [
-        "synonyme",
+        "synonym",
         [
           "alt-of"
         ]
       ],
       [
-        "synonyme",
+        "synonym",
         [
           "archaic"
         ]
@@ -239,6 +239,29 @@
     ""
   ],
   [
+    "peninsular",
+    "",
+    "non-lemma",
+    "n",
+    0,
+    [
+      [
+        "peninsula",
+        [
+          "alt-of"
+        ]
+      ],
+      [
+        "peninsula",
+        [
+          "misspelling"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
     "peninsulars",
     "",
     "non-lemma",
@@ -273,32 +296,32 @@
     ""
   ],
   [
-    "1920s",
+    "1920's",
     "",
     "non-lemma",
     "n",
     0,
     [
       [
-        "1920's",
+        "1920s",
         [
           "alt-of"
         ]
       ],
       [
-        "1920's",
+        "1920s",
         [
           "alternative"
         ]
       ],
       [
-        "1920's",
+        "1920s",
         [
           "plural"
         ]
       ],
       [
-        "1920's",
+        "1920s",
         [
           "plural-only"
         ]
@@ -393,26 +416,26 @@
     ""
   ],
   [
-    "cephalo-",
+    "cephal-",
     "",
     "non-lemma",
     "",
     0,
     [
       [
-        "cephal-",
+        "cephalo-",
         [
           "alt-of"
         ]
       ],
       [
-        "cephal-",
+        "cephalo-",
         [
           "alternative"
         ]
       ],
       [
-        "cephal-",
+        "cephalo-",
         [
           "morpheme"
         ]

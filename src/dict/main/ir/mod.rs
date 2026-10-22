@@ -1257,26 +1257,9 @@ fn handle_alt_of_sense(entry: &WordEntry, sense: &Sense, irs: &mut Tidy) -> bool
     //
     // At worst, just move this back to process_alt_forms, to not modify the senses.
     for (i, alt_form) in sense.alt_of.iter().enumerate() {
-        // If there was any alt_of, we consider this handled, even if we don't add it to forms
-        handled = true;
-
-        // [en-en] Ignore variations of little value.
-        // misspellings: https://en.wiktionary.org/wiki/peninsular#English
-        // misconstruction: https://en.wiktionary.org/wiki/attributative#English
-        // non-standard: https://en.wiktionary.org/wiki/%27cept
-        // pronunciation-spelling: https://en.wiktionary.org/wiki/Espanish#English
-        // obsolete: https://en.wiktionary.org/wiki/enhabit#English
-        // abbreviation: https://en.wiktionary.org/wiki/pp#English
-        //
-        // NOTE: At some point, this begs the question as to why even add alt_of...
-        if sense.tags.iter().any(|tag| {
-            tag == "misspelling"
-                || tag == "misconstruction"
-                || tag == "nonstandard"
-                || tag == "pronunciation-spelling"
-                || tag == "obsolete"
-                || tag == "abbreviation"
-        }) {
+        // Keep the gloss, a redirect does not fit acronyms and contractions.
+        // https://en.wiktionary.org/wiki/pp#English
+        if sense.tags.iter().any(|tag| tag == "abbreviation") {
             continue;
         }
 
@@ -1298,12 +1281,13 @@ fn handle_alt_of_sense(entry: &WordEntry, sense: &Sense, irs: &mut Tidy) -> bool
         }
 
         irs.insert_form(
-            &entry.word,
             &alt_form.word,
+            &entry.word,
             &entry.pos,
             FormSource::AltOfSense,
             sense_tags.clone(),
         );
+        handled = true;
     }
     handled
 }
