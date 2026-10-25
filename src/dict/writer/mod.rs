@@ -1,11 +1,14 @@
-use std::fmt;
+use std::{fmt, path::PathBuf};
 
 use anyhow::Result;
 use clap::ValueEnum;
+use pangloss::{AltEntry, Definition, Entry};
 
 use crate::{
+    Map, Set,
     cli::{LangSpecs, Options},
     dict::{Dictionary, Intermediate},
+    models::yomitan::{DetailedDefinition, YomitanDict},
     path::PathManager,
     utils::{CHECK_C, pretty_println_at_path},
 };
@@ -24,11 +27,9 @@ use stardict::write_stardict;
 use yomitan::{write_test_yomitan, write_yomitan};
 
 pub const STYLES_CSS: &[u8] = include_bytes!("../../../assets/styles/styles.css");
-pub const STYLES_CSS_EXPERIMENTAL: &[u8] =
-    include_bytes!("../../../assets/styles/styles_experimental.css");
 pub const YOMITAN_CSS: &[u8] = include_bytes!("../../../assets/styles/styles_yomitan.css");
 
-#[derive(ValueEnum, Debug, Default, Clone, Copy)]
+#[derive(ValueEnum, Debug, Default, Clone, Copy, PartialEq, Eq)]
 pub enum WriterFormat {
     // Yomitan zipped
     #[default]
@@ -82,7 +83,7 @@ impl WriterFormat {
         opts: &Options,
         pm: &PathManager,
         irs: &D::I,
-    ) -> Result<()> {
+    ) -> Result<Option<PathBuf>> {
         let wrote_at_path = match self {
             Self::Yomitan => write_yomitan(
                 langs.source,
@@ -93,43 +94,123 @@ impl WriterFormat {
             )?,
             Self::Ir => irs.write(pm)?,
             Self::Html => write_html(opts, pm, dict.to_yomitan(langs, irs))?,
-            Self::Mdict => write_mdict(
-                langs.source,
-                langs.target,
-                opts,
-                pm,
-                dict.to_yomitan(langs, irs),
-            )?,
-            Self::Stardict => write_stardict(
-                langs.source,
-                langs.target,
-                opts,
-                pm,
-                dict.to_yomitan(langs, irs),
-            )?,
+            Self::Mdict => write_mdict(opts, pm, dict.to_yomitan(langs, irs))?,
+            Self::Stardict => write_stardict(opts, pm, dict.to_yomitan(langs, irs))?,
             Self::DebugForms => write_debug_forms(opts, pm, dict.to_yomitan(langs, irs))?,
 
             // We don't need to pretty print a message for these.
             Self::TestHtml => {
                 write_test_html(opts, pm, dict.to_yomitan(langs, irs))?;
-                return Ok(());
+                return Ok(None);
             }
             Self::TestYomitan => {
                 write_test_yomitan(opts, pm, dict.to_yomitan(langs, irs))?;
-                return Ok(());
+                return Ok(None);
             }
             Self::TestYomitanMain => {
                 irs.write(pm)?;
                 write_test_yomitan(opts, pm, dict.to_yomitan(langs, irs))?;
-                return Ok(());
+                return Ok(None);
             }
-            Self::Skip => return Ok(()),
+            Self::Skip => return Ok(None),
         };
 
         if !opts.quiet {
-            pretty_println_at_path(&format!("{CHECK_C} Wrote dict"), wrote_at_path);
+            pretty_println_at_path(&format!("{CHECK_C} Wrote dict"), &wrote_at_path);
         }
 
-        Ok(())
+        Ok(Some(wrote_at_path))
+    }
+}
+
+/// Render every entry of `ydict` with `R`.
+fn build_entries<R: renderer::Renderer>(mut ydict: YomitanDict) -> Vec<Entry> {
+    let mut alts: Map<String, Set<String>> = Map::default();
+    for entry in &ydict.term_bank_form {
+        for def in &entry.definitions {
+            let DetailedDefinition::Inflection((from, _tags)) = def else {
+                panic!("forms must be made from inflections");
+            };
+            let terms = alts.entry(from.clone()).or_default();
+            if !terms.contains(&entry.term) {
+                terms.insert(entry.term.clone());
+            }
+        }
+    }
+
+    // Forms only exist as redirects on their lemma. A form whose lemma is missing is dropped.
+    ydict.term_bank_form.clear();
+
+    ydict
+        .into_iter_flat()
+        .map(|entry| {
+            let alts = alts
+                .swap_remove(entry.term())
+                .unwrap_or_default()
+                .into_iter()
+                .map(AltEntry::only_term)
+                .collect();
+            Entry::new(
+                entry.term().to_string(),
+                Definition::Html(R::render_entry(&entry).into_string()),
+            )
+            .with_alts(alts)
+        })
+        .collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::models::yomitan::{TermBankEntry, TermBankEntryForm};
+
+    struct Plain;
+    impl renderer::Renderer for Plain {}
+
+    fn lemma(term: &str) -> TermBankEntry {
+        TermBankEntry::new(
+            term.to_string(),
+            String::new(),
+            Vec::new(),
+            String::new(),
+            vec![DetailedDefinition::Text("def".to_string())],
+        )
+    }
+
+    fn form(term: &str, of: &str) -> TermBankEntryForm {
+        TermBankEntryForm::new(
+            term.to_string(),
+            String::new(),
+            String::new(),
+            vec![DetailedDefinition::Inflection((
+                of.to_string(),
+                vec!["past".to_string()],
+            ))],
+        )
+    }
+
+    fn alt_terms(entry: &Entry) -> Vec<&str> {
+        entry.alts().iter().map(AltEntry::term).collect()
+    }
+
+    #[test]
+    fn forms_are_redirects_on_their_lemma() {
+        let ydict = YomitanDict::new(
+            vec![lemma("食べる"), lemma("行く")],
+            vec![
+                form("食べた", "食べる"),
+                form("食べない", "食べる"),
+                form("行った", "行く"),
+                form("行った", "行う"),
+            ],
+            Vec::new(),
+        );
+
+        let entries = build_entries::<Plain>(ydict);
+
+        let terms: Vec<_> = entries.iter().map(Entry::term).collect();
+        assert_eq!(terms, ["食べる", "行く"]);
+        assert_eq!(alt_terms(&entries[0]), ["食べた", "食べない"]);
+        assert_eq!(alt_terms(&entries[1]), ["行った"]);
     }
 }

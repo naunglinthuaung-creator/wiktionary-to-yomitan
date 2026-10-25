@@ -58,7 +58,7 @@
                         "data": {
                           "content": "Etymology-content"
                         },
-                        "content": "From isä (“father”) + -o, through an earlier form isoi (attested in Agricola). SSA considers this word 'primarily western (Finnish)', although SMS remarks it is common in all dialect regions except Central and South Karelia. First attested as jso in c. 1401."
+                        "content": "From isä (“father”) + -o, through an earlier form isoi (attested in Agricola). SSA considers this word 'primarily western (Finnish)', although SMS remarks it is common in all dialect regions except Central and South Karelia. First attested as jso in c. 1401. The original senses probably were “father” as a noun, thence “big, grown-up, adult” as an adjective."
                       }
                     ]
                   }
@@ -71,6 +71,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -108,6 +109,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fi",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -124,6 +126,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -180,6 +183,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fi",
                                   "content": [
                                     "olet jo ",
                                     {
@@ -197,6 +201,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "you're a ",
                                     {
@@ -254,6 +259,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fi",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -270,6 +276,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -326,6 +333,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fi",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -342,6 +350,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -372,6 +381,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fi",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -388,6 +398,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -444,6 +455,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fi",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -460,6 +472,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -485,44 +498,65 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "fi",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyms"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "buli"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "huomattava"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "isokokoinen"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "buli"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "huomattava"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "isokokoinen"
-                  }
-                ]
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "pieni"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -601,6 +635,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -638,6 +673,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fi",
                                   "content": [
                                     "ahtaa ",
                                     {
@@ -654,6 +690,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "to cram (information) ",
                                     {
@@ -733,6 +770,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fi",
                                   "content": "Near-synonym: pääty"
                                 }
                               ]
@@ -780,6 +818,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fi",
                                   "content": [
                                     "hyvällä ",
                                     {
@@ -796,6 +835,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "in a good ",
                                     {
@@ -852,6 +892,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "fi",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -868,6 +909,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "one ",
                                     {

@@ -858,6 +858,16 @@
         0
     ],
     [
+        "ACG",
+        "topic",
+        0,
+        [
+            "anime, comics and games",
+            "ACG"
+        ],
+        0
+    ],
+    [
         "BDSM",
         "topic",
         0,
@@ -1986,6 +1996,13 @@
         "",
         0,
         "strong",
+        0
+    ],
+    [
+        "suru",
+        "",
+        0,
+        "suru",
         0
     ],
     [

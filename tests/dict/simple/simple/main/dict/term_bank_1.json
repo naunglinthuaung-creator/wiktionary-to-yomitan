@@ -14,6 +14,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -51,6 +52,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": "Pour a small amount of water into the dish."
                                 }
                               ]
@@ -83,7 +85,7 @@
             "content": [
               {
                 "tag": "a",
-                "href": "https://simple.wiktionary.org/wiki/amount#Simple English",
+                "href": "https://simple.wiktionary.org/wiki/amount#Simple_English",
                 "content": "Wiktionary"
               },
               " | ",

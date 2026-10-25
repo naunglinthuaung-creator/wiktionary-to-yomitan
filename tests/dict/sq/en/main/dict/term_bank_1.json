@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -138,6 +139,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -175,6 +177,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "sq",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -191,6 +194,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "boiled beef ",
                                     {
@@ -221,6 +225,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "sq",
                                   "content": [
                                     "Dogji ",
                                     {
@@ -238,6 +243,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Burned its ",
                                     {
@@ -310,6 +316,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "sq",
                                       "content": [
                                         "Mbaje ",
                                         {
@@ -327,6 +334,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": [
                                         "Hold your ",
                                         {
@@ -358,6 +366,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "sq",
                                       "content": [
                                         "E ka ",
                                         {
@@ -375,6 +384,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": "She is very talkative."
                                     }
                                   ]
@@ -436,6 +446,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "sq",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -452,6 +463,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "the Albanian ",
                                     {
@@ -506,6 +518,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "sq",
                                       "content": [
                                         {
                                           "tag": "span",
@@ -522,6 +535,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": [
                                         "children ",
                                         {
@@ -552,6 +566,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "sq",
                                       "content": [
                                         {
                                           "tag": "span",
@@ -568,6 +583,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": [
                                         "foul ",
                                         {
@@ -598,6 +614,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "sq",
                                       "content": [
                                         {
                                           "tag": "span",
@@ -614,6 +631,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": [
                                         "the author's ",
                                         {
@@ -665,6 +683,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "sq",
                                       "content": [
                                         {
                                           "tag": "span",
@@ -681,6 +700,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": [
                                         "music's ",
                                         {
@@ -711,6 +731,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "sq",
                                       "content": [
                                         {
                                           "tag": "span",
@@ -727,6 +748,7 @@
                                       "data": {
                                         "content": "example-sentence-b"
                                       },
+                                      "lang": "en",
                                       "content": [
                                         "bees' ",
                                         {

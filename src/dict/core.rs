@@ -65,8 +65,9 @@ where
         Self::len(self)
     }
 
-    fn write(&self, _: &PathManager) -> Result<PathBuf> {
-        unimplemented!()
+    fn write(&self, pm: &PathManager) -> Result<PathBuf> {
+        let pairs: Vec<_> = self.iter().collect();
+        pairs.write(pm)
     }
 }
 
@@ -121,7 +122,7 @@ pub trait Dictionary {
     fn to_yomitan(&self, langs: LangSpecs, irs: &Self::I) -> YomitanDict;
 }
 
-fn rejected(entry: &WordEntry, opts: &Options) -> bool {
+pub(super) fn rejected(entry: &WordEntry, opts: &Options) -> bool {
     opts.reject.iter().any(|(k, v)| k.field_value(entry) == v)
         || !opts.filter.iter().all(|(k, v)| k.field_value(entry) == v)
 }
@@ -154,17 +155,6 @@ impl fmt::Debug for Langs {
     }
 }
 
-pub fn iter_datasets(pm: &PathManager) -> impl Iterator<Item = Result<(Edition, PathBuf)>> + '_ {
-    let (edition_pm, source_pm, _) = pm.langs();
-
-    edition_pm.variants().into_iter().map(move |edition| {
-        let path_jsonl = find_or_download_jsonl(edition, Some(source_pm), pm)?;
-        tracing::trace!("edition: {edition}, path: {}", path_jsonl.display());
-
-        Ok((edition, path_jsonl))
-    })
-}
-
 #[derive(Deserialize)]
 #[serde(default)]
 pub struct LangCodeProbe<'a> {
@@ -191,7 +181,7 @@ impl Default for LangCodeProbe<'_> {
 /// Make a dictionary from a Kaikki jsonlines.
 pub fn make_dict_from_jsonl<D: Dictionary>(dict: D, raw_args: D::A) -> Result<()> {
     let pm: &PathManager = &raw_args.try_into()?;
-    let (_, source_pm, target_pm) = pm.langs();
+    let (edition_pm, source_pm, target_pm) = pm.langs();
     let opts = &pm.opts;
 
     pm.setup_dirs()?;
@@ -200,8 +190,16 @@ pub fn make_dict_from_jsonl<D: Dictionary>(dict: D, raw_args: D::A) -> Result<()
     let mut line = Vec::with_capacity(1 << 10);
     let mut irs = D::I::default();
 
-    for pair in iter_datasets(pm) {
-        let (edition, path_jsonl) = pair?;
+    for edition in edition_pm.variants() {
+        // A dictionary that does not probe does not filter by source either.
+        // Read this as a (reasonable) hack to make glossary-extended work.
+        let dataset_lang = if dict.supports_probe() {
+            source_pm
+        } else {
+            Lang::from(edition) // glossary-extended case
+        };
+        let path_jsonl = find_or_download_jsonl(edition, Some(dataset_lang), pm)?;
+        tracing::trace!("edition: {edition}, path: {}", path_jsonl.display());
 
         let reader_file = File::open(&path_jsonl)?;
         let mut reader = BufReader::with_capacity(capacity, reader_file);
@@ -238,10 +236,10 @@ pub fn make_dict_from_jsonl<D: Dictionary>(dict: D, raw_args: D::A) -> Result<()
                 continue;
             }
 
-            accepted_count += 1;
-            if accepted_count == opts.first {
+            if opts.first == Some(accepted_count) {
                 break;
             }
+            accepted_count += 1;
 
             if dict.skip_if(&entry) {
                 continue;
@@ -266,13 +264,33 @@ pub fn make_dict_from_jsonl<D: Dictionary>(dict: D, raw_args: D::A) -> Result<()
         dict.found_ir_message(pm.langs, &irs);
     }
 
-    if irs.is_empty() {
+    dict.postprocess(pm.langs, &mut irs);
+
+    if skip_below_min_entries(&irs, pm) {
         return Ok(());
     }
 
-    dict.postprocess(pm.langs, &mut irs);
-
-    opts.format.write(&dict, pm.langs, opts, pm, &irs)?;
+    for format in &opts.formats {
+        format.write(&dict, pm.langs, opts, pm, &irs)?;
+    }
 
     Ok(())
+}
+
+/// Whether `irs` is too thin to be worth writing, per `opts.min_entries`.
+pub fn skip_below_min_entries<I: Intermediate>(irs: &I, pm: &PathManager) -> bool {
+    // An empty dictionary is never written, whatever the threshold is.
+    let min_entries = pm.opts.min_entries.max(1);
+
+    if irs.len() < min_entries {
+        tracing::debug!(
+            "[{}-{}] Skipping: {} entries < min_entries {min_entries}",
+            pm.langs.source,
+            pm.langs.target,
+            irs.len(),
+        );
+        return true;
+    }
+
+    false
 }

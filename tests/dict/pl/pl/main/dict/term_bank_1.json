@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "pl",
             "content": [
               {
                 "tag": "li",
@@ -103,6 +104,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "pl",
                                   "content": [
                                     "Wczoraj spadł pierwszy ",
                                     {
@@ -160,6 +162,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "pl",
                                   "content": [
                                     "Obiecałaś matce, że jej pomożesz w odgarnięciu ",
                                     {
@@ -243,6 +246,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "pl",
                                   "content": [
                                     "Obudziło go mruganie ",
                                     {
@@ -297,30 +301,58 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "pl",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonimy"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "gw. (Górny Śląsk) śniyg"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "deszcz"
                     },
-                    "content": "gw. (Górny Śląsk) śniyg"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "słońce"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -339,6 +371,359 @@
               {
                 "tag": "a",
                 "href": "https://kaikki.org/plwiktionary/All%20languages%20combined/meaning/ś/śn/śnieg.html",
+                "content": "Kaikki"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    0,
+    ""
+  ],
+  [
+    "pobiec",
+    "",
+    "v vi pf",
+    "",
+    0,
+    [
+      {
+        "type": "structured-content",
+        "content": [
+          {
+            "tag": "ol",
+            "data": {
+              "content": "glosses"
+            },
+            "lang": "pl",
+            "content": [
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      "przemieścić się do przodu, biegnąc",
+                      {
+                        "tag": "details",
+                        "data": {
+                          "content": "details-entry-examples"
+                        },
+                        "content": [
+                          {
+                            "tag": "summary",
+                            "data": {
+                              "content": "summary-entry"
+                            },
+                            "content": "1 przykład"
+                          },
+                          {
+                            "tag": "div",
+                            "data": {
+                              "content": "extra-info"
+                            },
+                            "content": {
+                              "tag": "div",
+                              "data": {
+                                "content": "example-sentence"
+                              },
+                              "content": [
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-a"
+                                  },
+                                  "lang": "pl",
+                                  "content": [
+                                    "Dzieci ",
+                                    {
+                                      "tag": "span",
+                                      "data": {
+                                        "content": "bold-text"
+                                      },
+                                      "content": "pobiegły"
+                                    },
+                                    " przez pole, by powitać księdza."
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "tags"
+                        },
+                        "content": [
+                          {
+                            "tag": "span",
+                            "title": "colloquial",
+                            "data": {
+                              "content": "tag",
+                              "category": "register"
+                            },
+                            "content": "col"
+                          }
+                        ]
+                      },
+                      "pospiesznie udać się gdzieś lub po kogoś",
+                      {
+                        "tag": "details",
+                        "data": {
+                          "content": "details-entry-examples"
+                        },
+                        "content": [
+                          {
+                            "tag": "summary",
+                            "data": {
+                              "content": "summary-entry"
+                            },
+                            "content": "1 przykład"
+                          },
+                          {
+                            "tag": "div",
+                            "data": {
+                              "content": "extra-info"
+                            },
+                            "content": {
+                              "tag": "div",
+                              "data": {
+                                "content": "example-sentence"
+                              },
+                              "content": [
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-a"
+                                  },
+                                  "lang": "pl",
+                                  "content": [
+                                    {
+                                      "tag": "span",
+                                      "data": {
+                                        "content": "bold-text"
+                                      },
+                                      "content": "Pobiegnij"
+                                    },
+                                    " po tatę i powiedz mu, że zepsuł się kran."
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "tags"
+                        },
+                        "content": [
+                          {
+                            "tag": "span",
+                            "title": "literary",
+                            "data": {
+                              "content": "tag",
+                              "category": "register"
+                            },
+                            "content": "lit"
+                          }
+                        ]
+                      },
+                      "(o spojrzeniu, myślach itp.) zwrócić się ku czemuś lub komuś",
+                      {
+                        "tag": "details",
+                        "data": {
+                          "content": "details-entry-examples"
+                        },
+                        "content": [
+                          {
+                            "tag": "summary",
+                            "data": {
+                              "content": "summary-entry"
+                            },
+                            "content": "1 przykład"
+                          },
+                          {
+                            "tag": "div",
+                            "data": {
+                              "content": "extra-info"
+                            },
+                            "content": {
+                              "tag": "div",
+                              "data": {
+                                "content": "example-sentence"
+                              },
+                              "content": [
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-a"
+                                  },
+                                  "lang": "pl",
+                                  "content": [
+                                    "Jego spojrzenie ",
+                                    {
+                                      "tag": "span",
+                                      "data": {
+                                        "content": "bold-text"
+                                      },
+                                      "content": "pobiegło"
+                                    },
+                                    " w stronę zbliżającej się grupy urzędników."
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      "(o drogach, szlakach, ulicach itp.) zostać wytyczonym w pewnym kierunku",
+                      {
+                        "tag": "details",
+                        "data": {
+                          "content": "details-entry-examples"
+                        },
+                        "content": [
+                          {
+                            "tag": "summary",
+                            "data": {
+                              "content": "summary-entry"
+                            },
+                            "content": "1 przykład"
+                          },
+                          {
+                            "tag": "div",
+                            "data": {
+                              "content": "extra-info"
+                            },
+                            "content": {
+                              "tag": "div",
+                              "data": {
+                                "content": "example-sentence"
+                              },
+                              "content": [
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-a"
+                                  },
+                                  "lang": "pl",
+                                  "content": [
+                                    "Nowa autostrada ",
+                                    {
+                                      "tag": "span",
+                                      "data": {
+                                        "content": "bold-text"
+                                      },
+                                      "content": "pobiegnie"
+                                    },
+                                    " ku granicy z Białorusią."
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "data": {
+              "content": "related-words"
+            },
+            "lang": "pl",
+            "content": [
+              {
+                "tag": "div",
+                "data": {
+                  "content": "synonyms"
+                },
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "pognać"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "polecieć"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "popędzić"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "data": {
+              "content": "backlink"
+            },
+            "content": [
+              {
+                "tag": "a",
+                "href": "https://pl.wiktionary.org/wiki/pobiec#Polish",
+                "content": "Wiktionary"
+              },
+              " | ",
+              {
+                "tag": "a",
+                "href": "https://kaikki.org/plwiktionary/All%20languages%20combined/meaning/p/po/pobiec.html",
                 "content": "Kaikki"
               }
             ]

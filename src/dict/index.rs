@@ -64,7 +64,6 @@ pub fn get_index(
     let current_date = chrono::Utc::now().format("%Y.%m.%d"); // needs to be dot separated
     let index_url = index_url(dict_name_expanded);
     let download_url = download_url(dict_ty, dict_name_expanded, source, target);
-    let source_str = source_str(dict_ty, &source);
 
     format!(
         r#"{{
@@ -76,7 +75,7 @@ pub fn get_index(
   "url": "https://github.com/yomidevs/wiktionary-to-yomitan",
   "description": "Dictionaries for various language pairs generated from Wiktionary data, via Kaikki and wty.",
   "attribution": "https://kaikki.org/",
-  "sourceLanguage": "{source_str}",
+  "sourceLanguage": "{source}",
   "targetLanguage": "{target}",
   "isUpdatable": true,
   "indexUrl": "{index_url}",
@@ -103,6 +102,16 @@ mod tests {
             download_url(DictionaryType::IpaMerged, "wty-en-ipa", Lang::Afb, Lang::En),
             "https://huggingface.co/datasets/daxida/wty-release/resolve/main/latest/dict/all/en/wty-en-ipa.zip?download=true"
         );
+    }
+
+    #[test]
+    fn index_source_language() {
+        let ipa_merged = get_index(DictionaryType::IpaMerged, "wty-en-ipa", Lang::En, Lang::En);
+        assert!(ipa_merged.contains(r#""sourceLanguage": "en""#));
+        assert!(ipa_merged.contains("/dict/all/en/wty-en-ipa.zip"));
+
+        let main = get_index(DictionaryType::Main, "wty-afb-en", Lang::Afb, Lang::En);
+        assert!(main.contains(r#""sourceLanguage": "afb""#));
     }
 
     #[test]

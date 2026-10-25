@@ -10,7 +10,7 @@
 use serde::ser::{SerializeStruct, SerializeTuple, Serializer};
 use serde::{Deserialize, Serialize};
 
-use crate::{Map, models::kaikki::Tag};
+use crate::{Map, lang::Lang, models::kaikki::Tag, tags::ScriptTag};
 
 /// A custom type for a yomitan dictionary.
 ///
@@ -180,7 +180,7 @@ impl Serialize for TermBankEntry {
         let definition_tags_str = self
             .definition_tags
             .iter()
-            .map(|tag_info| tag_info.short_tag.clone())
+            .map(|tag_info| tag_info.short_tag.as_str())
             .collect::<Vec<_>>()
             .join(" ");
         tup.serialize_element(&definition_tags_str)?;
@@ -373,6 +373,47 @@ impl NTag {
     }
 }
 
+/// A `lang` attribute: the script of an example, or a language.
+///
+/// The yomitan side of [`ScriptTag`], which is kaikki side: parsed from the tags of an example.
+///
+/// Written explicitly so the css `:lang` rules match the real language, and also work in formats
+/// that cannot rely on Yomitan adding the `lang` attributes (mdict, html).
+#[derive(Debug, Clone, Copy)]
+pub enum LangAttr {
+    Script(ScriptTag),
+    Lang(Lang),
+}
+
+impl LangAttr {
+    /// Chinese lects get plain `zh`, the one the css selects on.
+    pub fn as_str(&self) -> &str {
+        match self {
+            Self::Script(script) => script.as_lang_attr(),
+            Self::Lang(Lang::Cmn | Lang::Yue) => "zh",
+            Self::Lang(lang) => lang.iso(),
+        }
+    }
+}
+
+impl From<ScriptTag> for LangAttr {
+    fn from(script: ScriptTag) -> Self {
+        Self::Script(script)
+    }
+}
+
+impl From<Lang> for LangAttr {
+    fn from(lang: Lang) -> Self {
+        Self::Lang(lang)
+    }
+}
+
+impl Serialize for LangAttr {
+    fn serialize<S: Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
+        serializer.serialize_str(self.as_str())
+    }
+}
+
 /// One of the possible values of the [`Node`] enum.
 ///
 /// Note that fields are ordered for visualization and may be different from yomitan builder order.
@@ -386,13 +427,56 @@ pub struct GenericNode {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub data: Option<NodeData>,
 
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub lang: Option<LangAttr>,
+
     pub content: Node,
 }
 
 impl GenericNode {
+    /// A node with a `data-sc-content` attribute, unless `content_ty` is empty.
+    pub fn new(tag: NTag, content_ty: &str, content: Node) -> Self {
+        Self {
+            tag,
+            title: None,
+            data: match content_ty {
+                "" => None,
+                _ => Some(NodeData::from_iter([(NodeDataKey::Content, content_ty)])),
+            },
+            lang: None,
+            content,
+        }
+    }
+
+    #[must_use]
+    pub fn with_title(mut self, title: String) -> Self {
+        self.title = Some(title);
+        self
+    }
+
+    /// Adds a `data-sc-category` attribute.
+    #[must_use]
+    pub fn with_category(mut self, category: &str) -> Self {
+        self.data
+            .get_or_insert_with(|| NodeData(Map::default()))
+            .0
+            .insert(NodeDataKey::Category, category.to_string());
+        self
+    }
+
+    #[must_use]
+    pub fn with_lang(mut self, lang: impl Into<LangAttr>) -> Self {
+        self.lang = Some(lang.into());
+        self
+    }
+
     pub fn into_node(self) -> Node {
         Node::Generic(Box::new(self))
     }
+}
+
+pub fn wrap(tag: NTag, content_ty: &str, content: Node) -> Node {
+    GenericNode::new(tag, content_ty, content).into_node()
 }
 
 // In the general case, this should be a String. We use an enum to shrink the size of Node.
@@ -462,19 +546,6 @@ impl Serialize for StructuredContent {
     }
 }
 
-pub fn wrap(tag: NTag, content_ty: &str, content: Node) -> Node {
-    GenericNode {
-        tag,
-        title: None, // hardcoded since most of the wrap calls don't use it
-        data: match content_ty {
-            "" => None,
-            _ => Some(NodeData::from_iter([(NodeDataKey::Content, content_ty)])),
-        },
-        content,
-    }
-    .into_node()
-}
-
 /// A tag. See [yomitan-dict-builder].
 ///
 /// [yomitan-dict-builder]: https://github.com/MarvNC/yomichan-dict-builder/blob/master/src/types/yomitan/tagbank.ts
@@ -513,5 +584,19 @@ impl Serialize for TagInfo {
         tup.serialize_element(&self.long_tag)?;
         tup.serialize_element(&self.popularity_score)?;
         tup.end()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn lang_attr_values() {
+        assert_eq!(LangAttr::from(Lang::Ja).as_str(), "ja");
+        assert_eq!(LangAttr::from(Lang::Simple).as_str(), "en");
+        assert_eq!(LangAttr::from(Lang::Cmn).as_str(), "zh");
+        assert_eq!(LangAttr::from(Lang::Yue).as_str(), "zh");
+        assert_eq!(LangAttr::from(ScriptTag::ZhHant).as_str(), "zh-Hant");
     }
 }

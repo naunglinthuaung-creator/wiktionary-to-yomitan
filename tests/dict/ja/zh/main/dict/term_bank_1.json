@@ -14,6 +14,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "zh",
             "content": [
               {
                 "tag": "li",
@@ -31,44 +32,44 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "同义词"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "辞(じ)書(しょ)"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "辞(じ)書(しょ)"
                     },
-                    "content": "辞(じ)林(りん)"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "辞(じ)林(りん)"
                     },
-                    "content": "字(じ)引(びき)"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "字(じ)引(びき)"
+                    }
+                  ]
+                }
               }
             ]
           },

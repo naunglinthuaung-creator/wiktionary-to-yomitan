@@ -5,20 +5,19 @@ use crate::{
     cli::LangSpecs,
     dict::{
         main::{
-            ir::{FormMap, GlossTree, LemmaInfo, LemmaMap, Tidy, normalize_orthography},
+            ir::{FormMap, GlossInfo, GlossTree, LemmaInfo, LemmaMap, Tidy, normalize_orthography},
             locale::{
                 localize_etymology_string, localize_examples_string, localize_grammar_string,
-                localize_synonyms_string,
             },
         },
         rules::rule_identifiers,
     },
     lang::Lang,
     models::{
-        kaikki::{Example, Offset, Synonym, Tag},
+        kaikki::{Example, Linkage, Offset, Tag},
         yomitan::{
-            BacklinkContent, BacklinkContentKind, DetailedDefinition, GenericNode, NTag, Node,
-            NodeData, NodeDataKey, TagInfo, TermBankEntry, TermBankEntryForm, YomitanDict, wrap,
+            BacklinkContent, BacklinkContentKind, DetailedDefinition, GenericNode, LangAttr, NTag,
+            Node, TagInfo, TermBankEntry, TermBankEntryForm, YomitanDict, wrap,
         },
     },
     tags::{Pos, find_tag_in_bank, localize_tag, localize_tag_info},
@@ -74,13 +73,14 @@ fn to_yomitan_lemma(
     }
 
     detailed_definition_content.push(structured_glosses(
+        source,
         target,
-        info.gloss_tree.clone(),
+        &info.gloss_tree,
         &common_short_tags_found,
     ));
 
-    if let Some(synonyms_node) = structured_synonyms(target, &info.synonyms) {
-        detailed_definition_content.push(synonyms_node);
+    if let Some(related_words_node) = structured_related_words(source, info) {
+        detailed_definition_content.push(related_words_node);
     }
 
     detailed_definition_content.push(structured_backlink(
@@ -122,8 +122,8 @@ fn get_found_tags(pos: Pos, info: &LemmaInfo) -> Vec<TagInfo> {
     std::iter::once(pos.long())
         .chain(info.tags.iter().map(String::as_str)) // top level tags (the non-En preferred way)
         .chain(common_tags_iter)
-        .filter(|s| seen.insert(*s))
         .filter_map(find_tag_in_bank)
+        .filter(|tag_info| seen.insert(tag_info.short_tag.clone()))
         .collect()
 }
 
@@ -173,90 +173,117 @@ fn structured_backlink(wlink: String, klink: String) -> Node {
 }
 
 fn structured_glosses(
+    source: Lang,
     target: Lang,
-    gloss_tree: GlossTree,
+    gloss_tree: &GlossTree,
     common_short_tags_found: &[Tag],
 ) -> Node {
-    wrap(
+    GenericNode::new(
         NTag::Ol,
         "glosses",
         Node::Array(
             gloss_tree
-                .into_iter()
-                .map(|gloss_pair| {
-                    wrap(
-                        NTag::Li,
-                        "",
-                        Node::Array(structured_glosses_go(
-                            target,
-                            &GlossTree::from_iter([gloss_pair]),
-                            common_short_tags_found,
-                            0,
-                        )),
-                    )
+                .iter()
+                .map(|(gloss, gloss_info)| {
+                    let mut nodes = Vec::new();
+                    push_gloss_nodes(
+                        source,
+                        target,
+                        gloss,
+                        gloss_info,
+                        common_short_tags_found,
+                        0,
+                        &mut nodes,
+                    );
+                    wrap(NTag::Li, "", Node::Array(nodes))
                 })
                 .collect(),
         ),
     )
+    .with_lang(target)
+    .into_node()
 }
 
 // Recursive helper ~ should return Node for consistency
 fn structured_glosses_go(
+    source: Lang,
     target: Lang,
     gloss_tree: &GlossTree,
     common_short_tags_found: &[Tag],
     level: usize,
 ) -> Vec<Node> {
-    let html_tag = if level == 0 { NTag::Div } else { NTag::Li };
     let mut nested = Vec::new();
 
     for (gloss, gloss_info) in gloss_tree {
-        // Tags/topics that are not common to all glosses (i.e. specific to this gloss)
-        let minimal_tags: Vec<_> = gloss_info
-            .tags
-            .iter()
-            .chain(gloss_info.topics.iter())
-            .filter(|&tag| !common_short_tags_found.contains(tag))
-            .cloned()
-            .collect();
-
-        let mut level_content = Node::new_array();
-
-        if let Some(structured_tags) =
-            structured_tags(target, &minimal_tags, common_short_tags_found)
-        {
-            level_content.push(structured_tags);
-        }
-
-        level_content.push(Node::Text(gloss.into()));
-
-        if !gloss_info.examples.is_empty() {
-            level_content.push(structured_examples(target, &gloss_info.examples));
-        }
-
-        nested.push(wrap(html_tag, "", level_content));
-
-        let Some(children) = &gloss_info.children else {
-            continue;
-        };
-
-        // We dont want tags from the parent appearing again in the children
-        let mut new_common_short_tags_found = minimal_tags;
-        new_common_short_tags_found.extend_from_slice(common_short_tags_found);
-
-        nested.push(wrap(
-            NTag::Ul,
-            "",
-            Node::Array(structured_glosses_go(
-                target,
-                children,
-                &new_common_short_tags_found,
-                level + 1,
-            )),
-        ));
+        push_gloss_nodes(
+            source,
+            target,
+            gloss,
+            gloss_info,
+            common_short_tags_found,
+            level,
+            &mut nested,
+        );
     }
 
     nested
+}
+
+/// Append the nodes of a single gloss: the gloss itself, then a nested list of its
+/// children, if any.
+fn push_gloss_nodes(
+    source: Lang,
+    target: Lang,
+    gloss: &str,
+    gloss_info: &GlossInfo,
+    common_short_tags_found: &[Tag],
+    level: usize,
+    nested: &mut Vec<Node>,
+) {
+    let html_tag = if level == 0 { NTag::Div } else { NTag::Li };
+
+    // Tags/topics that are not common to all glosses (i.e. specific to this gloss)
+    let minimal_tags: Vec<_> = gloss_info
+        .tags
+        .iter()
+        .chain(gloss_info.topics.iter())
+        .filter(|&tag| !common_short_tags_found.contains(tag))
+        .cloned()
+        .collect();
+
+    let mut level_content = Node::new_array();
+
+    if let Some(structured_tags) = structured_tags(target, &minimal_tags, common_short_tags_found) {
+        level_content.push(structured_tags);
+    }
+
+    level_content.push(Node::Text(gloss.into()));
+
+    if !gloss_info.examples.is_empty() {
+        level_content.push(structured_examples(source, target, &gloss_info.examples));
+    }
+
+    nested.push(wrap(html_tag, "", level_content));
+
+    let Some(children) = &gloss_info.children else {
+        return;
+    };
+
+    // We dont want tags from the parent appearing again in the children
+    let mut new_common_short_tags_found = minimal_tags;
+    new_common_short_tags_found.extend_from_slice(common_short_tags_found);
+
+    nested.push(wrap(
+        NTag::Ul,
+        "",
+        Node::Array(structured_glosses_go(
+            source,
+            target,
+            children,
+            &new_common_short_tags_found,
+            level + 1,
+        )),
+    ));
 }
 
 /// Structure inner tags.
@@ -286,16 +313,10 @@ fn structured_tags(target: Lang, tags: &[Tag], common_short_tags_found: &[Tag]) 
                 Some((short, long)) => (short.to_string(), long.to_string()),
                 None => (tag_info.short_tag, tag_info.long_tag),
             };
-            GenericNode {
-                tag: NTag::Span,
-                title: Some(long_tag),
-                data: Some(NodeData::from_iter([
-                    (NodeDataKey::Content, "tag"),
-                    (NodeDataKey::Category, &tag_info.category),
-                ])),
-                content: Node::Text(short_tag),
-            }
-            .into_node()
+            GenericNode::new(NTag::Span, "tag", Node::Text(short_tag))
+                .with_title(long_tag)
+                .with_category(&tag_info.category)
+                .into_node()
         })
         .collect();
 
@@ -310,7 +331,7 @@ fn structured_tags(target: Lang, tags: &[Tag], common_short_tags_found: &[Tag]) 
     }
 }
 
-fn structured_examples(target: Lang, examples: &[Example]) -> Node {
+fn structured_examples(source: Lang, target: Lang, examples: &[Example]) -> Node {
     debug_assert!(!examples.is_empty());
 
     let localized_label = wrap(
@@ -324,27 +345,37 @@ fn structured_examples(target: Lang, examples: &[Example]) -> Node {
         "details-entry-examples",
         Node::Array(
             std::iter::once(localized_label)
-                .chain(examples.iter().map(structured_example))
+                .chain(
+                    examples
+                        .iter()
+                        .map(|example| structured_example(source, target, example)),
+                )
                 .collect(),
         ),
     )
 }
 
 // TODO: change a-b-c into a more descriptive name: text/translation/ref
-fn structured_example(example: &Example) -> Node {
-    let mut structured_example_content = wrap(
+fn structured_example(source: Lang, target: Lang, example: &Example) -> Node {
+    let mut structured_example_content = GenericNode::new(
         NTag::Div,
         "example-sentence-a",
         structured_example_text(&example.text, &example.bold_text_offsets),
     )
+    .with_lang(example.lang.map_or_else(|| source.into(), LangAttr::from))
+    .into_node()
     .into_array_node();
 
     if !example.translation.is_empty() {
-        structured_example_content.push(wrap(
-            NTag::Div,
-            "example-sentence-b",
-            structured_example_text(&example.translation, &example.bold_translation_offsets),
-        ));
+        structured_example_content.push(
+            GenericNode::new(
+                NTag::Div,
+                "example-sentence-b",
+                structured_example_text(&example.translation, &example.bold_translation_offsets),
+            )
+            .with_lang(target)
+            .into_node(),
+        );
     }
 
     if !example.reference.is_empty() {
@@ -353,11 +384,11 @@ fn structured_example(example: &Example) -> Node {
             .strip_suffix(':')
             .unwrap_or(&example.reference)
             .to_string();
-        structured_example_content.push(wrap(
-            NTag::Div,
-            "example-sentence-c",
-            Node::Text(reference),
-        ));
+        structured_example_content.push(
+            GenericNode::new(NTag::Div, "example-sentence-c", Node::Text(reference))
+                .with_lang(target)
+                .into_node(),
+        );
     }
 
     wrap(
@@ -409,31 +440,57 @@ fn structured_example_text(text: &str, offsets: &[Offset]) -> Node {
     content
 }
 
-fn structured_synonyms(target: Lang, synonyms: &[Synonym]) -> Option<Node> {
-    if synonyms.is_empty() {
+fn structured_related_words(source: Lang, info: &LemmaInfo) -> Option<Node> {
+    let nodes: Vec<Node> = structured_linkages(
+        &info.synonyms,
+        ["synonyms", "synonyms-list", "synonym-item"],
+    )
+    .into_iter()
+    .chain(structured_linkages(
+        &info.antonyms,
+        ["antonyms", "antonyms-list", "antonym-item"],
+    ))
+    .chain(structured_linkages(
+        &info.coordinate_terms,
+        [
+            "coordinate-terms",
+            "coordinate-terms-list",
+            "coordinate-term-item",
+        ],
+    ))
+    .collect();
+    if nodes.is_empty() {
+        return None;
+    }
+
+    Some(
+        GenericNode::new(NTag::Div, "related-words", Node::Array(nodes))
+            .with_lang(source)
+            .into_node(),
+    )
+}
+
+fn structured_linkages(
+    words: &[Linkage],
+    [container, list_content, item_content]: [&str; 3],
+) -> Option<Node> {
+    if words.is_empty() {
         return None;
     }
 
     Some(wrap(
         NTag::Div,
-        "synonyms",
-        Node::Array(vec![
-            wrap(
-                NTag::Div,
-                "synonyms-label",
-                Node::Text(localize_synonyms_string(target).into()),
+        container,
+        wrap(
+            NTag::Ul,
+            list_content,
+            Node::Array(
+                words
+                    .iter()
+                    .map(|word| wrap(NTag::Li, item_content, Node::Text(word.word.clone())))
+                    .collect(),
             ),
-            wrap(
-                NTag::Ul,
-                "synonyms-list",
-                Node::Array(
-                    synonyms
-                        .iter()
-                        .map(|syn| wrap(NTag::Li, "synonym-item", Node::Text(syn.word.clone())))
-                        .collect(),
-                ),
-            ),
-        ]),
+        ),
     ))
 }
 
@@ -484,10 +541,12 @@ fn to_yomitan_forms(source: Lang, form_map: &FormMap) -> Vec<TermBankEntryForm> 
             // It is unclear if we just want to pass the pos here since tags
             // may only be relevant for some deinflected words and not others.
             // The changes are minimal, at any rate.
+            let mut seen = Set::default();
             let short_tags: Vec<_> = std::iter::once(pos.long())
                 .chain(tags.iter().map(String::as_str))
                 .filter_map(find_tag_in_bank)
                 .map(|tag| tag.short_tag)
+                .filter(|short_tag| seen.insert(short_tag.clone()))
                 .collect();
 
             TermBankEntryForm::new(

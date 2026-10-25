@@ -30,7 +30,11 @@
                 },
                 {
                   "tag": "li",
-                  "content": "갖다 주다"
+                  "content": "가져다주다"
+                },
+                {
+                  "tag": "li",
+                  "content": "갖다주다"
                 }
               ]
             }
@@ -149,6 +153,102 @@
                 {
                   "tag": "li",
                   "content": "마법의"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    0,
+    ""
+  ],
+  [
+    "bass",
+    "",
+    "n",
+    "n",
+    0,
+    [
+      {
+        "type": "structured-content",
+        "content": {
+          "tag": "div",
+          "content": [
+            {
+              "tag": "div",
+              "data": {
+                "content": "sense-label"
+              },
+              "content": "low spectrum of sound"
+            },
+            {
+              "tag": "ul",
+              "data": {
+                "content": "glossary"
+              },
+              "content": [
+                {
+                  "tag": "li",
+                  "content": "베이스"
+                },
+                {
+                  "tag": "li",
+                  "content": "남성저음"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "structured-content",
+        "content": {
+          "tag": "div",
+          "content": [
+            {
+              "tag": "div",
+              "data": {
+                "content": "sense-label"
+              },
+              "content": "section of musical group"
+            },
+            {
+              "tag": "ul",
+              "data": {
+                "content": "glossary"
+              },
+              "content": [
+                {
+                  "tag": "li",
+                  "content": "베이스"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "structured-content",
+        "content": {
+          "tag": "div",
+          "content": [
+            {
+              "tag": "div",
+              "data": {
+                "content": "sense-label"
+              },
+              "content": "musical instrument"
+            },
+            {
+              "tag": "ul",
+              "data": {
+                "content": "glossary"
+              },
+              "content": [
+                {
+                  "tag": "li",
+                  "content": "베이스"
                 }
               ]
             }

@@ -147,12 +147,18 @@ impl PathManager {
     pub fn dir_dicts(&self) -> PathBuf {
         self.root_dir().join("dict")
     }
+    /// The two folders holding the dictionary. Example: `("el", "en")`
+    pub fn dir_pair(&self) -> (String, String) {
+        let first = match self.dict_ty {
+            DictionaryType::IpaMerged => self.langs.edition.to_string(),
+            _ => self.langs.source.to_string(),
+        };
+        (first, self.langs.target.to_string())
+    }
     /// Example: `data/dict/el/el`
     fn dir_dict(&self) -> PathBuf {
-        self.dir_dicts().join(match self.dict_ty {
-            DictionaryType::IpaMerged => format!("{}/{}", self.langs.edition, self.langs.target),
-            _ => format!("{}/{}", self.langs.source, self.langs.target),
-        })
+        let (first, second) = self.dir_pair();
+        self.dir_dicts().join(first).join(second)
     }
     /// Depends on the type of dictionary being made.
     ///
@@ -161,7 +167,16 @@ impl PathManager {
     //
     // TODO: make this depend on WriterFromat?
     fn dir_stage(&self) -> PathBuf {
-        self.dir_dict().join(self.dict_ty.to_string())
+        let dir_stage = self.dir_dict().join(self.dict_ty.to_string());
+
+        match self.dict_ty {
+            // For GlossaryExtended, we need to add the edition to disambiguate intermediary
+            // files (the dictionary zip names differ anyway). That is (dir_stage between ``):
+            // `data/dict/el/en/glossary-ext/de/`tidy/tidy.jsonl
+            // `data/dict/el/en/glossary-ext/fr/`tidy/tidy.jsonl
+            DictionaryType::GlossaryExtended => dir_stage.join(self.langs.edition.to_string()),
+            _ => dir_stage,
+        }
     }
     /// Example: `data/dict/el/el/main/path`
     /// Example: `data/dict/el/el/glossary/path`
@@ -179,7 +194,7 @@ impl PathManager {
         fs::create_dir_all(self.dir_dict())?;
 
         // TODO: test this
-        if matches!(self.opts.format, WriterFormat::Ir) {
+        if self.opts.formats.contains(&WriterFormat::Ir) {
             fs::create_dir_all(self.dir_tidy())?;
             fs::create_dir_all(self.dir_temp_dict())?;
         }

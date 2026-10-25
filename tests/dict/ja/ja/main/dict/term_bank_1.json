@@ -14,6 +14,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -68,6 +69,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -122,6 +124,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "一体生徒が",
                                     {
@@ -139,6 +142,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ja",
                                   "content": "（夏目漱石『坊っちゃん』）"
                                 }
                               ]
@@ -160,6 +164,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "この老婆の生死が、",
                                     {
@@ -177,6 +182,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ja",
                                   "content": "（芥川龍之介『羅生門』）"
                                 }
                               ]
@@ -224,6 +230,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "この犯人の当てっこをやって私が驚いたのは、日本の作家の作品には、このゲームに適する作品が",
                                     {
@@ -241,6 +248,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ja",
                                   "content": "（坂口安吾 『私の探偵小説』）"
                                 }
                               ]
@@ -262,6 +270,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "自分は或る對象を、思考とか言語などをもつて、順序立てて取扱ふことが",
                                     {
@@ -279,6 +288,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ja",
                                   "content": "（堀辰雄 『春日遲々』）"
                                 }
                               ]
@@ -300,6 +310,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "その上、我々の収入の性質が実業家の収入などとは、",
                                     {
@@ -317,6 +328,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ja",
                                   "content": "（菊池寛 『差押へられる話』）"
                                 }
                               ]
@@ -364,6 +376,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": "用法:現在の日本語では、違和感のある用法とされる。"
                                 }
                               ]
@@ -409,6 +422,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ja",
                                       "content": [
                                         "アプレゲールは",
                                         {
@@ -426,6 +440,7 @@
                                       "data": {
                                         "content": "example-sentence-c"
                                       },
+                                      "lang": "ja",
                                       "content": "（坂口安吾 『安吾巷談 田園ハレム』）"
                                     }
                                   ]
@@ -447,6 +462,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ja",
                                       "content": [
                                         "「大丈夫？」「",
                                         {
@@ -478,6 +494,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ja",
                                       "content": [
                                         "「あんまりおいしくないけどよかったらどうぞ」「",
                                         {
@@ -538,6 +555,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ja",
                                       "content": [
                                         "こっちのほうが",
                                         {
@@ -590,6 +608,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ja",
                                       "content": [
                                         "これでは",
                                         {
@@ -621,6 +640,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ja",
                                       "content": [
                                         "そんなの",
                                         {
@@ -652,6 +672,7 @@
                                       "data": {
                                         "content": "example-sentence-a"
                                       },
+                                      "lang": "ja",
                                       "content": [
                                         "このチームはまだまだ",
                                         {
@@ -680,44 +701,44 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "類義語"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "全く"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "全く"
                     },
-                    "content": "少しも"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "少しも"
                     },
-                    "content": "ない"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "ない"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -749,7 +770,7 @@
   [
     "命令",
     "めいれい",
-    "名 irreg",
+    "名 サ変",
     "",
     0,
     [
@@ -761,6 +782,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -800,30 +822,30 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "類義語"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "指令"
-                  }
-                ]
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "指令"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -867,6 +889,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -904,6 +927,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "川",
                                     {
@@ -985,6 +1009,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1017,6 +1042,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ja",
                                   "content": "（にしずる ゆういち)"
                                 }
                               ]
@@ -1070,6 +1096,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -1107,6 +1134,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "旦那様に",
                                     {
@@ -1124,6 +1152,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ja",
                                   "content": "――『太平楽』鈴木勝忠〈未刊雑俳資料21期14〉、1963年6月、11頁。"
                                 }
                               ]
@@ -1177,6 +1206,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -1239,44 +1269,44 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "類義語"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "携帯食"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "携帯食"
                     },
-                    "content": "携行食"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "携行食"
                     },
-                    "content": "駅弁"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "駅弁"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -1320,6 +1350,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -1357,6 +1388,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "「ねえ、お延、藤井の叔父さんは飯を食いに来いったら、来るかい」「そりゃどうだかあたしにゃ解らないわ」　叔母は",
                                     {
@@ -1374,6 +1406,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ja",
                                   "content": "（夏目漱石『明暗』）"
                                 }
                               ]
@@ -1395,6 +1428,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "経験に乏しい処女の期待するような予言はともかくも、男女関係に一日の長ある年上の女として、相当の注意を与えてやりたい親切もないではなかった。彼女は差し障りのない際どい筋の上を",
                                     {
@@ -1412,6 +1446,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ja",
                                   "content": "（夏目漱石『明暗』　縁語的比喩を含む表現）"
                                 }
                               ]
@@ -1428,37 +1463,65 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "類義語"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "間接"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "間接的"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "間接"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "直接"
                     },
-                    "content": "間接的"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "直截"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -1490,7 +1553,7 @@
   [
     "うえかえる",
     "",
-    "動 一段 下一段",
+    "動 一段",
     "v1",
     0,
     [
@@ -1502,6 +1565,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -1556,6 +1620,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -1610,6 +1675,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -1675,6 +1741,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -1729,6 +1796,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -1771,7 +1839,7 @@
   [
     "つけくわえる",
     "",
-    "動 一段 下一段 他動",
+    "動 一段 他動",
     "v1",
     0,
     [
@@ -1783,6 +1851,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -1837,6 +1906,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -1902,6 +1972,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -2022,6 +2093,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -2076,6 +2148,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -2161,9 +2234,64 @@
     ""
   ],
   [
+    "仮葬",
+    "かそう",
+    "動",
+    "v",
+    0,
+    [
+      {
+        "type": "structured-content",
+        "content": [
+          {
+            "tag": "ol",
+            "data": {
+              "content": "glosses"
+            },
+            "lang": "ja",
+            "content": [
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      "仮に葬る"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "data": {
+              "content": "backlink"
+            },
+            "content": [
+              {
+                "tag": "a",
+                "href": "https://ja.wiktionary.org/wiki/仮葬#Japanese",
+                "content": "Wiktionary"
+              },
+              " | ",
+              {
+                "tag": "a",
+                "href": "https://kaikki.org/jawiktionary/All%20languages%20combined/meaning/仮/仮葬/仮葬.html",
+                "content": "Kaikki"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    0,
+    ""
+  ],
+  [
     "植え替える",
     "うえかえる",
-    "動 一段 下一段",
+    "動 一段",
     "v1",
     0,
     [
@@ -2175,6 +2303,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -2217,7 +2346,7 @@
   [
     "植え換える",
     "うえかえる",
-    "動 一段 下一段",
+    "動 一段",
     "v1",
     0,
     [
@@ -2229,6 +2358,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -2271,7 +2401,7 @@
   [
     "付け加える",
     "つけくわえる",
-    "動 一段 下一段 他動",
+    "動 一段 他動",
     "v1",
     0,
     [
@@ -2283,6 +2413,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -2337,6 +2468,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -2457,6 +2589,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",
@@ -2577,6 +2710,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "li",

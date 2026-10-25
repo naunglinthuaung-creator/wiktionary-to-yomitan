@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "zh",
             "content": [
               {
                 "tag": "li",
@@ -66,44 +67,44 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "zh",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "同义词"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "啤的"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "啤的"
                     },
-                    "content": "畢威"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "畢威"
                     },
-                    "content": "畢露"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "畢露"
+                    }
+                  ]
+                }
               }
             ]
           },

@@ -71,6 +71,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -119,6 +120,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "hascine propter rēs maledicās fāmās ferunt."
                                 },
                                 {
@@ -126,6 +128,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "Is it on account of these things that they spread slanderous reports?"
                                 },
                                 {
@@ -133,6 +136,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "c. 195 BCE, Plautus, Trinummus 1.2.149"
                                 }
                               ]
@@ -154,6 +158,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "“Oenōtrī coluēre virī; nunc fāma minōrēs"
                                 },
                                 {
@@ -161,6 +166,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "“Oenotrian men tilled [the land]; now rumor [has it that their] descendants call the nation ‘Italy’ after the name of its leader, [Italus].”"
                                 },
                                 {
@@ -168,6 +174,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "29 BCE – 19 BCE, Vergilius, Aeneis 1.532–533"
                                 }
                               ]
@@ -215,6 +222,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     "Dīmīcantī dē ",
                                     {
@@ -232,6 +240,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "To abandon one whose ",
                                     {
@@ -263,6 +272,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "Fāma tamen clāra est; et adhūc sine crīmine vīxī."
                                 },
                                 {
@@ -270,6 +280,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "My good name is nevertheless unstained; and so far I have lived without blame."
                                 },
                                 {
@@ -277,6 +288,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "43 BCE – c. 17 CE, Ovidius, Heroides 17.17 (translation Benham's Book of Quotations 1948)"
                                 }
                               ]
@@ -298,6 +310,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "Multī fāmam, conscientiam paucī verentur."
                                 },
                                 {
@@ -305,6 +318,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "Many fear their reputation, few their conscience."
                                 },
                                 {
@@ -312,6 +326,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "61 CE – c. 112 CE, Plinius Minor, Epistulae 3.20.9"
                                 }
                               ]
@@ -409,7 +424,7 @@
                         "data": {
                           "content": "Etymology-content"
                         },
-                        "content": "Etymology tree\nProto-Indo-European *leǵ-\nProto-Indo-European *-eti\nProto-Indo-European *léǵeti\nProto-Italic *legō\nLatin legō\nFrom Proto-Italic *legō, from Proto-Indo-European *léǵeti, from the root *leǵ- (“to gather”). Cognates include Ancient Greek λέγω (légō, “to speak, to choose, to mean”) and Albanian mbledh. May be related to lēx.\nFor etymology 1 sense 6 (“to read”), compare typologically разбира́ть (razbirátʹ), разбира́ться (razbirátʹsja) (< брать (bratʹ)), разбо́рчивый (razbórčivyj) (по́черк (póčerk))."
+                        "content": "Etymology tree\nProto-Indo-European *leǵ-\nProto-Indo-European *-eti\nProto-Indo-European *léǵeti\nProto-Italic *legō\nLatin legō\nFrom Proto-Italic *legō, from Proto-Indo-European *léǵeti, from the root *leǵ- (“to gather”). Cognates include Ancient Greek λέγω (légō, “to speak, to choose, to mean”) and Albanian mbledh. May be related to lēx.\nFor etymology 1 sense 6 (“to read”), compare typologically Russian разбира́ть (razbirátʹ), разбира́ться (razbirátʹsja) (< брать (bratʹ)), разбо́рчивый (razbórčivyj) (по́черк (póčerk))."
                       }
                     ]
                   }
@@ -422,6 +437,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -459,6 +475,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "“[...] Date volnera lymphīs / abluam, et, extrēmus sī quis super hālitus errat, / ōre legam.” [...]"
                                 },
                                 {
@@ -466,6 +483,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "“Grant that I may wash her wounds with water, and, if any last breath wanders over her, I will gather it with my lips.”"
                                 },
                                 {
@@ -473,6 +491,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "29 BCE – 19 BCE, Vergilius, Aeneis 4.683-685"
                                 }
                               ]
@@ -531,6 +550,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "[…] dum ne quem militem legeret ex eo numero quibus senatus missionem reditumque in patriam negasset ante belli finem."
                                 },
                                 {
@@ -538,6 +558,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "[…] provided he did not choose any soldier from those to whom the Senate had refused discharge and a return home before the end of the war"
                                 },
                                 {
@@ -545,6 +566,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "27 BCE – 25 BCE, Titus Livius, Ab urbe condita 26.1"
                                 }
                               ]
@@ -614,6 +636,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     "Librōs ",
                                     {
@@ -631,6 +654,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -661,6 +685,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -677,6 +702,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Have you ",
                                     {
@@ -708,6 +734,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     "Graecum est; nōn ",
                                     {
@@ -725,6 +752,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "It's Greek; it cannot be ",
                                     {
@@ -867,6 +895,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -965,7 +994,7 @@
                         "data": {
                           "content": "Etymology-content"
                         },
-                        "content": "From Proto-Italic *ū̆skʷe, from Proto-Indo-European *úds-kʷe, from *úd-s (“out, outward”, genitive) + *-kʷe (“and”). Cognate with Sanskrit उच्चा (uccā́), Younger Avestan 𐬎𐬯𐬗𐬀 (usca, “up, out”), Russian вы- (vy-, “out from”), Proto-Germanic *ūt, English out.\nHowever, cf. Lewis & Short, which says: usquĕ, adv. [us- for ubs-, from ubi with locative s; and que for qued, old abl. of quis; v. Corss. Ausspr. 2, 471; 838; cf.: quisque, usquam]."
+                        "content": "From Proto-Italic *ū̆skʷe, from Proto-Indo-European *úds-kʷe, from *úd-s (“out, outward”, genitive) + *-kʷe (“and”). Cognate with Sanskrit उच्चा (uccā́), Younger Avestan 𐬎𐬯𐬗𐬀 (usca, “up, out”), Russian вы- (vy-, “out from”), Proto-Germanic *ūt, English out."
                       }
                     ]
                   }
@@ -978,6 +1007,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1026,6 +1056,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "Eōsdem facile addūcam, ut tē haec quae vastāre iam prīdem studēs relinquentem, usque ad portās prōsequantur."
                                 },
                                 {
@@ -1033,6 +1064,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "I shall easily persuade the same [men], that as you are leaving these [things] which you have long been eager to destroy, they may escort [you] all the way to the [city] gates."
                                 },
                                 {
@@ -1040,6 +1072,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "63 BCE, Cicero, In Catilinam orationes 1.21"
                                 }
                               ]
@@ -1061,6 +1094,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "ab ōvō usque ad māla"
                                 },
                                 {
@@ -1068,6 +1102,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "from the beginning to the end\n(literally, “from the egg to the apples”)"
                                 },
                                 {
@@ -1075,6 +1110,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "c. 35 BCE, Horatius, Sermones 1.3.6–7"
                                 }
                               ]
@@ -1096,6 +1132,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": ", Latin Vulgate translation of Psalm 71:8; Canadian national motto\nĀ marī usque ad mare."
                                 },
                                 {
@@ -1103,6 +1140,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "From sea unto sea."
                                 }
                               ]
@@ -1200,7 +1238,7 @@
                         "data": {
                           "content": "Etymology-content"
                         },
-                        "content": "Perfect passive participle of regō (“to keep or lead straight, to guide”). Inherited from Proto-Italic *rektos, corresponding to Proto-Indo-European *h₃reǵtós (“having moved in a straight line”), from Proto-Indo-European *h₃reǵ- (“to straighten, direct”)."
+                        "content": "Etymology tree\nProto-Indo-European *h₃reǵ-\nProto-Indo-European *-tós\nProto-Indo-European *h₃reǵtós\nProto-Italic *rektos\nLatin rēctus\nPerfect passive participle of regō (“to keep or lead straight, to guide”). Inherited from Proto-Italic *rektos, corresponding to Proto-Indo-European *h₃reǵtós (“having moved in a straight line”), from Proto-Indo-European *h₃reǵ- (“to straighten, direct”). The vowel is long because of Lachmann's law."
                       }
                     ]
                   }
@@ -1213,6 +1251,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1250,6 +1289,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "Quae rectis lineis suos ordines servant"
                                 },
                                 {
@@ -1257,6 +1297,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "Which preserve their order in straight lines"
                                 },
                                 {
@@ -1264,6 +1305,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "c. 52 BCE, Julius Caesar, Commentarii de bello Gallico VII.23"
                                 }
                               ]
@@ -1322,6 +1364,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "Via stultī rēcta in oculīs eius; quī autem sapiēns est audit cōnsilia."
                                 },
                                 {
@@ -1329,6 +1372,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "The way of a fool is right in his own eyes: but he that is wise hearkeneth unto counsels. (Douay-Rheims trans., Challoner rev.: 1752 CE)"
                                 },
                                 {
@@ -1336,6 +1380,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "c. 347 CE – 420 CE, Hieronymus, Vulgate Proverbs.12.15"
                                 }
                               ]
@@ -1446,6 +1491,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1483,6 +1529,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     "Deō ",
                                     {
@@ -1500,6 +1547,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "For God and for ",
                                     {
@@ -1531,6 +1579,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     "Stet fortūna ",
                                     {
@@ -1547,6 +1596,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Let the good fortune of the ",
                                     {
@@ -1578,6 +1628,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "nox erat et tōta lūmina nūlla domō"
                                 },
                                 {
@@ -1585,6 +1636,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "It was night, and [there were] no lights in the whole house."
                                 },
                                 {
@@ -1592,6 +1644,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "8 CE, Ovidius, Fasti 2.792"
                                 }
                               ]
@@ -1734,6 +1787,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1750,6 +1804,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "to drag ",
                                     {
@@ -1780,6 +1835,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1796,6 +1852,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "One is ",
                                     {
@@ -1827,6 +1884,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1843,6 +1901,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "to conceive ",
                                     {
@@ -1916,6 +1975,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     "bellī ",
                                     {
@@ -1965,6 +2025,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "in war and ",
                                     {
@@ -1995,6 +2056,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "ut non quietior populus domi esset quam militiae"
                                 },
                                 {
@@ -2002,6 +2064,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "so that the people should not become lazier in the time of peace than that of war"
                                 },
                                 {
@@ -2009,6 +2072,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "27 BCE – 25 BCE, Titus Livius, Ab urbe condita 1.38"
                                 }
                               ]
@@ -2119,6 +2183,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -2156,6 +2221,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     "Nihil agis, nihil moliris, nihil ",
                                     {
@@ -2173,6 +2239,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "You do nothing, you plan nothing, you ",
                                     {
@@ -2190,6 +2257,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "63 BCE, Cicero, Catiline Orations"
                                 }
                               ]
@@ -2228,44 +2296,44 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "la",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyms"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "arbitror"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "arbitror"
                     },
-                    "content": "sentio"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "sentio"
                     },
-                    "content": "puto"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "puto"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -2366,6 +2434,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -2403,6 +2472,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "omne adeo genvs in terris hominvmqve ferarvmqve et genvs æqvorevm pecvdes pictæqve volvcres in fvrias ignemqve rvvnt"
                                 },
                                 {
@@ -2410,6 +2480,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "So far does every species on earth of man and beast, whether the aquatic species, livestock, or painted-winged, collapse into the frenzies and the fire"
                                 },
                                 {
@@ -2417,6 +2488,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "c. 37 BCE – 30 BCE, Vergilius, Georgicon III"
                                 }
                               ]
@@ -2438,6 +2510,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "venenum in auro bibitur"
                                 },
                                 {
@@ -2445,6 +2518,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "Poison is drunk from a gold cup"
                                 },
                                 {
@@ -2452,6 +2526,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "Seneca"
                                 }
                               ]
@@ -2499,6 +2574,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "lentus in umbrā"
                                 },
                                 {
@@ -2506,6 +2582,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "sluggish under the shade"
                                 },
                                 {
@@ -2513,6 +2590,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "c. 41 BCE – 39 BCE, Vergilius, Eclogae 1.4"
                                 }
                               ]
@@ -2582,6 +2660,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "Et Verbum caro factum est, et habitavit in nobis :"
                                 },
                                 {
@@ -2589,6 +2668,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "And the Word was made flesh, and dwelt among us,"
                                 },
                                 {
@@ -2596,6 +2676,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "Vulgate, Gospel of St. John 1:14"
                                 }
                               ]
@@ -2617,6 +2698,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "Et ingressus angelus ad eam dixit : Ave gratia plena : Dominus tecum : benedicta tu in mulieribus."
                                 },
                                 {
@@ -2624,6 +2706,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "And the angel being come in, said unto her: Hail, full of grace, the Lord is with thee: blessed art thou among women."
                                 },
                                 {
@@ -2631,6 +2714,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "Vulgate, Gospel of St. Luke 1:28"
                                 }
                               ]
@@ -2695,6 +2779,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "De introductione religionis Christianæ in Islandiam."
                                 },
                                 {
@@ -2702,6 +2787,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "On the introduction of Christianity to Iceland."
                                 },
                                 {
@@ -2709,6 +2795,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "1774, Finnur Jónsson, Historia Ecclesiastica Islandiæ 1"
                                 }
                               ]
@@ -2773,6 +2860,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     "Gallī ",
                                     {
@@ -2798,6 +2886,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The Gauls are rushing ",
                                     {
@@ -2829,6 +2918,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "Scelera in se fratris"
                                 },
                                 {
@@ -2836,6 +2926,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "The brother’s crimes against himself"
                                 },
                                 {
@@ -2843,6 +2934,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "27 BCE – 25 BCE, Titus Livius, Ab urbe condita I.6"
                                 }
                               ]
@@ -2864,6 +2956,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "in adversum Romani subiere"
                                 },
                                 {
@@ -2871,6 +2964,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "The Romans marched against their enemy"
                                 },
                                 {
@@ -2878,6 +2972,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "27 BCE – 25 BCE, Titus Livius, Ab urbe condita I.12"
                                 }
                               ]
@@ -2998,6 +3093,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": "generatimque distributi in civitates"
                                 },
                                 {
@@ -3005,6 +3101,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "and being distributed in tribes according to their respective nations"
                                 },
                                 {
@@ -3012,6 +3109,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "c. 52 BCE, Julius Caesar, Commentarii de bello Gallico VII.19"
                                 }
                               ]
@@ -3022,6 +3120,36 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "data": {
+              "content": "related-words"
+            },
+            "lang": "la",
+            "content": [
+              {
+                "tag": "div",
+                "data": {
+                  "content": "antonyms"
+                },
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "ex"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -3109,7 +3237,7 @@
                         "data": {
                           "content": "Etymology-content"
                         },
-                        "content": "Etymology tree\nProto-Indo-European *lent-\nProto-Indo-European *-os\nProto-Italic *lentos\nLatin lentus\nLatin -ē\nLatin lentē\nFrom lentus (“slow”) + -ē."
+                        "content": "Etymology tree\nProto-Indo-European *lent-\nProto-Indo-European *-os\nProto-Italic *lentos\nLatin lentus\nProto-Italic *-ēd\nOld Latin -ēd\nLatin -ē\nLatin lentē\nFrom lentus (“slow”) + -ē."
                       }
                     ]
                   }
@@ -3122,6 +3250,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -3159,6 +3288,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "la",
                                   "content": [
                                     "Marcus ad arborem ",
                                     {
@@ -3176,6 +3306,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Marcus walks ",
                                     {
@@ -3296,6 +3427,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -3303,7 +3435,60 @@
                   {
                     "tag": "div",
                     "content": [
-                      "beautiful, fair, pretty"
+                      "beautiful, fair, pretty",
+                      {
+                        "tag": "details",
+                        "data": {
+                          "content": "details-entry-examples"
+                        },
+                        "content": [
+                          {
+                            "tag": "summary",
+                            "data": {
+                              "content": "summary-entry"
+                            },
+                            "content": "1 example"
+                          },
+                          {
+                            "tag": "div",
+                            "data": {
+                              "content": "extra-info"
+                            },
+                            "content": {
+                              "tag": "div",
+                              "data": {
+                                "content": "example-sentence"
+                              },
+                              "content": [
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-a"
+                                  },
+                                  "lang": "la",
+                                  "content": "Heic est sepulcrum hau pulcrum pulcrai feminae"
+                                },
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-b"
+                                  },
+                                  "lang": "en",
+                                  "content": "Here is the ugly tomb of a beautiful woman\n(literally, “Here is the tomb of no beauty for a beautiful woman”)"
+                                },
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-c"
+                                  },
+                                  "lang": "en",
+                                  "content": "c. 135-120 BCE, CIL 6.15346"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
                     ]
                   }
                 ]

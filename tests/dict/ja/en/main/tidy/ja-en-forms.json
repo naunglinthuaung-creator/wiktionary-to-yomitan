@@ -659,8 +659,8 @@
       ]
     }
   },
-  "走る": {
-    "ハシる": {
+  "ハシる": {
+    "走る": {
       "verb": [
         "altofsense",
         [
@@ -668,7 +668,9 @@
           "alternative"
         ]
       ]
-    },
+    }
+  },
+  "走る": {
     "走り": {
       "verb": [
         "extracted",
@@ -727,6 +729,7 @@
         [
           "hypothetical",
           "imperative stem",
+          "potential stem",
           "realis stem"
         ]
       ]
@@ -769,7 +772,7 @@
       "verb": [
         "extracted",
         [
-          "causative"
+          "causative short-form"
         ]
       ]
     },
@@ -809,6 +812,7 @@
       "verb": [
         "extracted",
         [
+          "imperative",
           "volitional"
         ]
       ]
@@ -857,7 +861,8 @@
       "verb": [
         "extracted",
         [
-          "formal"
+          "formal",
+          "polite"
         ]
       ]
     },
@@ -1052,6 +1057,390 @@
         "extracted",
         [
           "volitional"
+        ]
+      ]
+    },
+    "走らないで": {
+      "verb": [
+        "extracted",
+        [
+          "negative conjunctive"
+        ]
+      ]
+    },
+    "走らなくて": {
+      "verb": [
+        "extracted",
+        [
+          "negative conjunctive"
+        ]
+      ]
+    },
+    "走りません": {
+      "verb": [
+        "extracted",
+        [
+          "negative polite"
+        ]
+      ]
+    },
+    "走らなかった": {
+      "verb": [
+        "extracted",
+        [
+          "negative"
+        ]
+      ]
+    },
+    "走りました": {
+      "verb": [
+        "extracted",
+        [
+          "polite"
+        ]
+      ]
+    },
+    "走りませんでした": {
+      "verb": [
+        "extracted",
+        [
+          "negative polite"
+        ]
+      ]
+    },
+    "走られ": {
+      "verb": [
+        "extracted",
+        [
+          "passive stem"
+        ]
+      ]
+    },
+    "走られない": {
+      "verb": [
+        "extracted",
+        [
+          "passive negative"
+        ]
+      ]
+    },
+    "走られます": {
+      "verb": [
+        "extracted",
+        [
+          "passive polite"
+        ]
+      ]
+    },
+    "走られません": {
+      "verb": [
+        "extracted",
+        [
+          "passive negative polite"
+        ]
+      ]
+    },
+    "走られた": {
+      "verb": [
+        "extracted",
+        [
+          "past passive"
+        ]
+      ]
+    },
+    "走られなかった": {
+      "verb": [
+        "extracted",
+        [
+          "past passive negative"
+        ]
+      ]
+    },
+    "走らせ": {
+      "verb": [
+        "extracted",
+        [
+          "causative stem"
+        ]
+      ]
+    },
+    "走らせない": {
+      "verb": [
+        "extracted",
+        [
+          "negative causative"
+        ]
+      ]
+    },
+    "走らせます": {
+      "verb": [
+        "extracted",
+        [
+          "causative polite"
+        ]
+      ]
+    },
+    "走らせません": {
+      "verb": [
+        "extracted",
+        [
+          "negative causative polite"
+        ]
+      ]
+    },
+    "走らせた": {
+      "verb": [
+        "extracted",
+        [
+          "past causative"
+        ]
+      ]
+    },
+    "走らせなかった": {
+      "verb": [
+        "extracted",
+        [
+          "past negative causative"
+        ]
+      ]
+    },
+    "走れない": {
+      "verb": [
+        "extracted",
+        [
+          "negative potential"
+        ]
+      ]
+    },
+    "走れます": {
+      "verb": [
+        "extracted",
+        [
+          "polite potential"
+        ]
+      ]
+    },
+    "走れません": {
+      "verb": [
+        "extracted",
+        [
+          "negative polite potential"
+        ]
+      ]
+    },
+    "走れた": {
+      "verb": [
+        "extracted",
+        [
+          "past potential"
+        ]
+      ]
+    },
+    "走れなかった": {
+      "verb": [
+        "extracted",
+        [
+          "past negative potential"
+        ]
+      ]
+    },
+    "走りましょう": {
+      "verb": [
+        "extracted",
+        [
+          "imperative polite"
+        ]
+      ]
+    },
+    "走らせられ": {
+      "verb": [
+        "extracted",
+        [
+          "passive causative standard stem"
+        ]
+      ]
+    },
+    "走らされ": {
+      "verb": [
+        "extracted",
+        [
+          "passive causative colloquial stem"
+        ]
+      ]
+    },
+    "走らせられる": {
+      "verb": [
+        "extracted",
+        [
+          "passive causative"
+        ]
+      ]
+    },
+    "走らされる": {
+      "verb": [
+        "extracted",
+        [
+          "passive causative"
+        ]
+      ]
+    },
+    "走らせられない": {
+      "verb": [
+        "extracted",
+        [
+          "passive negative causative"
+        ]
+      ]
+    },
+    "走らされない": {
+      "verb": [
+        "extracted",
+        [
+          "passive negative causative"
+        ]
+      ]
+    },
+    "走らせられます": {
+      "verb": [
+        "extracted",
+        [
+          "passive causative polite"
+        ]
+      ]
+    },
+    "走らされます": {
+      "verb": [
+        "extracted",
+        [
+          "passive causative polite"
+        ]
+      ]
+    },
+    "走らせられません": {
+      "verb": [
+        "extracted",
+        [
+          "passive negative causative polite"
+        ]
+      ]
+    },
+    "走らされません": {
+      "verb": [
+        "extracted",
+        [
+          "passive negative causative polite"
+        ]
+      ]
+    },
+    "走らせられた": {
+      "verb": [
+        "extracted",
+        [
+          "past passive causative"
+        ]
+      ]
+    },
+    "走らされた": {
+      "verb": [
+        "extracted",
+        [
+          "past passive causative"
+        ]
+      ]
+    },
+    "走らせられなかった": {
+      "verb": [
+        "extracted",
+        [
+          "past passive negative causative"
+        ]
+      ]
+    },
+    "走らされなかった": {
+      "verb": [
+        "extracted",
+        [
+          "past passive negative causative"
+        ]
+      ]
+    },
+    "走りたい": {
+      "verb": [
+        "extracted",
+        [
+          "desiderative"
+        ]
+      ]
+    },
+    "走りたくない": {
+      "verb": [
+        "extracted",
+        [
+          "negative desiderative"
+        ]
+      ]
+    },
+    "走っている": {
+      "verb": [
+        "extracted",
+        [
+          "desiderative"
+        ]
+      ]
+    },
+    "走ってる": {
+      "verb": [
+        "extracted",
+        [
+          "contraction desiderative"
+        ]
+      ]
+    },
+    "走っていない": {
+      "verb": [
+        "extracted",
+        [
+          "negative desiderative"
+        ]
+      ]
+    },
+    "走ってない": {
+      "verb": [
+        "extracted",
+        [
+          "negative contraction desiderative"
+        ]
+      ]
+    },
+    "走っています": {
+      "verb": [
+        "extracted",
+        [
+          "desiderative polite"
+        ]
+      ]
+    },
+    "走っていません": {
+      "verb": [
+        "extracted",
+        [
+          "negative desiderative polite"
+        ]
+      ]
+    },
+    "走っていた": {
+      "verb": [
+        "extracted",
+        [
+          "past desiderative"
+        ]
+      ]
+    },
+    "走っていなかった": {
+      "verb": [
+        "extracted",
+        [
+          "past negative desiderative"
         ]
       ]
     }

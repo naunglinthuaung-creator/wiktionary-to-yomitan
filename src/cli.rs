@@ -6,6 +6,7 @@ use anyhow::{Ok, Result, bail};
 use clap::{Parser, Subcommand};
 
 use crate::{
+    Set,
     dict::{Langs, WriterFormat},
     lang::{Edition, EditionSpec, Lang},
     models::kaikki::WordEntry,
@@ -44,6 +45,9 @@ pub enum Command {
 
     /// Download a Kaikki jsonlines
     Download(MainArgs),
+
+    /// Manage the wiktextract databases that `release` reads from
+    Db(DbArgs),
 
     /// Show supported iso codes, with coloured editions
     Iso(IsoArgs),
@@ -120,15 +124,99 @@ pub struct IpaMergedArgs {
     pub options: Options,
 }
 
+fn dedup_editions(editions: &[Edition]) -> Vec<Edition> {
+    editions
+        .iter()
+        .copied()
+        .collect::<Set<_>>()
+        .into_iter()
+        .collect()
+}
+
 #[derive(Parser, Debug)]
 pub struct ReleaseArgs {
     /// Change the root directory
     #[arg(long, default_value = "data")]
     pub root_dir: PathBuf,
 
-    /// Writer format for all dictionaries
-    #[arg(long, default_value_t = WriterFormat::Yomitan)]
-    pub format: WriterFormat,
+    /// Writer formats for all dictionaries (comma separated)
+    #[arg(long = "format", value_delimiter = ',', default_values_t = [WriterFormat::Yomitan])]
+    pub formats: Vec<WriterFormat>,
+
+    /// Only release these editions (defaults to all)
+    #[arg(value_delimiter = ',')]
+    pub editions: Vec<Edition>,
+}
+
+impl ReleaseArgs {
+    /// The options every dictionary of the release is built with.
+    pub fn options(&self) -> Options {
+        Options {
+            quiet: true,
+            root_dir: self.root_dir.clone(),
+            formats: self.formats.clone(),
+            min_entries: DEFAULT_MIN_ENTRIES,
+            ..Default::default()
+        }
+    }
+
+    /// The editions to cover, English first because it is the bottleneck and we
+    /// want it started as soon as possible.
+    pub fn editions(&self) -> Vec<Edition> {
+        let mut editions = if self.editions.is_empty() {
+            Edition::all()
+        } else {
+            dedup_editions(&self.editions)
+        };
+        editions.sort_by_key(|ed| i32::from(*ed != Edition::En));
+        editions
+    }
+}
+
+#[derive(Parser, Debug)]
+pub struct DbArgs {
+    #[command(subcommand)]
+    pub op: DbOp,
+}
+
+#[derive(Subcommand, Debug)]
+pub enum DbOp {
+    /// Import the Kaikki jsonlines into a database, downloading them if needed
+    Build(DbBuildArgs),
+
+    /// Delete databases
+    Drop(DbSelectArgs),
+}
+
+#[derive(Parser, Debug)]
+pub struct DbBuildArgs {
+    #[command(flatten)]
+    pub select: DbSelectArgs,
+
+    /// Rebuild even if the database already exists
+    #[arg(long)]
+    pub force: bool,
+}
+
+#[derive(Parser, Debug, Clone)]
+pub struct DbSelectArgs {
+    /// Editions to act on (defaults to all)
+    #[arg(value_delimiter = ',')]
+    pub editions: Vec<Edition>,
+
+    /// Change the root directory
+    #[arg(long, default_value = "data")]
+    pub root_dir: PathBuf,
+}
+
+impl DbSelectArgs {
+    pub fn editions(&self) -> Vec<Edition> {
+        if self.editions.is_empty() {
+            Edition::all()
+        } else {
+            dedup_editions(&self.editions)
+        }
+    }
 }
 
 #[derive(Parser, Debug, Default)]
@@ -185,9 +273,9 @@ pub struct Options {
     #[arg(long, short)]
     pub redownload: bool,
 
-    /// Only keep the first n filtered lines. -1 keeps all
-    #[arg(long, default_value_t = -1)]
-    pub first: i32,
+    /// Only keep the first n filtered lines.
+    #[arg(long)]
+    pub first: Option<usize>,
 
     // Example:
     //   `--filter pos,adv`
@@ -225,10 +313,24 @@ pub struct Options {
     #[arg(long, default_value = "data")]
     pub root_dir: PathBuf,
 
-    /// Writer format
-    #[arg(long, default_value_t = WriterFormat::Yomitan)]
-    pub format: WriterFormat,
+    /// Writer formats (comma separated)
+    #[arg(long = "format", value_delimiter = ',', default_values_t = [WriterFormat::Yomitan])]
+    pub formats: Vec<WriterFormat>,
+
+    /// Do not write dictionaries with fewer than this many entries
+    #[arg(long, default_value_t = DEFAULT_MIN_ENTRIES)]
+    pub min_entries: usize,
+
+    /// Read the entries from the databases made by `wty db build`, not from the kaikki jsonl
+    #[arg(long)]
+    pub from_db: bool,
 }
+
+/// Default of [`Options::min_entries`].
+///
+/// NOTE: `Options::default()` is derived, so it leaves `min_entries` at 0 and writes every
+/// non-empty dictionary. That is what tests and benches want.
+pub const DEFAULT_MIN_ENTRIES: usize = 100;
 
 /// Newtype string wrapper to overwrite Default with `wty`.
 #[derive(Debug, Clone)]
@@ -263,12 +365,12 @@ impl Deref for DictName {
 }
 
 fn parse_tuple(s: &str) -> Result<(FilterKey, String), String> {
-    let parts: Vec<_> = s.split(',').map(|x| x.trim().to_string()).collect();
-    if parts.len() != 2 {
+    // Split on the *first* comma only: the value may contain commas itself!
+    let Some((key, value)) = s.split_once(',') else {
         return Err("expected two comma-separated values".into());
-    }
-    let filter_key = FilterKey::try_from(parts[0].as_str()).map_err(|e| e.to_string())?;
-    core::result::Result::Ok((filter_key, parts[1].clone()))
+    };
+    let filter_key = FilterKey::try_from(key.trim()).map_err(|e| e.to_string())?;
+    Result::Ok((filter_key, value.trim().to_string()))
 }
 
 /// A key used to filter a [`WordEntry`] by one of its fields.
@@ -382,6 +484,9 @@ impl TryFrom<GlossaryExtendedLangs> for LangSpecs {
     type Error = anyhow::Error;
 
     fn try_from(langs: GlossaryExtendedLangs) -> Result<Self> {
+        if langs.edition == EditionSpec::One(Edition::Simple) {
+            anyhow::bail!("Simple English can not be used as the Edition for this dictionary.");
+        }
         err_on_simple_english(&langs.source, &langs.target)?;
         err_on_source_being_target(&langs.source, &langs.target)?;
 
@@ -472,9 +577,86 @@ mod tests {
     }
 
     #[test]
+    fn glossary_extended_can_not_use_the_simple_edition() {
+        let specs = |edition, source, target| {
+            let args = ["wty", "glossary-extended", edition, source, target];
+            match Cli::try_parse_from(args).unwrap().command {
+                Command::GlossaryExtended(args) => LangSpecs::try_from(args.langs),
+                _ => panic!(),
+            }
+        };
+
+        assert!(specs("simple", "de", "en").is_err());
+        assert!(specs("en", "de", "el").is_ok());
+        // "all" stays fine: the Simple edition just contributes nothing.
+        assert!(specs("all", "de", "el").is_ok());
+    }
+
+    #[test]
+    fn editions_are_deduplicated() {
+        let parse = |args: &[&str]| {
+            let cli = Cli::try_parse_from(args).unwrap();
+            match cli.command {
+                Command::Db(db) => {
+                    let DbOp::Build(build) = db.op else { panic!() };
+                    build.select.editions()
+                }
+                _ => panic!(),
+            }
+        };
+
+        assert_eq!(parse(&["wty", "db", "build", "en,en"]), vec![Edition::En]);
+        assert_eq!(
+            parse(&["wty", "db", "build", "ja,el,ja"]),
+            vec![Edition::Ja, Edition::El]
+        );
+    }
+
+    #[test]
     fn filter_flag() {
         assert!(MainArgs::try_parse_from(["_pname", "el", "el", "--filter", "foo,bar"]).is_err());
         assert!(MainArgs::try_parse_from(["_pname", "el", "el", "--filter", "word,hello"]).is_ok());
         assert!(MainArgs::try_parse_from(["_pname", "el", "el", "--reject", "pos,name"]).is_ok());
+    }
+
+    #[test]
+    fn format_flag_takes_several_formats() {
+        let args = MainArgs::try_parse_from(["_pname", "el", "el"]).unwrap();
+        assert_eq!(args.options.formats, [WriterFormat::Yomitan]);
+
+        let args =
+            MainArgs::try_parse_from(["_pname", "el", "el", "--format", "yomitan,mdict"]).unwrap();
+        assert_eq!(
+            args.options.formats,
+            [WriterFormat::Yomitan, WriterFormat::Mdict]
+        );
+
+        let args =
+            ReleaseArgs::try_parse_from(["_pname", "--format=yomitan,mdict", "de,en"]).unwrap();
+        assert_eq!(args.formats, [WriterFormat::Yomitan, WriterFormat::Mdict]);
+        assert_eq!(args.editions.len(), 2);
+    }
+
+    #[test]
+    fn filter_flag_empty_values() {
+        assert!(MainArgs::try_parse_from(["_pname", "el", "el", "--filter", "word"]).is_err());
+    }
+
+    fn parse_filter_value(filter: &str) -> String {
+        let args = MainArgs::try_parse_from(["_pname", "el", "el", "--filter", filter]).unwrap();
+        let [(key, value)] = args.options.filter.as_slice() else {
+            panic!("expected exactly one filter");
+        };
+        assert!(matches!(key, FilterKey::Word));
+        value.clone()
+    }
+
+    #[test]
+    fn filter_flag_value_with_comma() {
+        assert_eq!(parse_filter_value("word,Hello, world"), "Hello, world");
+        // The headword *is* a comma
+        assert_eq!(parse_filter_value("word,,"), ",");
+        // Both halves are still trimmed
+        assert_eq!(parse_filter_value("word, hello "), "hello");
     }
 }

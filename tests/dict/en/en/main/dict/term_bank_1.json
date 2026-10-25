@@ -36,7 +36,7 @@
                         "data": {
                           "content": "Grammar-content"
                         },
-                        "content": "bring (third-person singular simple present brings, present participle bringing, simple past brought, past participle brought or (rare, dialectal) broughten)"
+                        "content": "bring (third-person singular simple present brings, present participle bringing, simple past brought or (colloquial, dialectal) brang, past participle brought or (colloquial, dialectal) brung or (rare, dialectal) broughten)"
                       }
                     ]
                   },
@@ -71,6 +71,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -134,6 +135,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Waiter, please ",
                                     {
@@ -217,6 +219,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The new company director ",
                                     {
@@ -291,6 +294,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Let's ",
                                     {
@@ -322,6 +326,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The controversial TV broadcast ",
                                     {
@@ -353,6 +358,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Seeing her ",
                                     {
@@ -438,6 +444,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "It seems so preposterous a thing[…]that they do not easily ",
                                     {
@@ -495,6 +502,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "What does coal ",
                                     {
@@ -578,6 +586,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The closer Jones can really ",
                                     {
@@ -652,6 +661,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "You want to ",
                                     {
@@ -772,6 +782,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -826,6 +837,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "\"The Hay ",
                                     {
@@ -1010,6 +1022,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1188,6 +1201,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1225,6 +1239,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "He rode astride while hawking; she ",
                                     {
@@ -1242,6 +1257,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "2003, Brenda Joyce, House of Dreams, page 175"
                                 }
                               ]
@@ -1352,6 +1368,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1443,6 +1460,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "A spirit I am indeed;\nBut am in that dimension grossly clad\nWhich from the womb I did ",
                                     {
@@ -1591,6 +1609,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1628,6 +1647,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1797,6 +1817,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1936,6 +1957,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1984,6 +2006,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The fireworks created a ",
                                     {
@@ -2010,44 +2033,79 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyms"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "mystic"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "mystical"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "numinous"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "mystic"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "nonmagical"
                     },
-                    "content": "mystical"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "nonmystic"
                     },
-                    "content": "numinous"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "nonmystical"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -2066,6 +2124,466 @@
               {
                 "tag": "a",
                 "href": "https://kaikki.org/dictionary/English/meaning/m/ma/magical.html",
+                "content": "Kaikki"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    0,
+    ""
+  ],
+  [
+    "bass",
+    "",
+    "adj",
+    "adj",
+    0,
+    [
+      {
+        "type": "structured-content",
+        "content": [
+          {
+            "tag": "div",
+            "content": [
+              {
+                "tag": "div",
+                "data": {
+                  "content": "preamble"
+                },
+                "content": [
+                  {
+                    "tag": "details",
+                    "data": {
+                      "content": "details-entry-Grammar"
+                    },
+                    "content": [
+                      {
+                        "tag": "summary",
+                        "data": {
+                          "content": "summary-entry"
+                        },
+                        "content": "Grammar"
+                      },
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "Grammar-content"
+                        },
+                        "content": "bass (comparative basser, superlative bassest)"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "details",
+                    "data": {
+                      "content": "details-entry-Etymology"
+                    },
+                    "content": [
+                      {
+                        "tag": "summary",
+                        "data": {
+                          "content": "summary-entry"
+                        },
+                        "content": "Etymology"
+                      },
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "Etymology-content"
+                        },
+                        "content": "Etymology tree\nProto-Indo-European *gʷem-\nProto-Indo-European *-tis\nProto-Indo-European *gʷémtis\nProto-Hellenic *gʷə́tis\nAncient Greek βᾰ́σῐς (bắsĭs)bor.\nLatin basis\nOld French basebor.\nMiddle English base\nEnglish base\n▲\nItalian bassoinflu.\nEnglish bass\nA respelling of base under the influence of Italian basso (“low”)."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "ol",
+            "data": {
+              "content": "glosses"
+            },
+            "lang": "en",
+            "content": [
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      "Of sound, a voice or an instrument, low in pitch or frequency.",
+                      {
+                        "tag": "details",
+                        "data": {
+                          "content": "details-entry-examples"
+                        },
+                        "content": [
+                          {
+                            "tag": "summary",
+                            "data": {
+                              "content": "summary-entry"
+                            },
+                            "content": "1 example"
+                          },
+                          {
+                            "tag": "div",
+                            "data": {
+                              "content": "extra-info"
+                            },
+                            "content": {
+                              "tag": "div",
+                              "data": {
+                                "content": "example-sentence"
+                              },
+                              "content": [
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-a"
+                                  },
+                                  "lang": "en",
+                                  "content": [
+                                    "The giant spoke in a deep, ",
+                                    {
+                                      "tag": "span",
+                                      "data": {
+                                        "content": "bold-text"
+                                      },
+                                      "content": "bass"
+                                    },
+                                    ", rumbling voice that shook me to my boots."
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "data": {
+              "content": "backlink"
+            },
+            "content": [
+              {
+                "tag": "a",
+                "href": "https://en.wiktionary.org/wiki/bass#English",
+                "content": "Wiktionary"
+              },
+              " | ",
+              {
+                "tag": "a",
+                "href": "https://kaikki.org/dictionary/English/meaning/b/ba/bass.html",
+                "content": "Kaikki"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    0,
+    ""
+  ],
+  [
+    "bass",
+    "",
+    "n",
+    "n",
+    0,
+    [
+      {
+        "type": "structured-content",
+        "content": [
+          {
+            "tag": "div",
+            "content": [
+              {
+                "tag": "div",
+                "data": {
+                  "content": "preamble"
+                },
+                "content": [
+                  {
+                    "tag": "details",
+                    "data": {
+                      "content": "details-entry-Grammar"
+                    },
+                    "content": [
+                      {
+                        "tag": "summary",
+                        "data": {
+                          "content": "summary-entry"
+                        },
+                        "content": "Grammar"
+                      },
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "Grammar-content"
+                        },
+                        "content": "bass (plural basses)"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "details",
+                    "data": {
+                      "content": "details-entry-Etymology"
+                    },
+                    "content": [
+                      {
+                        "tag": "summary",
+                        "data": {
+                          "content": "summary-entry"
+                        },
+                        "content": "Etymology"
+                      },
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "Etymology-content"
+                        },
+                        "content": "Etymology tree\nProto-Indo-European *gʷem-\nProto-Indo-European *-tis\nProto-Indo-European *gʷémtis\nProto-Hellenic *gʷə́tis\nAncient Greek βᾰ́σῐς (bắsĭs)bor.\nLatin basis\nOld French basebor.\nMiddle English base\nEnglish base\n▲\nItalian bassoinflu.\nEnglish bass\nA respelling of base under the influence of Italian basso (“low”)."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "ol",
+            "data": {
+              "content": "glosses"
+            },
+            "lang": "en",
+            "content": [
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      "A low spectrum of sound tones.",
+                      {
+                        "tag": "details",
+                        "data": {
+                          "content": "details-entry-examples"
+                        },
+                        "content": [
+                          {
+                            "tag": "summary",
+                            "data": {
+                              "content": "summary-entry"
+                            },
+                            "content": "1 example"
+                          },
+                          {
+                            "tag": "div",
+                            "data": {
+                              "content": "extra-info"
+                            },
+                            "content": {
+                              "tag": "div",
+                              "data": {
+                                "content": "example-sentence"
+                              },
+                              "content": [
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-a"
+                                  },
+                                  "lang": "en",
+                                  "content": [
+                                    "Peter adjusted the equalizer on his audio equipment to emphasize the ",
+                                    {
+                                      "tag": "span",
+                                      "data": {
+                                        "content": "bold-text"
+                                      },
+                                      "content": "bass"
+                                    },
+                                    "."
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "tags"
+                        },
+                        "content": [
+                          {
+                            "tag": "span",
+                            "title": "music",
+                            "data": {
+                              "content": "tag",
+                              "category": "topic"
+                            },
+                            "content": "🎵"
+                          }
+                        ]
+                      },
+                      "A section of a musical group that produces low-pitched sound, lower than the baritone and tenor.",
+                      {
+                        "tag": "details",
+                        "data": {
+                          "content": "details-entry-examples"
+                        },
+                        "content": [
+                          {
+                            "tag": "summary",
+                            "data": {
+                              "content": "summary-entry"
+                            },
+                            "content": "1 example"
+                          },
+                          {
+                            "tag": "div",
+                            "data": {
+                              "content": "extra-info"
+                            },
+                            "content": {
+                              "tag": "div",
+                              "data": {
+                                "content": "example-sentence"
+                              },
+                              "content": [
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-a"
+                                  },
+                                  "lang": "en",
+                                  "content": [
+                                    "The conductor preferred to situate the ",
+                                    {
+                                      "tag": "span",
+                                      "data": {
+                                        "content": "bold-text"
+                                      },
+                                      "content": "bass"
+                                    },
+                                    " in the middle rear, rather than to one side of the orchestra."
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "tags"
+                        },
+                        "content": [
+                          {
+                            "tag": "span",
+                            "title": "music",
+                            "data": {
+                              "content": "tag",
+                              "category": "topic"
+                            },
+                            "content": "🎵"
+                          }
+                        ]
+                      },
+                      "One who sings in the bass range."
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "tags"
+                        },
+                        "content": [
+                          {
+                            "tag": "span",
+                            "title": "music",
+                            "data": {
+                              "content": "tag",
+                              "category": "topic"
+                            },
+                            "content": "🎵"
+                          }
+                        ]
+                      },
+                      "An instrument that plays in the bass range, in particular a bass guitar, double bass, electric bass, or bass synthesiser."
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      "The clef sign that indicates that the pitch of the notes is below middle C."
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "data": {
+              "content": "backlink"
+            },
+            "content": [
+              {
+                "tag": "a",
+                "href": "https://en.wiktionary.org/wiki/bass#English",
+                "content": "Wiktionary"
+              },
+              " | ",
+              {
+                "tag": "a",
+                "href": "https://kaikki.org/dictionary/English/meaning/b/ba/bass.html",
                 "content": "Kaikki"
               }
             ]

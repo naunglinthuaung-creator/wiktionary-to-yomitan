@@ -4,33 +4,20 @@ use std::{
 };
 
 use anyhow::Result;
-use pangloss::{
-    AltEntry, AltMap, Definition, Entry, Glossary, GlossaryInfo, Writer,
-    formats::stardict::StardictFormat,
-};
+use pangloss::{Glossary, GlossaryInfo, Writer, formats::stardict::StardictFormat};
 
 use crate::{
-    cli::Options,
-    dict::writer::renderer::Renderer,
-    lang::Lang,
-    models::yomitan::{DetailedDefinition, YomitanDict},
-    path::PathManager,
+    cli::Options, dict::writer::build_entries, models::yomitan::YomitanDict, path::PathManager,
 };
 
 mod renderer;
 use renderer::StardictRenderer;
 
-pub fn write_stardict(
-    source: Lang,
-    target: Lang,
-    _: &Options,
-    pm: &PathManager,
-    ydict: YomitanDict,
-) -> Result<PathBuf> {
+pub fn write_stardict(_: &Options, pm: &PathManager, ydict: YomitanDict) -> Result<PathBuf> {
     let dir_in_stage = pm.dir_in_stage("stardict");
     _ = fs::create_dir_all(&dir_in_stage);
 
-    let dict_name = format!("wty-{source}-{target}");
+    let dict_name = pm.dict_name_expanded();
     let ifo_path = dir_in_stage.join(format!("{dict_name}.ifo"));
     let glossary = build_glossary(&dict_name, ydict);
 
@@ -41,31 +28,9 @@ pub fn write_stardict(
 
 // Build a Glossary out of the html rendered by StardictRenderer
 fn build_glossary(dict_name: &str, ydict: YomitanDict) -> Glossary {
-    // Aren't these duplicated in entries?
-    let mut alt_map = AltMap::new();
-    for entry in &ydict.term_bank_form {
-        for def in &entry.definitions {
-            let DetailedDefinition::Inflection((from, _tags)) = def else {
-                panic!("forms must be made from inflections");
-            };
-            alt_map
-                .entry(from.clone())
-                .or_default()
-                .push(AltEntry::only_term(entry.term.clone()));
-        }
-    }
-
     // We don't need to sort entries it since pangloss does it on write:
     // https://github.com/daxida/pangloss/blob/master/src/formats/stardict/writer.rs#L66
-    let entries: Vec<Entry> = ydict
-        .into_iter_flat()
-        .map(|entry| {
-            Entry::new(
-                entry.term().to_string(),
-                Definition::Html(StardictRenderer::render_entry(&entry).into_string()),
-            )
-        })
-        .collect();
+    let entries = build_entries::<StardictRenderer>(ydict);
 
     let mut info = GlossaryInfo::new();
     info.insert("name", dict_name.to_string());
@@ -73,7 +38,6 @@ fn build_glossary(dict_name: &str, ydict: YomitanDict) -> Glossary {
 
     Glossary {
         entries,
-        alt_map,
         info,
         ..Default::default()
     }

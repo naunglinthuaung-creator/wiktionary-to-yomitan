@@ -9,6 +9,10 @@ use wty::{
     path::PathManager,
 };
 
+/// Root of the bench fixtures.
+///
+/// Every `<source>-<target>-extract.jsonl` under `kaikki/` was made by taking the
+/// first 50 entries of that edition's kaikki dump.
 const BENCH_FIXTURES_DIR_100: &str = "benches/fixtures";
 
 fn fixture_options(fixture_dir: &Path) -> Options {
@@ -17,7 +21,7 @@ fn fixture_options(fixture_dir: &Path) -> Options {
         experimental: false,
         quiet: true,
         root_dir: fixture_dir.to_path_buf(),
-        format: WriterFormat::Ir,
+        formats: vec![WriterFormat::Ir],
         ..Default::default()
     }
 }
@@ -39,10 +43,9 @@ fn bench_monolingual(c: &mut Criterion, edition: Edition, label: &str) {
         b.iter(|| make_dict_from_jsonl(DMain, args.clone()));
     });
 
-    std::fs::remove_dir_all(pm.dir_dicts()).unwrap();
+    let _ = std::fs::remove_dir_all(pm.dir_dicts());
 }
 
-// cargo run -r -- main el el -r --cache-filter --skip-yomitan --first 50
 fn bench_el_el(c: &mut Criterion) {
     bench_monolingual(c, Edition::El, "main_dict_el_el");
 }
@@ -51,5 +54,9 @@ fn bench_de_de(c: &mut Criterion) {
     bench_monolingual(c, Edition::De, "main_dict_de_de");
 }
 
-criterion_group!(benches, bench_el_el, bench_de_de);
+fn bench_en_en(c: &mut Criterion) {
+    bench_monolingual(c, Edition::En, "main_dict_en_en");
+}
+
+criterion_group!(benches, bench_el_el, bench_de_de, bench_en_en);
 criterion_main!(benches);

@@ -7,11 +7,7 @@ use crate::{
     cli::LangSpecs,
     dict::main::ir::{FormMap, FormSource, LemmaMap, Tidy, found_ir_message_impl},
     lang::{Edition, Lang},
-    tags::{
-        merge_tags_by_case, merge_tags_by_definitiveness, merge_tags_by_gender,
-        merge_tags_by_german_verb_type, merge_tags_by_person, merge_tags_by_verb_form,
-        remove_redundant_tags, sort_tags, sort_tags_by_similar,
-    },
+    tags::{merge_tags_by_categories, remove_redundant_tags, sort_tags, sort_tags_by_similar},
     utils::{has_kanji, is_kana, is_kanji_c},
 };
 
@@ -71,15 +67,7 @@ fn postprocess_forms(form_map: &mut FormMap) {
         remove_redundant_tags(tags);
 
         // Merges
-        // Note that while some of the merges are only relevant for certain editions,
-        // they are quite cheap, and don't deserve (for now), to be only applied in case
-        // we match some (Edition, Lang) pairs.
-        merge_tags_by_person(tags);
-        merge_tags_by_case(tags);
-        merge_tags_by_verb_form(tags);
-        merge_tags_by_definitiveness(tags); // [ko-en]
-        merge_tags_by_gender(tags);
-        merge_tags_by_german_verb_type(tags);
+        merge_tags_by_categories(tags);
 
         // Sort inner words
         for tag in tags.iter_mut() {
@@ -312,7 +300,7 @@ fn to_odoriji(lemma: &str) -> Option<String> {
     let mut found = false;
 
     for i in 0..chars.len().saturating_sub(1) {
-        if is_kanji_c(chars[i]) && chars[i] == chars[i + 1] {
+        if is_kanji_c(result[i]) && result[i] == chars[i + 1] {
             result[i + 1] = '々';
             found = true;
         }
@@ -324,6 +312,16 @@ fn to_odoriji(lemma: &str) -> Option<String> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn ja_odoriji() {
+        assert_eq!(to_odoriji("日日"), Some("日々".to_string()));
+        assert_eq!(to_odoriji("種種"), Some("種々".to_string()));
+        assert_eq!(to_odoriji("明明明後日"), Some("明々明後日".to_string()));
+        assert_eq!(to_odoriji("子子子子"), Some("子々子々".to_string()));
+        assert_eq!(to_odoriji("日"), None);
+        assert_eq!(to_odoriji("ここ"), None);
+    }
 
     #[test]
     fn ja_form_promotion_basic() {

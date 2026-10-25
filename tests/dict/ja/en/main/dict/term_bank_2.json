@@ -1413,20 +1413,20 @@
     ""
   ],
   [
-    "ハシる",
+    "走る",
     "",
     "non-lemma",
     "v",
     0,
     [
       [
-        "走る",
+        "ハシる",
         [
           "alt-of"
         ]
       ],
       [
-        "走る",
+        "ハシる",
         [
           "alternative"
         ]
@@ -1583,6 +1583,12 @@
       [
         "走る",
         [
+          "potential stem"
+        ]
+      ],
+      [
+        "走る",
+        [
           "realis stem"
         ]
       ]
@@ -1680,7 +1686,7 @@
       [
         "走る",
         [
-          "causative"
+          "causative short-form"
         ]
       ]
     ],
@@ -1762,6 +1768,12 @@
     "v",
     0,
     [
+      [
+        "走る",
+        [
+          "imperative"
+        ]
+      ],
       [
         "走る",
         [
@@ -1868,6 +1880,12 @@
         "走る",
         [
           "formal"
+        ]
+      ],
+      [
+        "走る",
+        [
+          "polite"
         ]
       ]
     ],
@@ -2288,6 +2306,822 @@
         "走る",
         [
           "volitional"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らないで",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative conjunctive"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らなくて",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative conjunctive"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走りません",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らなかった",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走りました",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走りませんでした",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走られ",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive stem"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走られない",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive negative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走られます",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走られません",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive negative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走られた",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past passive"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走られなかった",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past passive negative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせ",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "causative stem"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせない",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせます",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "causative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせません",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative causative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせた",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせなかった",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past negative causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走れない",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative potential"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走れます",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "polite potential"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走れません",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative polite potential"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走れた",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past potential"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走れなかった",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past negative potential"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走りましょう",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "imperative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせられ",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive causative standard stem"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らされ",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive causative colloquial stem"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせられる",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らされる",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせられない",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive negative causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らされない",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive negative causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせられます",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive causative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らされます",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive causative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせられません",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive negative causative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らされません",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "passive negative causative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせられた",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past passive causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らされた",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past passive causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らせられなかった",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past passive negative causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走らされなかった",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past passive negative causative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走りたい",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "desiderative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走りたくない",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative desiderative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走っている",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "desiderative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走ってる",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "contraction desiderative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走っていない",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative desiderative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走ってない",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative contraction desiderative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走っています",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "desiderative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走っていません",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "negative desiderative polite"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走っていた",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past desiderative"
+        ]
+      ]
+    ],
+    0,
+    ""
+  ],
+  [
+    "走っていなかった",
+    "",
+    "non-lemma",
+    "v",
+    0,
+    [
+      [
+        "走る",
+        [
+          "past negative desiderative"
         ]
       ]
     ],

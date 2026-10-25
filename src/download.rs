@@ -11,14 +11,12 @@ use crate::{
 };
 
 /// Return the url of the "raw" dataset.
-fn url_jsonl_gz(edition: Edition) -> Result<String> {
+fn url_jsonl_gz(edition: Edition) -> String {
     let root = "https://kaikki.org";
 
     match edition {
-        Edition::En => Ok(format!("{root}/dictionary/raw-wiktextract-data.jsonl.gz")),
-        other => Ok(format!(
-            "{root}/{other}wiktionary/raw-wiktextract-data.jsonl.gz"
-        )),
+        Edition::En => format!("{root}/dictionary/raw-wiktextract-data.jsonl.gz"),
+        other => format!("{root}/{other}wiktionary/raw-wiktextract-data.jsonl.gz"),
     }
 }
 
@@ -65,7 +63,7 @@ mod html {
     use flate2::read::GzDecoder;
     use std::fs::File;
     use std::io::BufWriter;
-    use std::path::Path;
+    use std::path::{Path, PathBuf};
 
     use crate::{
         lang::Edition,
@@ -86,7 +84,7 @@ mod html {
     ///
     /// WARN: expects `path_jsonl` to be a valid path (with existing parents etc.)
     pub fn download_jsonl(edition: Edition, path_jsonl: &Path, quiet: bool) -> Result<()> {
-        let url = url_jsonl_gz(edition)?;
+        let url = url_jsonl_gz(edition);
         if !quiet {
             println!("⬇ Downloading {url}");
         }
@@ -102,8 +100,18 @@ mod html {
         // https://github.com/tatuylonen/wiktextract/issues/1482
         let mut decoder = GzDecoder::new(reader);
 
-        let mut writer = BufWriter::new(File::create(path_jsonl)?);
-        std::io::copy(&mut decoder, &mut writer)?;
+        // Download to a temporary path, so that a partial one is never taken as complete.
+        {
+            let mut path_part = path_jsonl.as_os_str().to_owned();
+            path_part.push(".part");
+            let path_part = PathBuf::from(path_part);
+
+            let mut writer = BufWriter::new(File::create(&path_part)?);
+            std::io::copy(&mut decoder, &mut writer)?;
+            writer.into_inner()?;
+
+            std::fs::rename(&path_part, path_jsonl)?;
+        }
 
         if !quiet {
             pretty_println_at_path(&format!("{CHECK_C} Downloaded"), path_jsonl);

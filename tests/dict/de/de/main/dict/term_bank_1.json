@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -86,6 +87,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Der ",
                                     {
@@ -112,30 +114,65 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyme"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "Rock 'n' Roll"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "Blues"
                     },
-                    "content": "Rock 'n' Roll"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "Country"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "Folk"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -214,6 +251,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -251,6 +289,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Sindbad band sich, um seinem Schicksal auf einer abgelegenen Insel zu entkommen, an ein Bein des Vogels ",
                                     {
@@ -276,30 +315,30 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyme"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "Simurgh"
-                  }
-                ]
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "Simurgh"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -378,6 +417,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -415,6 +455,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Ich werde das Auto in die ",
                                     {
@@ -446,6 +487,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Ein Mann steht vor seinem Opel allein in einer ",
                                     {
@@ -477,6 +519,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Leo stand schon draußen vor der ",
                                     {
@@ -494,6 +537,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Heinrich Böll: Ansichten eines Clowns. Roman. Insel, Leipzig 1990, ISBN 3-7351-0161-5, Seite 68."
                                 }
                               ]
@@ -541,6 +585,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Ein Mann steht vor seinem Opel allein in einer ",
                                     {
@@ -572,6 +617,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Leo stand schon draußen vor der ",
                                     {
@@ -589,6 +635,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Heinrich Böll: Ansichten eines Clowns. Roman. Insel, Leipzig 1990, ISBN 3-7351-0161-5, Seite 68."
                                 }
                               ]
@@ -610,6 +657,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Als ich zur ",
                                     {
@@ -712,6 +760,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Selbstverständlich werden in der ",
                                     {
@@ -729,6 +778,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Online-Ausgabe der Jungfrau Zeitung, Lernen Sie das neue Team kennen, 03.07.2009"
                                 }
                               ]
@@ -745,30 +795,30 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyme"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "Autowerkstatt"
-                  }
-                ]
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "Autowerkstatt"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -847,6 +897,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -884,6 +935,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Er ",
                                     {
@@ -922,6 +974,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Hast du die Heizung ",
                                     {
@@ -952,6 +1005,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Ich ",
                                     {
@@ -1016,6 +1070,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Es war ",
                                     {
@@ -1047,6 +1102,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Sie war Trudis Vorschlag gefolgt und ",
                                     {
@@ -1072,6 +1128,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Katharina Adler: Ida. Roman. 1. Auflage. Rowohlt Verlag, Reinbek bei Hamburg 2018, ISBN 978-3-498-00093-6, Seite 384 ."
                                 }
                               ]
@@ -1119,6 +1176,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Wenn man mit einem Buben ",
                                     {
@@ -1150,6 +1208,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Sie ",
                                     {
@@ -1214,6 +1273,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Was unsere Freundschaft ",
                                     {
@@ -1271,6 +1331,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Kinder ",
                                     {
@@ -1335,6 +1396,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Es ",
                                     {
@@ -1400,6 +1462,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Am anderen Ufer konnte der Forscher eine Gruppe Krokodile ",
                                     {
@@ -1456,6 +1519,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Die Bauern ",
                                     {
@@ -1494,6 +1558,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Beim nächsten H",
                                     {
@@ -1567,6 +1632,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Das muss er mit seinem Gewissen ",
                                     {
@@ -1593,44 +1659,79 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyme"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "verabreden"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "vereinbaren"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "abmachen"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "verabreden"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "anmachen"
                     },
-                    "content": "vereinbaren"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "aktivieren"
                     },
-                    "content": "abmachen"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "einschalten"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -1709,6 +1810,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -1746,6 +1848,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Anna und ",
                                     {
@@ -1777,6 +1880,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1807,6 +1911,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1904,6 +2009,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -1941,6 +2047,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Was haben wir ",
                                     {
@@ -1972,6 +2079,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2028,6 +2136,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Was wird ",
                                     {
@@ -2085,6 +2194,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Das ist ",
                                     {
@@ -2153,6 +2263,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2209,6 +2320,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2234,44 +2346,44 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyme"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "jetzt"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "jetzt"
                     },
-                    "content": "augenblicklich"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "augenblicklich"
                     },
-                    "content": "gegenwärtig"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "gegenwärtig"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -2350,6 +2462,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -2413,6 +2526,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2443,6 +2557,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2473,6 +2588,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Vormittags sollten die Schüler ",
                                     {
@@ -2564,6 +2680,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Ab morgen gehst du ",
                                     {
@@ -2611,6 +2728,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Im W",
                                     {
@@ -2684,6 +2802,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Im W",
                                     {
@@ -2731,6 +2850,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2761,6 +2881,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Ich will ",
                                     {
@@ -2826,6 +2947,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2856,6 +2978,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -2886,6 +3009,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Halloweenscherze versetzen ke",
                                     {
@@ -2928,44 +3052,44 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyme"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "an"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "an"
                     },
-                    "content": "auf"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "auf"
                     },
-                    "content": "nach"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "nach"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -3044,6 +3168,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -3098,6 +3223,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Er ",
                                     {
@@ -3179,6 +3305,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Bei Oma und Opa war es l",
                                     {
@@ -3252,6 +3379,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Sie kann mir in dieser Sache nichts ",
                                     {
@@ -3277,37 +3405,37 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyme"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "tragen"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "tragen"
                     },
-                    "content": "schaden"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "schaden"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -3386,6 +3514,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -3423,6 +3552,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Seit ich die neue Brille habe, ",
                                     {
@@ -3454,6 +3584,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Das Kindermädchen ",
                                     {
@@ -3485,6 +3616,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -3558,6 +3690,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Das ",
                                     {
@@ -3589,6 +3722,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Dann wollen wir mal ",
                                     {
@@ -3620,6 +3754,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Wenn ich das richtig ",
                                     {
@@ -3640,6 +3775,50 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "data": {
+              "content": "related-words"
+            },
+            "lang": "de",
+            "content": [
+              {
+                "tag": "div",
+                "data": {
+                  "content": "antonyms"
+                },
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "fühlen"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "hören"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "spüren"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -3718,6 +3897,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -3755,6 +3935,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Folgen Sie mir ",
                                     {
@@ -3786,6 +3967,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "\"Viele Vögel brüten ",
                                     {
@@ -3817,6 +3999,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Seine explosive Fracht transportierte er in einem ",
                                     {
@@ -3834,6 +4017,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Christine Richter: Attentäter ohne Netzwerk. In: G/Geschichte. Nummer 5/2017, ISSN 1617-9412, Seite 45."
                                 }
                               ]
@@ -3850,37 +4034,72 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyme"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "dezent"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "unscheinbar"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "dezent"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "auffallend"
                     },
-                    "content": "unscheinbar"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "aufsehenerregend"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "eklatant"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -3924,6 +4143,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -3961,6 +4181,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Lucas arbeitet in ",
                                     {
@@ -3992,6 +4213,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "Von Paris aus ist ",
                                     {
@@ -4009,6 +4231,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Wikipedia-Artikel „Nantes“"
                                 }
                               ]
@@ -4097,6 +4320,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -4134,6 +4358,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Nur Myriam Dyckhoff, eigentlich Torhüterin, und Trainerin Gabi ",
                                     {
@@ -4151,6 +4376,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "Abbenhaus spricht Klartext. Westfälische Nachrichten, 5. Februar 2013, abgerufen am 27. September 2013."
                                 }
                               ]
@@ -4239,6 +4465,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "de",
             "content": [
               {
                 "tag": "li",
@@ -4276,6 +4503,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Die ",
                                     {
@@ -4293,6 +4521,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "de",
                                   "content": "bento: The Rock bekommt eine Tochter – und verneigt sich vor allen Frauen. 24. April 2018, abgerufen am 12. Mai 2018."
                                 }
                               ]
@@ -4314,6 +4543,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "de",
                                   "content": [
                                     "„Wegen der heftigen Erschütterung fiel ein Stück der Zimmerdecke genau in den Korb, in dem die ",
                                     {

@@ -7,9 +7,6 @@ from typing import Any
 
 REPO_ID = "daxida/wty-release"
 REPO_URL = f"https://huggingface.co/datasets/{REPO_ID}"
-BASE_URL = f"{REPO_URL}/resolve/main/dict"
-"""https://huggingface.co/datasets/daxida/wty-release/resolve/main/dict"""
-
 
 # duplicated from build
 @dataclass
@@ -40,61 +37,36 @@ def load_langs(path: Path) -> list[Lang]:
     return [load_lang(item) for item in data]
 
 
-def render_dropdown_options(langs: list[Lang]) -> str:
+# (value, label) of the formats with a release_metadata_<format>.json
+FORMATS = [("yomitan", "Yomitan"), ("mdict", "Mdict")]
+
+
+def render_dropdown_options(options: list[tuple[str, str]]) -> str:
     return "\n".join(
-        f'  <option value="{lang.iso}">{lang.display_name}</option>' for lang in langs
+        f'  <option value="{value}">{label}</option>' for value, label in options
     ).strip()
 
 
-def render_combobox(cl: str, placeholder: str, langs: list[Lang]) -> str:
-    assert cl in ("dl-source", "dl-target")
+def render_combobox(cl: str, placeholder: str, options: list[tuple[str, str]]) -> str:
+    assert cl in ("dl-source", "dl-target", "dl-format")
     return f"""
 <div class="{cl}-combobox">
   <input class="{cl}-search" placeholder="{placeholder}" autocomplete="off">
   <div class="{cl}-dropdown">
-    {render_dropdown_options(langs)}
+    {render_dropdown_options(options)}
   </div>
   <input type="hidden" class="{cl}">
 </div>""".strip()
 
 
-def render_line(
-    label: str,
-    dtype: str,
-    source_langs: list[Lang],
-    target_langs: list[Lang],
-) -> str:
-    if source_langs:
-        source_html = render_combobox("dl-source", "Search source...", source_langs)
-        line_class = "download-line"
-    else:
-        source_html = ""
-        line_class = "download-line no source"
-
-    return f"""
-<tr data-type="{dtype}" class="{line_class}">
-  <th>{label}</th>
-  <td>{source_html}</td>
-  <td>{render_combobox("dl-target", "Search target...", target_langs)}</td>
-  <td><button class="dl-btn">📥</button></td>
-  <td class="dl-info"></td>
+def generate_downloads_page(all_langs: list[Lang]) -> str:
+    langs = [(lang.iso, lang.display_name) for lang in all_langs]
+    table_html = f"""
+<tr>
+  <td>{render_combobox("dl-source", "Source: language of the word...", langs)}</td>
+  <td>{render_combobox("dl-target", "Target: language of the definition...", langs)}</td>
+  <td>{render_combobox("dl-format", "Format...", FORMATS)}</td>
 </tr>""".strip()
-
-
-def generate_downloads_page(all_langs: list[Lang], editions: list[Lang]) -> str:
-    all_langs_no_simple = [lang for lang in all_langs if lang.iso != "simple"]
-    editions_no_simple = [lang for lang in editions if lang.iso != "simple"]
-
-    table_html = "\n".join(
-        [
-            render_line("📘 Main", "main", all_langs, editions),
-            render_line("🔤 IPA", "ipa", all_langs_no_simple, editions_no_simple),
-            render_line("🧬 IPA merged", "ipa-merged", [], all_langs_no_simple),
-            render_line(
-                "🌍 Glossary", "glossary", editions_no_simple, all_langs_no_simple
-            ),
-        ]
-    )
 
     return f"""# Download
 
@@ -104,9 +76,9 @@ def generate_downloads_page(all_langs: list[Lang], editions: list[Lang]) -> str:
   </tbody>
 </table>
 
-!!! warning "If you get an "Entry not found" error, please **open an [issue](https://github.com/yomidevs/wiktionary-to-yomitan/issues/new)**."
+<div class="dl-results"></div>
 
-!!! tip "You can import a dictionary directly to Yomitan by pasting the URL into "Import from URLs""
+!!! tip "You can import a dictionary directly to Yomitan by pasting the URL into "Import from URLs" (requires **Advanced** settings)"
 
 Files are hosted [here]({
         REPO_URL
@@ -153,7 +125,7 @@ def main() -> None:
     print(f"Found {len(all_langs)} languages, {len(editions)} with edition")
 
     print(f"Generating downloads page @ {path_download}")
-    path_download.write_text(generate_downloads_page(all_langs, editions))
+    path_download.write_text(generate_downloads_page(all_langs))
 
     print(f"Generating language page @ {path_language}")
     path_language.write_text(generate_language_page(all_langs, editions))

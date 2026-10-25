@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "li",
@@ -86,6 +87,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "it",
                                   "content": [
                                     "Disse la povera madre ormai stremata: \"Eh, ma... non è possibile: le ",
                                     {
@@ -160,6 +162,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "it",
                                   "content": "\"Aoh, che fissa!!\""
                                 }
                               ]
@@ -176,44 +179,79 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Sinonimi"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "fissata"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "stabile"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "salda"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "fissata"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "mobile"
                     },
-                    "content": "stabile"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "sposta"
                     },
-                    "content": "salda"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "rimuove"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -292,6 +330,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "li",
@@ -340,6 +379,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "it",
                                   "content": [
                                     "più ",
                                     {
@@ -366,44 +406,79 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Sinonimi"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "attenzione"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "cautela"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "coscienza"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "attenzione"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "incuria"
                     },
-                    "content": "cautela"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "negligenza"
                     },
-                    "content": "coscienza"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "superficialità"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -482,6 +557,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "li",
@@ -519,6 +595,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "it",
                                   "content": "L’alimentazione fornisce energia al corpo e teoricamente non si dovrebbe mangiare più di ciò che si consuma"
                                 }
                               ]
@@ -583,6 +660,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "it",
                                   "content": "devi mangiare il cavallo"
                                 }
                               ]
@@ -599,44 +677,44 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "it",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Sinonimi"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "alimenti"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "alimenti"
                     },
-                    "content": "cibo"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "cibo"
                     },
-                    "content": "derrate"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "derrate"
+                    }
+                  ]
+                }
               }
             ]
           },

@@ -13,7 +13,7 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::tags::{BLACKLISTED_FORM_TAGS, IDENTITY_FORM_TAGS};
+use crate::tags::{BLACKLISTED_FORM_TAGS, IDENTITY_FORM_TAGS, ScriptTag};
 
 // In case we ever decide to narrow them
 pub type Tag = String;
@@ -44,7 +44,9 @@ pub struct WordEntry {
     pub form_of: Vec<AltForm>,
     pub alt_of: Vec<AltForm>,
 
-    pub synonyms: Vec<Synonym>,
+    pub synonyms: Vec<Linkage>,
+    pub antonyms: Vec<Linkage>,
+    pub coordinate_terms: Vec<Linkage>, // [zh]
 
     pub translations: Vec<Translation>, // used in glossary
 }
@@ -99,6 +101,12 @@ pub struct Example {
     pub bold_text_offsets: Vec<Offset>,
     #[serde(skip_serializing_if = "Vec::is_empty")]
     pub bold_translation_offsets: Vec<Offset>, // [en]
+    #[serde(
+        rename(deserialize = "tags"),
+        deserialize_with = "ScriptTag::deserialize_kaikki_tags",
+        skip_serializing_if = "Option::is_none"
+    )]
+    pub lang: Option<ScriptTag>,
 }
 
 #[derive(Debug, Deserialize, Serialize, Default)]
@@ -118,14 +126,14 @@ pub struct Form {
     pub ruby: Vec<(String, String)>, // [ja] (kanji, hiragana)
 }
 
-// * We don't extract Synonyms in Senses, even though some editions use them.
-// * We also don't disambiguate to which Sense matches a certain Synonym because
+// * We don't extract Synonyms or Antonyms in Senses, even though some editions use them.
+// * We also don't disambiguate to which Sense matches a certain Linkage because
 // the wiktextract field sense_index is sometimes an int / sometimes a String.
 // TODO: report / fix the above in wiktextract...
 #[derive(Debug, Deserialize, Serialize, Default, Clone)]
 #[serde(default)]
 #[derive(rkyv::Archive, rkyv::Deserialize, rkyv::Serialize)]
-pub struct Synonym {
+pub struct Linkage {
     pub word: String,
     // Unused for the moment
     // #[serde(skip_serializing_if = "Vec::is_empty")]
@@ -140,6 +148,11 @@ pub struct Translation {
     pub word: String,
     #[serde(skip_serializing_if = "String::is_empty")]
     pub sense: String,
+    // These two are used to get the reading for GlossaryExtended
+    #[serde(skip_serializing_if = "String::is_empty")]
+    pub roman: String,
+    #[serde(skip_serializing_if = "String::is_empty")]
+    pub alt: String,
 }
 
 // WordEntry impls
@@ -211,11 +224,11 @@ impl WordEntry {
                 .tags
                 .iter()
                 .any(|tag| BLACKLISTED_FORM_TAGS.contains(&tag.as_str()));
-            let is_identity = form
+            let is_untagged_or_identity = form
                 .tags
                 .iter()
                 .all(|tag| IDENTITY_FORM_TAGS.contains(&tag.as_str()));
-            if is_blacklisted || is_identity {
+            if is_blacklisted || is_untagged_or_identity {
                 return false;
             }
 

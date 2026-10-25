@@ -71,6 +71,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -88,30 +89,58 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "ja",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyms"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "面白い"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "苦しい"
                     },
-                    "content": "面白い"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "つまらない"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -212,6 +241,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -249,6 +279,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -265,6 +296,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "What's your ",
                                     {
@@ -296,6 +328,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "君が",
                                     {
@@ -313,6 +346,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "It's precisely because I like you [because of my ",
                                     {
@@ -344,6 +378,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -360,6 +395,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "“I like you.” → idiomatically used to express: “I love you.”"
                                 }
                               ]
@@ -470,6 +506,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -507,6 +544,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "狸 兼名苑云狸［音𨤲和名",
                                     {
@@ -524,6 +562,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Raccoon dog: According to Jian Ming Yuan (兼名苑), raccoon dogs [read as 𨤲 (ri), native Japanese ",
                                     {
@@ -549,6 +588,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "938, Minamoto no Shitagō, Wamyō Ruijushō"
                                 }
                               ]
@@ -570,6 +610,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "アライグマなら尻尾にシマがある。どう見でも",
                                     {
@@ -587,6 +628,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "If you're a raccoon, you'd have stripes on your tail. No matter how you look at it, you're a ",
                                     {
@@ -661,6 +703,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": "やいやい、其処な狸め"
                                 },
                                 {
@@ -668,6 +711,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "Hey there, you sly dog!"
                                 },
                                 {
@@ -675,6 +719,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "1717, Kokusen'ya gonichi gassen (jōruri), volume 3"
                                 }
                               ]
@@ -682,6 +727,154 @@
                           }
                         ]
                       }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "tags"
+                        },
+                        "content": [
+                          {
+                            "tag": "span",
+                            "title": "abbreviation",
+                            "data": {
+                              "content": "tag",
+                              "category": "morphology"
+                            },
+                            "content": "abbv"
+                          }
+                        ]
+                      },
+                      "short for 狸饂飩 (tanuki-udon) and 狸蕎麦 (tanuki-soba): styles of various noodle dishes"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "tags"
+                        },
+                        "content": [
+                          {
+                            "tag": "span",
+                            "title": "abbreviation",
+                            "data": {
+                              "content": "tag",
+                              "category": "morphology"
+                            },
+                            "content": "abbv"
+                          },
+                          {
+                            "tag": "span",
+                            "title": "rare",
+                            "data": {
+                              "content": "tag",
+                              "category": "archaism"
+                            },
+                            "content": "rare"
+                          }
+                        ]
+                      },
+                      "short for 狸寝入り (tanuki neiri): pretending to be asleep",
+                      {
+                        "tag": "details",
+                        "data": {
+                          "content": "details-entry-examples"
+                        },
+                        "content": [
+                          {
+                            "tag": "summary",
+                            "data": {
+                              "content": "summary-entry"
+                            },
+                            "content": "1 example"
+                          },
+                          {
+                            "tag": "div",
+                            "data": {
+                              "content": "extra-info"
+                            },
+                            "content": {
+                              "tag": "div",
+                              "data": {
+                                "content": "example-sentence"
+                              },
+                              "content": [
+                                {
+                                  "tag": "div",
+                                  "data": {
+                                    "content": "example-sentence-a"
+                                  },
+                                  "lang": "ja",
+                                  "content": "狸を決め込む ― tanuki o kimekomu ― pretend to be a raccoon dog → feign sleep"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "li",
+                "content": [
+                  {
+                    "tag": "div",
+                    "content": [
+                      {
+                        "tag": "div",
+                        "data": {
+                          "content": "tags"
+                        },
+                        "content": [
+                          {
+                            "tag": "span",
+                            "title": "abbreviation",
+                            "data": {
+                              "content": "tag",
+                              "category": "morphology"
+                            },
+                            "content": "abbv"
+                          },
+                          {
+                            "tag": "span",
+                            "title": "obsolete",
+                            "data": {
+                              "content": "tag",
+                              "category": "archaism"
+                            },
+                            "content": "obs"
+                          },
+                          {
+                            "tag": "span",
+                            "title": "rare",
+                            "data": {
+                              "content": "tag",
+                              "category": "archaism"
+                            },
+                            "content": "rare"
+                          }
+                        ]
+                      },
+                      "short for 狸汁 (tanuki-jiru): a soup made from tanuki meat mixed with daikon, burdock root, etc."
                     ]
                   }
                 ]
@@ -763,6 +956,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -800,6 +994,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "マラソン選手が",
                                     {
@@ -817,6 +1012,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Marathon athlete(s) started ",
                                     {
@@ -848,6 +1044,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "彼はこの道をよく",
                                     {
@@ -865,6 +1062,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "He often ",
                                     {
@@ -922,6 +1120,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": "車が走る"
                                 },
                                 {
@@ -929,6 +1128,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "a car moves"
                                 }
                               ]
@@ -976,6 +1176,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "石の上を水が",
                                     {
@@ -993,6 +1194,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The water ",
                                     {
@@ -1050,6 +1252,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "刀が鞘から",
                                     {
@@ -1067,6 +1270,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The sword ",
                                     {
@@ -1146,6 +1350,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "彼は敵に",
                                     {
@@ -1163,6 +1368,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "He ",
                                     {
@@ -1194,6 +1400,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "立場を忘れて感情に",
                                     {
@@ -1211,6 +1418,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Don't forget your stance and ",
                                     {
@@ -1279,6 +1487,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "山脈が南北に",
                                     {
@@ -1296,6 +1505,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The mountain range ",
                                     {
@@ -1327,6 +1537,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "社会に亀裂が",
                                     {
@@ -1343,6 +1554,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "a crack (division) ",
                                     {
@@ -1400,6 +1612,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "稲妻が",
                                     {
@@ -1416,6 +1629,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "lightning ",
                                     {
@@ -1446,6 +1660,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "背中に痛みが",
                                     {
@@ -1463,6 +1678,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "I felt a brief pain in my back."
                                 }
                               ]
@@ -1590,6 +1806,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1712,6 +1929,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1823,6 +2041,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -1860,6 +2079,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     "梓弓をして春雨",
                                     {
@@ -1877,6 +2097,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1907,6 +2128,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ja",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -1923,6 +2145,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Isn't ",
                                     {
@@ -2021,6 +2244,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",

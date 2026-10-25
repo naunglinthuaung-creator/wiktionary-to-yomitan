@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "nl",
             "content": [
               {
                 "tag": "li",
@@ -86,6 +87,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "nl",
                                   "content": [
                                     "En daarna was hij ",
                                     {
@@ -112,30 +114,30 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "nl",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synoniemen"
-              },
-              {
-                "tag": "ul",
-                "data": {
-                  "content": "synonyms-list"
-                },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "aftaaien"
-                  }
-                ]
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "aftaaien"
+                    }
+                  ]
+                }
               }
             ]
           },

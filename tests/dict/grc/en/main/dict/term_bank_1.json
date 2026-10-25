@@ -71,6 +71,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -108,6 +109,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "grc",
                                   "content": "εἴ οἱ καὶ μάλα πολλὸν ἀπόπροθι πίονες ἀγροί[…]\neí hoi kaì mála pollòn apóprothi píones agroí[…]"
                                 },
                                 {
@@ -115,6 +117,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": "Even though his rich fields lie very far away […]"
                                 },
                                 {
@@ -122,6 +125,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "en",
                                   "content": "c. 800 BCE – 600 BCE, Homer, Iliad 23.832"
                                 }
                               ]
@@ -143,7 +147,7 @@
             "content": [
               {
                 "tag": "a",
-                "href": "https://en.wiktionary.org/wiki/ἀγρός#Ancient Greek",
+                "href": "https://en.wiktionary.org/wiki/ἀγρός#Ancient_Greek",
                 "content": "Wiktionary"
               },
               " | ",
@@ -232,6 +236,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -265,7 +270,7 @@
             "content": [
               {
                 "tag": "a",
-                "href": "https://en.wiktionary.org/wiki/Ἀθηναῖος#Ancient Greek",
+                "href": "https://en.wiktionary.org/wiki/Ἀθηναῖος#Ancient_Greek",
                 "content": "Wiktionary"
               },
               " | ",

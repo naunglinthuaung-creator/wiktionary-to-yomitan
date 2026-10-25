@@ -44,7 +44,8 @@
                       12,
                       17
                     ]
-                  ]
+                  ],
+                  "lang": "zh-Hant"
                 },
                 {
                   "text": "这是镇上最便宜的商店。",
@@ -60,7 +61,8 @@
                       12,
                       17
                     ]
-                  ]
+                  ],
+                  "lang": "zh-Hans"
                 },
                 {
                   "text": "用便宜的肉就做不出好湯。",
@@ -76,7 +78,25 @@
                       0,
                       5
                     ]
-                  ]
+                  ],
+                  "lang": "zh-Hant"
+                },
+                {
+                  "text": "用便宜的肉就做不出好汤。",
+                  "translation": "Cheap meat doesn't make good soup.",
+                  "bold_text_offsets": [
+                    [
+                      1,
+                      3
+                    ]
+                  ],
+                  "bold_translation_offsets": [
+                    [
+                      0,
+                      5
+                    ]
+                  ],
+                  "lang": "zh-Hans"
                 }
               ]
             }
@@ -92,8 +112,88 @@
               "word": "賤"
             }
           ],
+          "antonyms": [
+            {
+              "word": "昂貴"
+            },
+            {
+              "word": "昂贵"
+            },
+            {
+              "word": "高昂"
+            }
+          ],
           "wlink": "https://en.wiktionary.org/wiki/便宜#Chinese",
           "klink": "https://kaikki.org/dictionary/Chinese/meaning/便/便宜/便宜.html"
+        }
+      ]
+    }
+  },
+  "醬": {
+    "jiàng (jiang⁴)": {
+      "character": [
+        {
+          "gloss_tree": {
+            "-chan": {
+              "tags": [
+                "Internet"
+              ],
+              "topics": [
+                "ACG",
+                "video-games"
+              ],
+              "examples": [
+                {
+                  "text": "初音醬",
+                  "translation": "Hatsune Miku-chan",
+                  "bold_text_offsets": [
+                    [
+                      2,
+                      3
+                    ]
+                  ],
+                  "bold_translation_offsets": [
+                    [
+                      12,
+                      17
+                    ]
+                  ],
+                  "lang": "zh-Hant"
+                },
+                {
+                  "text": "初音酱",
+                  "translation": "Hatsune Miku-chan",
+                  "bold_text_offsets": [
+                    [
+                      2,
+                      3
+                    ]
+                  ],
+                  "bold_translation_offsets": [
+                    [
+                      12,
+                      17
+                    ]
+                  ],
+                  "lang": "zh-Hans"
+                }
+              ]
+            }
+          },
+          "coordinate_terms": [
+            {
+              "word": "桑"
+            },
+            {
+              "word": "炭"
+            },
+            {
+              "word": "君"
+            }
+          ],
+          "etymology_text": "Borrowed from Japanese ちゃん (-chan).",
+          "wlink": "https://en.wiktionary.org/wiki/醬#Chinese",
+          "klink": "https://kaikki.org/dictionary/Chinese/meaning/醬/醬/醬.html"
         }
       ]
     }

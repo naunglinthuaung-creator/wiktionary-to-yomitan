@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "es",
             "content": [
               {
                 "tag": "li",
@@ -97,6 +98,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "en",
                                   "content": "Your watch is some minutes fast"
                                 },
                                 {
@@ -104,6 +106,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "es",
                                   "content": "Tu reloj va algunos minutos adelantado."
                                 }
                               ]

@@ -78,7 +78,9 @@ pub trait Renderer {
         html! {
             div class="entry form" {
                 h2 { (&entry.term) }
-                div class="reading" { (&entry.reading) }
+                @if !entry.reading.is_empty() {
+                    div class="reading" { (&entry.reading) }
+                }
                 ul {
                     @for def in &entry.definitions {
                         li { (Self::render_detailed_definition(def)) }
@@ -93,17 +95,22 @@ pub trait Renderer {
         html! {
             div class="entry form" {
                 h2 { (tm.term) }
-                h3 { (Self::render_phonetic_transcription(&tm.transcription)) }
+                h3 { (tm.transcription.reading) }
+                (Self::render_phonetic_transcription(&tm.transcription))
             }
         }
     }
 
     fn render_phonetic_transcription(pt: &PhoneticTranscription) -> Markup {
         html! {
-            b { (pt.reading) }
             ul {
                 @for tr in &pt.transcriptions {
-                    li { (tr.ipa) (tr.tags.join("|")) }
+                    li {
+                        (tr.ipa)
+                        @if !tr.tags.is_empty() {
+                            " (" (tr.tags.join(", ")) ")"
+                        }
+                    }
                 }
             }
         }
@@ -161,61 +168,31 @@ pub trait Renderer {
         let category_attr = data
             .and_then(|d| d.0.get(&NodeDataKey::Category))
             .map(String::as_str);
-        let class = format!("gloss-sc-{}", node.tag.as_str());
 
         // https://github.com/lambda-fairy/maud/issues/240
         // The attr=[value] syntax skips the attribute if the value is None
+        macro_rules! render {
+            ($tag:ident) => {
+                html! {
+                    $tag
+                        class={ "gloss-sc-" (node.tag.as_str()) }
+                        title=[node.title.as_deref()]
+                        data-sc-content=[content_attr]
+                        data-sc-category=[category_attr]
+                        lang=[node.lang.as_ref().map(LangAttr::as_str)]
+                    { (content) }
+                }
+            };
+        }
+
         match node.tag {
-            NTag::Span => html! {
-                span
-                    class=(class)
-                    title=[node.title.clone()]
-                    data-sc-content=[content_attr]
-                    data-sc-category=[category_attr]
-                { (content) }
-            },
-            NTag::Div => html! {
-                div
-                    class=(class)
-                    data-sc-content=[content_attr]
-                    data-sc-category=[category_attr]
-                { (content) }
-            },
-            NTag::Ol => html! {
-                ol
-                    class=(class)
-                    data-sc-content=[content_attr]
-                    data-sc-category=[category_attr]
-                { (content) }
-            },
-            NTag::Ul => html! {
-                ul
-                    class=(class)
-                    data-sc-content=[content_attr]
-                    data-sc-category=[category_attr]
-                { (content) }
-            },
-            NTag::Li => html! {
-                li
-                    class=(class)
-                    data-sc-content=[content_attr]
-                    data-sc-category=[category_attr]
-                { (content) }
-            },
-            NTag::Details => html! {
-                details
-                    class=(class)
-                    data-sc-content=[content_attr]
-                    data-sc-category=[category_attr]
-                { (content) }
-            },
-            NTag::Summary => html! {
-                summary
-                    class=(class)
-                    data-sc-content=[content_attr]
-                    data-sc-category=[category_attr]
-                { (content) }
-            },
+            NTag::Span => render!(span),
+            NTag::Div => render!(div),
+            NTag::Ol => render!(ol),
+            NTag::Ul => render!(ul),
+            NTag::Li => render!(li),
+            NTag::Details => render!(details),
+            NTag::Summary => render!(summary),
         }
     }
 

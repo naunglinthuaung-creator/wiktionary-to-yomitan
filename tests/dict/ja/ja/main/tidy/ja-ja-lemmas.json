@@ -195,8 +195,7 @@
             "コンピューターに指示して処理をさせるための文字列。コマンド。": {}
           },
           "tags": [
-            "irregular",
-            "sa-row"
+            "suru"
           ],
           "synonyms": [
             {
@@ -380,6 +379,14 @@
               "word": "間接的"
             }
           ],
+          "antonyms": [
+            {
+              "word": "直接"
+            },
+            {
+              "word": "直截"
+            }
+          ],
           "wlink": "https://ja.wiktionary.org/wiki/婉曲#Japanese",
           "klink": "https://kaikki.org/jawiktionary/All%20languages%20combined/meaning/婉/婉曲/婉曲.html"
         }
@@ -394,9 +401,7 @@
             "植物を他の鉢や場所に移して植える。": {}
           },
           "tags": [
-            "a-row",
-            "ichidan",
-            "shimoichidan"
+            "ichidan"
           ],
           "wlink": "https://ja.wiktionary.org/wiki/うえかえる#Japanese",
           "klink": "https://kaikki.org/jawiktionary/All%20languages%20combined/meaning/う/うえ/うえかえる.html"
@@ -469,9 +474,7 @@
             }
           },
           "tags": [
-            "a-row",
-            "ichidan",
-            "shimoichidan"
+            "ichidan"
           ],
           "wlink": "https://ja.wiktionary.org/wiki/つけくわえる#Japanese",
           "klink": "https://kaikki.org/jawiktionary/All%20languages%20combined/meaning/つ/つけ/つけくわえる.html"
@@ -550,6 +553,19 @@
       ]
     }
   },
+  "仮葬": {
+    "かそう": {
+      "verb": [
+        {
+          "gloss_tree": {
+            "仮に葬る": {}
+          },
+          "wlink": "https://ja.wiktionary.org/wiki/仮葬#Japanese",
+          "klink": "https://kaikki.org/jawiktionary/All%20languages%20combined/meaning/仮/仮葬/仮葬.html"
+        }
+      ]
+    }
+  },
   "植え替える": {
     "うえかえる": {
       "verb": [
@@ -558,9 +574,7 @@
             "植物を他の鉢や場所に移して植える。": {}
           },
           "tags": [
-            "a-row",
-            "ichidan",
-            "shimoichidan"
+            "ichidan"
           ],
           "wlink": "https://ja.wiktionary.org/wiki/うえかえる#Japanese",
           "klink": "https://kaikki.org/jawiktionary/All%20languages%20combined/meaning/う/うえ/うえかえる.html"
@@ -576,9 +590,7 @@
             "植物を他の鉢や場所に移して植える。": {}
           },
           "tags": [
-            "a-row",
-            "ichidan",
-            "shimoichidan"
+            "ichidan"
           ],
           "wlink": "https://ja.wiktionary.org/wiki/うえかえる#Japanese",
           "klink": "https://kaikki.org/jawiktionary/All%20languages%20combined/meaning/う/うえ/うえかえる.html"
@@ -598,9 +610,7 @@
             }
           },
           "tags": [
-            "a-row",
-            "ichidan",
-            "shimoichidan"
+            "ichidan"
           ],
           "wlink": "https://ja.wiktionary.org/wiki/つけくわえる#Japanese",
           "klink": "https://kaikki.org/jawiktionary/All%20languages%20combined/meaning/つ/つけ/つけくわえる.html"

@@ -110,7 +110,7 @@ def generate_tags_rs(
     whitelisted_tags: list[WhitelistedTag],
     f,
 ) -> None:
-    # Having duplicated short tags is pointless, use aliases instead.
+    # Two entries sharing a short tag should be a single entry with aliases instead.
     seen = {}
     for wt in whitelisted_tags:
         st = wt.short_tag
@@ -121,15 +121,15 @@ def generate_tags_rs(
         else:
             seen[st] = wt
 
-    # Having duplicated long tags is pointless, only the first will be found by find_map.
+    # Same for long tags, aliases included: find_tag_in_bank indexes every alias and
+    # keeps the first it sees, so a repeat silently shadows the other entry.
     seen = {}
     for wt in whitelisted_tags:
-        lt = wt.long_tag()
-        if lt in seen:
-            old = seen[lt]
-            print(f"ERROR: duplicated long tag\n{wt}\n{old}")
-            sys.exit(1)
-        else:
+        for lt in wt.longs_as_list():
+            if lt in seen:
+                old = seen[lt]
+                print(f"ERROR: duplicated long tag '{lt}'\n{wt}\n{old}")
+                sys.exit(1)
             seen[lt] = wt
 
     idt = " " * 4
@@ -137,10 +137,14 @@ def generate_tags_rs(
 
     write_warning(f)
 
-    w(f"pub const TAG_ORDER: [&str; {len(tag_order)}] = [\n")
-    for tag in tag_order:
-        w(f'{idt}"{tag}",\n')
-    w("];\n\n")
+    w("/// Position of the tag in `tag_order.json`, if any.\n")
+    w("pub fn tag_order(tag: &str) -> Option<usize> {\n")
+    w(f"{idt}match tag {{\n")
+    for position, tag in enumerate(tag_order):
+        w(f'{idt * 2}"{tag}" => Some({position}),\n')
+    w(f"{idt * 2}_ => None,\n")
+    w(f"{idt}}}\n")
+    w("}\n\n")
 
     # Not sure why all of this was done in the original, it makes almost no sense
 
@@ -808,7 +812,7 @@ def main() -> None:
         path_tag_bank_variety_json,
         path_tag_locale_folder,
     ):
-        if not path.exists:
+        if not path.exists():
             print(f"Path does not exist @ {path}")
             return
 

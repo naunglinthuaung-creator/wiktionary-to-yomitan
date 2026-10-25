@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "el",
             "content": [
               {
                 "tag": "li",
@@ -103,6 +104,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": "αποκοιμήθηκε στον κόρφο της μάνας του"
                                 }
                               ]
@@ -167,6 +169,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": "※ Διονύσιος Σολωμός, Ὕμνος εἰς τὴν Ἐλευθερίαν, στροφή 85"
                                 },
                                 {
@@ -174,6 +177,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "el",
                                   "content": "Ἡ ψυχή μου ἀναγαλλιάζει\nπὼς ὁ κόρφος καθεμιᾶς\nγλυκοβύζαστο ἐτοιμάζει\nγάλα ἀνδρείας κι ἐλευθεριάς."
                                 }
                               ]
@@ -273,6 +277,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "el",
             "content": [
               {
                 "tag": "li",
@@ -362,6 +367,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "el",
             "content": [
               {
                 "tag": "li",
@@ -427,6 +433,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": "ήρθε συνοδευόμενος από τους γορίλλες του"
                                 }
                               ]
@@ -515,6 +522,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "el",
             "content": [
               {
                 "tag": "li",
@@ -532,44 +540,79 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "el",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Συνώνυμα"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "αγνοητέος"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "αναξιοπρόσεχτος"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "ασήμαντος"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "αγνοητέος"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "αξιόλογος"
                     },
-                    "content": "αναξιοπρόσεχτος"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "δυσκαταφρόνητος"
                     },
-                    "content": "ασήμαντος"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "σημαντικός"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -648,6 +691,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "el",
             "content": [
               {
                 "tag": "li",
@@ -685,6 +729,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": "Το φορτηγό εξετράπη και εισήλθε στο αντίθετο ρεύμα"
                                 }
                               ]
@@ -706,6 +751,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": "Ο ποταμός εκτρέπεται λίγο πιο ψηλά από το χωριό και ακολουθεί άλλη πορεία"
                                 }
                               ]
@@ -727,6 +773,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": "Ακτίνα φωτός που διαθλάται από πρίσμα εκτρέπεται κατά γωνία φ."
                                 }
                               ]

@@ -12,6 +12,9 @@ use heap::HeapSize;
 mod preprocess_forms;
 use preprocess_forms::preprocess_forms;
 
+mod preprocess_tags;
+use preprocess_tags::preprocess_tags;
+
 mod postprocess;
 pub use postprocess::postprocess_main;
 
@@ -20,14 +23,16 @@ use crate::{
     cli::{LangSpecs, Options},
     dict::Intermediate,
     lang::{Edition, Lang},
-    models::kaikki::{Example, Form, HeadTemplate, Sense, Synonym, Tag, WordEntry},
+    models::kaikki::{Example, Form, HeadTemplate, Linkage, Sense, Tag, WordEntry},
     path::PathManager,
     tags::{Pos, REDUNDANT_FORM_TAGS},
     utils::{human_size, link_kaikki, link_wiktionary},
 };
 
-const MAX_NUMBER_OF_SYNONYMS: usize = 3;
+const MAX_NUMBER_OF_RELATED_WORDS: usize = 3;
 const MAX_NUMBER_OF_EXAMPLES: usize = 3;
+/// An alt-of target longer than this is noise (heuristic).
+const MAX_ALT_OF_WORDS: usize = 3;
 const MAX_SIZE_OF_EXAMPLE: usize = 120;
 const MAX_SIZE_OF_EXAMPLE_REFERENCE: usize = 120;
 
@@ -96,6 +101,10 @@ impl Tidy {
 }
 
 pub fn found_ir_message_impl(langs: LangSpecs, irs: &Tidy) {
+    if !tracing::enabled!(tracing::Level::DEBUG) {
+        return;
+    }
+
     let n_lemmas = irs.lemma_map.len();
     let n_forms = irs.form_map.len();
     let n_irs = n_lemmas + n_forms;
@@ -374,7 +383,13 @@ pub struct LemmaInfo {
     pub tags: Vec<Tag>,
 
     #[serde(skip_serializing_if = "Vec::is_empty")]
-    pub synonyms: Vec<Synonym>,
+    pub synonyms: Vec<Linkage>,
+
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub antonyms: Vec<Linkage>,
+
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub coordinate_terms: Vec<Linkage>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     pub etymology_text: Option<String>,
@@ -449,8 +464,11 @@ pub fn preprocess_main(
     entry: &mut WordEntry,
     irs: &mut Tidy,
 ) {
-    // WARN:: mutates entry::forms (and entry::forms::form)
+    // WARN: mutates entry::forms and entry::forms::form
     preprocess_forms(edition, source, entry);
+
+    // WARN: mutates entry::tags, entry::forms::form::tags and entry::senses::sense::tags
+    preprocess_tags(edition, source, entry);
 
     // WARN: mutates entry::senses::sense::tags
     match edition {
@@ -486,7 +504,7 @@ pub fn preprocess_main(
         _ => (),
     }
 
-    // WARN: mutates entry::senses
+    // WARN: mutates entry::senses::sense::glosses
     //
     // Deal with "no definition" glosses, cf. https://it.wiktionary.org/wiki/cartoccio#Italian
     // That is, glosses that are of no value, usually of the shape "Empty definition, add one at
@@ -524,12 +542,12 @@ pub fn preprocess_main(
     // Note that deleting senses is a good decision overall: it reduces clutter and forces the
     // redirect. One just has to be careful about when to do it
     //
+    let may_drop_sense = !opts.experimental || entry.non_trivial_forms().next().is_none();
+
     let old_senses = std::mem::take(&mut entry.senses);
     let mut senses_without_inflections = Vec::new();
     for sense in old_senses {
-        if (!opts.experimental || entry.non_trivial_forms().next().is_none())
-            && handle_inflection_sense(edition, source, entry, &sense, irs)
-        {
+        if may_drop_sense && handle_inflection_sense(edition, source, entry, &sense, irs) {
             // handled as inflection
         } else if handle_alt_of_sense(entry, &sense, irs) {
             // handled as alt-of
@@ -541,7 +559,7 @@ pub fn preprocess_main(
     }
     entry.senses = senses_without_inflections;
 
-    // WARN: mutates entry::senses::glosses
+    // WARN: mutates entry::senses::sense::glosses
     //
     // rg: full stop
     // https://github.com/yomidevs/yomitan/issues/2232
@@ -648,10 +666,13 @@ fn should_skip_form(edition: Edition, source: Lang, entry: &WordEntry, form: &Fo
         (Edition::En, Lang::Fi) => {
             // Bloated, remove anything non-essential
             // For the reasoning behind possessive, see. should_break_at_finish_forms
+            //
+            // Possessive forms come tagged either "possessive" or, since the tables now
+            // expose the number of the possessum, "singular-possessive"/"plural-possessive".
             if form
                 .tags
                 .iter()
-                .any(|tag| tag == "rare" || tag == "possessive")
+                .any(|tag| tag == "rare" || tag.ends_with("possessive"))
             {
                 return true;
             }
@@ -661,15 +682,11 @@ fn should_skip_form(edition: Edition, source: Lang, entry: &WordEntry, form: &Fo
                 return true;
             }
         }
-        (Edition::Ja, Lang::Ja) => {
-            // Since we expect "Letter" as Yomitan "Dictionary search resolution", forms prefixed
-            // by the lemma are redundant.
-            // - lemma: ぷくぷく
-            // - forms: ぷくぷくし | ぷくぷくせ | ぷくぷくさ etc.
-            if form.form.starts_with(&entry.word) {
-                return true;
-            }
-        }
+        // Since we expect "Letter" as Yomitan "Dictionary search resolution", forms prefixed
+        // by the lemma are redundant.
+        // - lemma: ぷくぷく
+        // - forms: ぷくぷくし | ぷくぷくせ | ぷくぷくさ etc.
+        (Edition::Ja, Lang::Ja) if form.form.starts_with(&entry.word) => return true,
         _ => (),
     }
     false
@@ -753,7 +770,13 @@ pub fn get_reading(edition: Edition, source: Lang, entry: &WordEntry) -> Option<
     match (edition, source) {
         (Edition::En | Edition::Zh, Lang::Ja) => get_japanese_reading(entry),
         (Edition::En, Lang::Fa) => entry.romanization_form().map(|f| f.form.clone()),
-        (Edition::Ja, _) => entry.transliteration_form().map(|f| f.form.clone()),
+        (Edition::Ja, _) => entry.transliteration_form().map(|f| {
+            f.form
+                .strip_suffix("する")
+                .filter(|stem| !stem.is_empty() && !entry.word.ends_with("する"))
+                .unwrap_or(&f.form)
+                .to_string()
+        }),
         (Edition::En | Edition::Zh, Lang::Zh) => entry.pinyin().map(String::from),
         _ => get_canonical_word(source, entry),
     }
@@ -837,17 +860,25 @@ fn get_japanese_reading(entry: &WordEntry) -> Option<String> {
     None
 }
 
+fn related_words(words: &[Linkage], word: &str) -> Vec<Linkage> {
+    words
+        .iter()
+        .filter(|related| related.word != word)
+        .take(MAX_NUMBER_OF_RELATED_WORDS)
+        .cloned()
+        .collect()
+}
+
 fn process_entry(edition: Edition, source: Lang, entry: &WordEntry) -> LemmaInfo {
     LemmaInfo {
         gloss_tree: get_gloss_tree(entry),
         tags: entry.tags.clone(),
-        synonyms: entry
-            .synonyms
-            .iter()
-            .filter(|syn| syn.word != entry.word)
-            .take(MAX_NUMBER_OF_SYNONYMS)
-            .cloned()
-            .collect(),
+        synonyms: related_words(&entry.synonyms, &entry.word),
+        antonyms: related_words(&entry.antonyms, &entry.word),
+        coordinate_terms: match source {
+            Lang::Zh => related_words(&entry.coordinate_terms, &entry.word),
+            _ => Vec::new(),
+        },
         etymology_text: entry
             .etymology_texts()
             // TODO: patch this in wiktextract
@@ -896,11 +927,17 @@ fn get_gloss_tree(entry: &WordEntry) -> GlossTree {
     let mut gloss_tree = GlossTree::default();
 
     for sense in &entry.senses {
+        // Examples in both scripts (Chinese) come in pairs: do not split them
+        let max_examples = if sense.examples.iter().any(|ex| ex.lang.is_some()) {
+            2 * MAX_NUMBER_OF_EXAMPLES
+        } else {
+            MAX_NUMBER_OF_EXAMPLES
+        };
         let mut filtered_examples: Vec<_> = sense
             .examples
             .iter()
             .filter(|ex| !ex.text.is_empty() && ex.text.chars().count() <= MAX_SIZE_OF_EXAMPLE)
-            .take(MAX_NUMBER_OF_EXAMPLES)
+            .take(max_examples)
             .cloned()
             .map(|mut ex| {
                 // Remove reference if too long
@@ -918,7 +955,7 @@ fn get_gloss_tree(entry: &WordEntry) -> GlossTree {
             &sense.glosses,
             &sense.tags,
             &sense.topics,
-            &filtered_examples,
+            filtered_examples,
         );
     }
 
@@ -931,7 +968,7 @@ fn insert_glosses(
     glosses: &[String],
     tags: &[Tag],
     topics: &[Tag],
-    examples: &[Example],
+    examples: Vec<Example>,
 ) {
     let Some(head) = glosses.first() else {
         return;
@@ -940,25 +977,35 @@ fn insert_glosses(
     let tail = &glosses[1..];
 
     // get or insert node with only tags at this level
-    let node = gloss_tree.entry(head.clone()).or_insert_with(|| GlossInfo {
-        tags: tags.to_vec(),
-        topics: topics.to_vec(),
-        examples: Vec::new(),
-        children: None,
-    });
-
-    // intersect tags if node already exists
-    if !node.tags.is_empty() {
-        node.tags = tags
-            .iter()
-            .filter(|&t| node.tags.contains(t))
-            .cloned()
-            .collect();
-    }
+    let node = gloss_tree
+        .entry(head.clone())
+        // intersect tags and topics with the ones already there
+        .and_modify(|node| {
+            if !node.tags.is_empty() {
+                node.tags = tags
+                    .iter()
+                    .filter(|&t| node.tags.contains(t))
+                    .cloned()
+                    .collect();
+            }
+            if !node.topics.is_empty() {
+                node.topics = topics
+                    .iter()
+                    .filter(|&t| node.topics.contains(t))
+                    .cloned()
+                    .collect();
+            }
+        })
+        .or_insert_with(|| GlossInfo {
+            tags: tags.to_vec(),
+            topics: topics.to_vec(),
+            examples: Vec::new(),
+            children: None,
+        });
 
     // assign examples to the last level
     if tail.is_empty() {
-        node.examples = examples.to_vec();
+        node.examples = examples;
         return;
     }
 
@@ -968,11 +1015,35 @@ fn insert_glosses(
     insert_glosses(children, tail, tags, topics, examples);
 }
 
-static DE_INFLECTION_RE: LazyLock<Regex> = LazyLock::new(|| {
-    Regex::new(
-        r"^(.*)des (?:Verbs|Adjektivs|Substantivs|Demonstrativpronomens|Possessivpronomens|Pronomens) (.*)$"
-    ).unwrap()
-});
+/// The nouns that can follow "des" in a German inflection gloss.
+const DE_INFLECTION_HEADS: [&str; 6] = [
+    "Verbs",
+    "Adjektivs",
+    "Substantivs",
+    "Demonstrativpronomens",
+    "Possessivpronomens",
+    "Pronomens",
+];
+
+/// Split a German inflection gloss into (inflection tags, uninflected word).
+fn split_de_inflection(gloss: &str) -> Option<(&str, &str)> {
+    if gloss.contains('\n') {
+        return None;
+    }
+
+    let mut upto = gloss.len();
+    while let Some(start) = gloss[..upto].rfind("des ") {
+        let after = &gloss[start + "des ".len()..];
+        for head in DE_INFLECTION_HEADS {
+            if let Some(rest) = after.strip_prefix(head).and_then(|r| r.strip_prefix(' ')) {
+                return Some((&gloss[..start], rest));
+            }
+        }
+        upto = start;
+    }
+
+    None
+}
 
 const TAGS_RETAINED_EL: [&str; 9] = [
     "masculine",
@@ -1003,14 +1074,13 @@ fn handle_inflection_sense(
             let Some((inflection_tags, uninflected)) = sense
                 .glosses
                 .first()
-                .and_then(|gloss| DE_INFLECTION_RE.captures(gloss))
-                .and_then(|caps| Some((caps.get(1)?, caps.get(2)?)))
+                .and_then(|gloss| split_de_inflection(gloss))
             else {
                 return false;
             };
-            let inflection_tags = inflection_tags.as_str().trim();
+            let inflection_tags = inflection_tags.trim();
             irs.insert_form(
-                uninflected.as_str(),
+                uninflected,
                 &entry.word,
                 &entry.pos,
                 FormSource::Inflection,
@@ -1153,11 +1223,11 @@ fn handle_inflection_sense_en(source: Lang, entry: &WordEntry, sense: &Sense, ir
     let mut inflections = Set::default();
     let of_uninflected = format!("of {uninflected}");
     for gloss in &sense.glosses {
-        let cleaned = gloss
-            .replace("inflection of ", "")
-            .replace(&of_uninflected, "")
-            .replace(uninflected, "")
-            .replace(':', "");
+        if gloss.ends_with(':') {
+            continue;
+        }
+
+        let cleaned = gloss.replace(&of_uninflected, "").replace(':', "");
 
         let inflection = PARENS_RE.replace_all(&cleaned, "").trim().to_string();
 
@@ -1186,27 +1256,21 @@ fn handle_alt_of_sense(entry: &WordEntry, sense: &Sense, irs: &mut Tidy) -> bool
     // form_of is easy to redirect FROM form_of TO the lemma.
     //
     // At worst, just move this back to process_alt_forms, to not modify the senses.
-    for alt_form in &sense.alt_of {
-        // If there was any alt_of, we consider this handled, even if we don't add it to forms
-        handled = true;
+    for (i, alt_form) in sense.alt_of.iter().enumerate() {
+        // Keep the gloss, a redirect does not fit acronyms and contractions.
+        // https://en.wiktionary.org/wiki/pp#English
+        if sense.tags.iter().any(|tag| tag == "abbreviation") {
+            continue;
+        }
 
-        // [en-en] Ignore variations of little value.
-        // misspellings: https://en.wiktionary.org/wiki/peninsular#English
-        // misconstruction: https://en.wiktionary.org/wiki/attributative#English
-        // non-standard: https://en.wiktionary.org/wiki/%27cept
-        // pronunciation-spelling: https://en.wiktionary.org/wiki/Espanish#English
-        // obsolete: https://en.wiktionary.org/wiki/enhabit#English
-        // abbreviation: https://en.wiktionary.org/wiki/pp#English
-        //
-        // NOTE: At some point, this begs the question as to why even add alt_of...
-        if sense.tags.iter().any(|tag| {
-            tag == "misspelling"
-                || tag == "misconstruction"
-                || tag == "nonstandard"
-                || tag == "pronunciation-spelling"
-                || tag == "obsolete"
-                || tag == "abbreviation"
-        }) {
+        // heuristic to remove noise
+        if i > 0
+            && alt_form
+                .word
+                .split_whitespace()
+                .nth(MAX_ALT_OF_WORDS)
+                .is_some()
+        {
             continue;
         }
 
@@ -1217,12 +1281,13 @@ fn handle_alt_of_sense(entry: &WordEntry, sense: &Sense, irs: &mut Tidy) -> bool
         }
 
         irs.insert_form(
-            &entry.word,
             &alt_form.word,
+            &entry.word,
             &entry.pos,
             FormSource::AltOfSense,
             sense_tags.clone(),
         );
+        handled = true;
     }
     handled
 }

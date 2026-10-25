@@ -71,6 +71,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "en",
             "content": [
               {
                 "tag": "li",
@@ -108,6 +109,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     "Την είδα να ",
                                     {
@@ -125,6 +127,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "I saw her ",
                                     {
@@ -156,6 +159,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     {
                                       "tag": "span",
@@ -172,6 +176,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Has the doctor ",
                                     {
@@ -203,6 +208,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     "Ο χειμώνας ",
                                     {
@@ -220,6 +226,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Winter is ",
                                     {
@@ -277,6 +284,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     "Πόσο ",
                                     {
@@ -294,6 +302,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "How much ",
                                     {
@@ -359,6 +368,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     "Τελικά, οι δυό τους ",
                                     {
@@ -376,6 +386,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "In the end, they ",
                                     {
@@ -407,6 +418,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     "Θα ",
                                     {
@@ -424,6 +436,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "A lot of things will ",
                                     {
@@ -463,6 +476,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     "Οι αρχηγοί των κομμάτων της βουλής ",
                                     {
@@ -480,6 +494,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The party leaders in parliament ",
                                     {
@@ -537,6 +552,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     "Αυτό το φόρεμα δε σου ",
                                     {
@@ -554,6 +570,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "That dress doesn't ",
                                     {
@@ -637,6 +654,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     "Πώς σου ",
                                     {
@@ -654,6 +672,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "What ",
                                     {
@@ -685,6 +704,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     "Κάθε φορά που τον βλέπω, μου ",
                                     {
@@ -702,6 +722,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "Every time I see him, I ",
                                     {
@@ -733,6 +754,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "el",
                                   "content": [
                                     "Η ταινία ήταν τόσο βαρετή που μου ",
                                     {
@@ -750,6 +772,7 @@
                                   "data": {
                                     "content": "example-sentence-b"
                                   },
+                                  "lang": "en",
                                   "content": [
                                     "The film was so boring that I ",
                                     {
@@ -776,44 +799,79 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "el",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Synonyms"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "φθάνω"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "επέρχομαι"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "ενσκήπτω"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "φθάνω"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "απέρχομαι"
                     },
-                    "content": "επέρχομαι"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "αποχωρώ"
                     },
-                    "content": "ενσκήπτω"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "εξέρχομαι"
+                    }
+                  ]
+                }
               }
             ]
           },

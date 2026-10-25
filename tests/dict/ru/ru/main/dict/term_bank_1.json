@@ -49,6 +49,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ru",
             "content": [
               {
                 "tag": "li",
@@ -86,6 +87,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     "Едва успел я накинуть бурку, как повалил ",
                                     {
@@ -103,6 +105,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ru",
                                   "content": "М. Ю. Лермонтов, «Герой нашего времени», 1839–1840 гг. [НКРЯ]"
                                 }
                               ]
@@ -124,6 +127,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     "К утру выпал ",
                                     {
@@ -141,6 +145,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ru",
                                   "content": "В. С. Гроссман, «Жизнь и судьба», 1960 г. [НКРЯ]"
                                 }
                               ]
@@ -162,6 +167,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     "В воздухе тихо кружились хлопья мокрого ",
                                     {
@@ -179,6 +185,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ru",
                                   "content": "Д. Н. Мамин-Сибиряк, «Вольный человек Яшка», 1893 г. [НКРЯ]"
                                 }
                               ]
@@ -226,6 +233,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     "Не цвести цветам зимой по ",
                                     {
@@ -243,6 +251,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ru",
                                   "content": "А. В. Кольцов, «Русская песня», 1838 г. [НКРЯ]"
                                 }
                               ]
@@ -264,6 +273,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     "Между тем зима установилась. Густые ",
                                     {
@@ -281,6 +291,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ru",
                                   "content": "А. А. Бестужев-Марлинский, «Письма из Дагестана», 1831 г. [НКРЯ]"
                                 }
                               ]
@@ -302,6 +313,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     "Сани заскрипели по ",
                                     {
@@ -319,6 +331,7 @@
                                   "data": {
                                     "content": "example-sentence-c"
                                   },
+                                  "lang": "ru",
                                   "content": "Н. С. Лесков, «Житие одной бабы», 1863 г. [НКРЯ]"
                                 }
                               ]
@@ -366,6 +379,7 @@
                                   "data": {
                                     "content": "example-sentence-a"
                                   },
+                                  "lang": "ru",
                                   "content": [
                                     "Экран на пару секунд покрылся ",
                                     {
@@ -403,44 +417,65 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "ru",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Синонимы"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "снегопад"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "снежный покров"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "белый шум"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "снегопад"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
                   },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "снежный покров"
-                  },
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
-                    },
-                    "content": "белый шум"
-                  }
-                ]
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "дождь"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -519,6 +554,7 @@
             "data": {
               "content": "glosses"
             },
+            "lang": "ru",
             "content": [
               {
                 "tag": "li",
@@ -547,30 +583,65 @@
           {
             "tag": "div",
             "data": {
-              "content": "synonyms"
+              "content": "related-words"
             },
+            "lang": "ru",
             "content": [
               {
                 "tag": "div",
                 "data": {
-                  "content": "synonyms-label"
+                  "content": "synonyms"
                 },
-                "content": "Синонимы"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "synonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "synonym-item"
+                      },
+                      "content": "продлевать"
+                    }
+                  ]
+                }
               },
               {
-                "tag": "ul",
+                "tag": "div",
                 "data": {
-                  "content": "synonyms-list"
+                  "content": "antonyms"
                 },
-                "content": [
-                  {
-                    "tag": "li",
-                    "data": {
-                      "content": "synonym-item"
+                "content": {
+                  "tag": "ul",
+                  "data": {
+                    "content": "antonyms-list"
+                  },
+                  "content": [
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "прекращать"
                     },
-                    "content": "продлевать"
-                  }
-                ]
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "переставать"
+                    },
+                    {
+                      "tag": "li",
+                      "data": {
+                        "content": "antonym-item"
+                      },
+                      "content": "останавливать"
+                    }
+                  ]
+                }
               }
             ]
           },
